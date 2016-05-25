@@ -1,0 +1,2 @@
+# SOL
+Progetto SOL
