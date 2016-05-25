@@ -1,0 +1,340 @@
+/**
+  \brief header file primo frammento
+  \author Francesco Lorito 464604
+*/
+
+#include "sparse.h"
+#include <errno.h>
+#include <stdlib.h>
+/** 
+  stampa la matrice in forma canonica (FORNITA DAI DOCENTI)
+
+  \param l putatore alla matrice da stampare
+  \param f puntatore al file su cui scrivere
+
+*/
+static void print_elem_r(FILE * f, elem_t* p)  {
+  if ( p == NULL ) return ;
+  fprintf(f, "<%d,%f>",p->col,p->val);
+  print_elem_r(f,p->next);
+  return;
+}
+void print_smat (FILE * f, smatrix_t * a) { 
+  int i;
+  
+ if ( f == NULL || a == NULL )
+    return ;
+
+  
+  for (i=0; i< a->nrow ; i++) {
+	  if(a->mat[i]!=NULL) {
+		  fprintf(f,"%d: ",i);
+		  print_elem_r(f,a->mat[i]);
+          fprintf(f,"\n");}
+  } 
+  fprintf(f,"\n");
+} 
+
+/** 
+  crea una nuova matrice vuota
+  \param n numero di righe
+  \param m numero di colonne
+
+  \retval NULL se si e' verificato un errore
+  \retval p ppuntatore alla matrice appena allocata
+
+*/
+smatrix_t * new_smat ( unsigned n, unsigned m ) {
+	smatrix_t * p;
+	int i;
+	p=malloc(sizeof(smatrix_t));
+	if(p==NULL)
+		errno=ENOMEM;
+	else
+	{
+		p->nrow=n;
+		p->ncol=m;
+		p->mat=malloc(n*sizeof(elem_t*));
+		for(i=0;i<n;i++)
+			p->mat[i]=NULL;
+	}
+	return p;
+}
+
+/**
+   Controlla se due matrici sono uguali, elemento per elemento
+
+   \param a puntatore alla prima matrice da confrontare
+   \param b puntatore alla seconda matrice da confrontare
+
+   \retval TRUE se sono uguali
+   \retval FALSE altrimenti
+ */
+bool_t is_equal_smat ( smatrix_t * a , smatrix_t * b ){
+	/* due matrici sono uguali se sono vuote entrambe o se hanno lo stesso numero di righe/colonne e gli stessi identici elementi */
+	elem_t *tmpA, *tmpB;
+	bool_t uguale; 
+	int i;
+	uguale = TRUE;
+	if(a!=NULL)
+	{
+		if(b!=NULL)
+		{
+			if(a->nrow!=b->nrow)
+				uguale = FALSE;
+			else
+				if(a->ncol!=b->ncol)
+					uguale = FALSE;
+				else
+				{
+					i=0;
+					while((uguale == TRUE) && (i<(a->nrow)))
+					{
+						tmpA=a->mat[i];
+						tmpB=b->mat[i];
+						
+						while((uguale==TRUE) && (tmpA!=NULL))
+						{
+							if(tmpB!=NULL)
+							{
+								if((a->mat[i]->val == b->mat[i]->val) && (a->mat[i]->col == b->mat[i]->col))
+								{
+									tmpA=tmpA->next;
+									tmpB=tmpB->next;
+								}
+								else
+								{
+									uguale = FALSE;
+								}
+							}
+							else
+								uguale = FALSE;
+						}
+						if(tmpA==NULL)
+						{
+						/* Se B ha ancora elementi nella riga allora A e B sono diverse altrimenti controllo la riga successiva */
+							if(tmpB!=NULL)
+								uguale = FALSE;
+							else
+								i++;
+						}
+					}
+				}
+		}	
+	}
+	else
+		if(b!=NULL)
+			uguale = FALSE;
+	return uguale;
+}
+
+/**
+   scrive un valore nell'elemento i,j, per mantenere la
+   rappresentazione consistente se il valore scritto è 0 l'elemento
+   corrispondente deve essere eliminato dalla lista che rappresenta la riga
+
+   \param m puntatore alla matrice
+   \param (i,j) posizione dell'elemento
+   \param d valore dell'elemento da scrivere
+
+   \retval -1 se si e' verificato un errore 
+   \retval 0 altrimenti
+ */
+int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d ){
+	elem_t *tmpRow;
+	elem_t tmpElem;
+	int inserito;
+	if(i >= m->nrow)
+		inserito = -1;
+	else
+		if(j >= m->ncol)
+			inserito = -1;
+		else
+		{
+			tmpRow=m[i];
+			if(tmpRow==NULL)
+			{
+				if(d!=0)
+				{
+					m[i]=malloc(sizeof(elem_t*));
+					if(m[i]==NULL)
+						inserito = -1
+					else
+					{
+							m[i]->col=j;
+							m[i]->val=d;
+							m[i]->next=NULL;
+							inserito = 0;
+					}
+				}
+				else
+					inserito = 0;
+
+			}
+			else
+			{
+				if(j < tmpRow->col)
+				{
+					if(d!=0)
+					{
+						tmpElem.col=j;
+						tmpElem.val=d;
+						tmpElem.next=tmpRow;
+						m[i]=*tmpElem;
+						inserito = 0;
+					}
+					else
+						inserito = 0;
+				}
+				else
+					if(j == tmpRow->col)
+					{
+						if(d!=0)
+						{
+							m[i]->val=d;
+							inserito = 0;
+						}
+						else
+						{
+							m[i]->tmpRow->next;
+							free(tmpRow);
+							inserito = 0;
+						}
+					}
+					else
+					{
+						if(m[i]->next == NULL)
+						{
+							if(d!=0)
+							{
+								tmpElem.col=j;
+								tmpElem.val=d;
+								tmpElem.next=tmpRow;
+								m[i]->next=*tmpElem;
+								inserito = 0;
+							}
+							else
+								inserito = 0;
+						}
+						/** DA QUIIIIIIIIIII */
+						
+					}
+			}
+		}
+}
+
+/**
+   legge il valore nell'elemento i,j
+
+   \param m puntatore alla matrice
+   \param (i,j) posizione dell'elemento
+   \param pd puntatore della variabile in cui scrivere il valore dell'elemento
+
+   \retval -1 se si e' verificato un errore 
+   \retval 0 altrimenti
+ */
+int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd );
+
+/**
+  dealloca tutta la matrice
+
+  \param pm puntatore al putatore della matrice da deallocare
+            (*pm viene messo a NULL dalla funzione)
+
+ */
+void free_smat (smatrix_t ** pm);
+
+/** 
+    somma due matrici
+    (se la somma è zero ricordarsi di non inserire l'elemento corrispondente)
+    \param a, b matrici da sommare
+
+    \retval c la matrice risultato (viene allocata dentro la funzione)
+    \retval NULL se si è verificato un errore
+
+*/
+smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b); 
+
+/** 
+    moltiplica due matrici
+    (se il prodotto è zero ricordarsi di non inserire l'elemento corrispondente)
+    \param a, b matrici da moltiplicare
+
+    \retval c la matrice risultato (viene allocata dentro la funzione)
+    \retval NULL se si è verificato un errore
+
+*/
+smatrix_t* prod_smat (smatrix_t* a, smatrix_t* b); 
+
+/** 
+    calcola la trasposta di una matrice
+    (se un elemento è zero ricordarsi di non inserire)
+    \param a matrice
+
+    \retval c la matrice risultato (viene allocata dentro la funzione)
+    \retval NULL se si è verificato un errore
+
+*/
+smatrix_t* transp_smat (smatrix_t* a); 
+
+/** 
+    carica da file una matrice nel formato
+    nrighe1
+    ncolonne1
+    riga1 colonna1 valore1
+    ...
+    rigaN colonnaN valoreN
+    
+    Ad esempio la matrice
+
+    3.1  0   0   0
+     0   0   0   0
+     0  7.2  0  9.0
+
+    è rappresentata come
+    3
+    3
+    0 0 3.1
+    2 1 7.2
+    2 2 9.0
+
+    \param fd file da cui caricare la matrice (gia' aperto)
+
+    \retval p puntatore alla nuove matrice caricata (allocata dentro la funzione)
+    \retval NULL se si è verificato un errore (setta errno)
+
+*/
+smatrix_t* load_smat (FILE* fd); 
+
+/* salva una matrice su file nel formato specificato per la funzione load_smat
+  
+   \param fd file su cui scrivere la matrice (gia' aperto)
+   \param mat la matrice da scrivere su file
+
+   \retval 0 se tutto e' andato bene
+   \retval -1 se si è verificato un errore (setta errno)
+ */
+int save_smat (FILE* fd, smatrix_t* mat);
+ 
+/** 
+    carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
+
+    \param fd file da cui caricare la matrice (gia' aperto)
+
+    \retval p puntatore alla nuove matrice caricata (allocata dentro la funzione)
+    \retval NULL se si è verificato un errore (setta errno)
+
+*/
+smatrix_t* loadbin_smat (FILE* fd); 
+
+/** salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+  
+   \param fd file su cui scrivere la matrice (gia' aperto)
+   \param mat la matrice da scrivere su file
+
+   \retval 0 se tutto e' andato bene
+   \retval -1 se si è verificato un errore (setta errno)
+ */
+int savebin_smat (FILE* fd, smatrix_t* mat);  
+
+
