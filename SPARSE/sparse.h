@@ -111,6 +111,19 @@ int put_elem_row(elem_t ** r,int j, int d);
  */
 int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d );
 
+
+/**
+   legge il valore dell'elemento nella colonna j
+
+   \param r puntatore alla riga da leggere
+   \param j colonna dell'elemento
+   \param pd puntatore della variabile in cui scrivere il valore dell'elemento
+
+   \retval -1 se si e' verificato un errore 
+   \retval 0 altrimenti
+ */
+int get_elem_row ( elem_t ** r,int j, double* pd );
+
 /**
    legge il valore nell'elemento i,j
 

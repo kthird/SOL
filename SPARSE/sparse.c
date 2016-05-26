@@ -183,7 +183,7 @@ int put_elem_row(elem_t ** r,int j, int d)
 			}
 			else
 			{
-				return 0 + put_elem_row(&(r->next),j,d);
+				return 0 + put_elem_row(&((*r)->next),j,d);
 			}
 	}
 	else
@@ -214,39 +214,75 @@ int put_elem_row(elem_t ** r,int j, int d)
    \retval -1 se si e' verificato un errore 
    \retval 0 altrimenti
  */
-int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d ){
-	if(i >= m->nrow)
-		return -1;
-	else
-		if(j >= m->ncol)
+int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d )
+{
+	if(m!=NULL)
+	{
+		if(i >= m->nrow)
 			return -1;
 		else
-		{
-			if(m->mat[i]==NULL)
-			{
-				if(d!=0)
-				{
-					m->mat[i]=malloc(sizeof(elem_t*));
-					if(m->mat[i]==NULL)
-						return -1;
-					else
-					{
-							m->mat[i]->col=j;
-							m->mat[i]->val=d;
-							m->mat[i]->next=NULL;
-							return 0;
-					}
-				}
-				else
-					return 0;
-
-			}
+			if(j >= m->ncol)
+				return -1;
 			else
 			{
-				return put_elem_row(&(m->mat[i]),j,d);	
+				if(m->mat[i]==NULL)
+				{
+					if(d!=0)
+					{
+						m->mat[i]=malloc(sizeof(elem_t*));
+						if(m->mat[i]==NULL)
+							return -1;
+						else
+						{
+								m->mat[i]->col=j;
+								m->mat[i]->val=d;
+								m->mat[i]->next=NULL;
+								return 0;
+						}
+					}
+					else
+						return 0;
+
+				}
+				else
+				{
+					return put_elem_row(&(m->mat[i]),j,d);	
+				}
 			}
-		}
+	}
+	else 
+		return -1;
 }
+
+
+/**
+   legge il valore dell'elemento nella colonna j
+
+   \param r puntatore alla riga da leggere
+   \param j colonna dell'elemento
+   \param pd puntatore della variabile in cui scrivere il valore dell'elemento
+
+   \retval -1 se si e' verificato un errore 
+   \retval 0 altrimenti
+ */
+int get_elem_row ( elem_t ** r,int j, double* pd )
+{
+	if(m!=NULL)
+	{
+		if(i >= m->nrow)
+				return -1;
+			else
+				if(j >= m->ncol)
+					return -1;
+				else
+				{
+					/* DA IMPLEMENTARE */
+				}
+	}
+	else
+		/* COSA RITORNO?? */ 
+}
+	
 
 /**
    legge il valore nell'elemento i,j
@@ -258,7 +294,31 @@ int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d ){
    \retval -1 se si e' verificato un errore 
    \retval 0 altrimenti
  */
-int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd );
+int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd )
+{
+	if(m!=NULL)
+	{
+		if(i >= m->nrow)
+				return -1;
+			else
+				if(j >= m->ncol)
+					return -1;
+				else
+				{
+					if(m->mat[i]==NULL)
+					{
+						/* DECIDERE SE TORNARE ZERO O -1 */
+
+					}
+					else
+					{
+						return get_elem_row(&(m->mat[i]),j,d);	
+					}
+				}
+	}
+	else
+		return -1;
+}
 
 /**
   dealloca tutta la matrice
