@@ -17,6 +17,12 @@ int main()
 	A=new_smat(3,3);
 	B=new_smat(3,3);
 	
+	printf("%s",((put_elem(A,0,0,25)==0)?"INSERITO 25\n":"ERRORE\n"));
+	printf("%s",((put_elem(A,0,1,42)==0)?"INSERITO 42\n":"ERRORE\n"));
+	printf("%s",((put_elem(A,1,0,1)==0)?"INSERITO 1\n":"ERRORE\n"));
+	printf("%s",((put_elem(A,1,2,30)==0)?"INSERITO 30\n":"ERRORE\n"));
+	printf("%s",((put_elem(A,2,1,59.61)==0)?"INSERITO 59.61\n":"ERRORE\n"));
+	/*
 	A->mat=malloc(3*sizeof(elem_t*));
 	
 	A->mat[0]=malloc(sizeof(elem_t*));
@@ -45,7 +51,7 @@ int main()
 	B->mat[2]->val=23;
 	B->mat[2]->next=NULL;
 	
-	
+	*/
 	fA=fopen("print/A.txt","w");
 	fB=fopen("print/B.txt","w");
 	

@@ -128,6 +128,80 @@ bool_t is_equal_smat ( smatrix_t * a , smatrix_t * b ){
 	return uguale;
 }
 
+
+/**
+   inserisce un elemento in r passata con indice colonna j, per mantenere la
+   rappresentazione consistente se il valore scritto è 0 l'elemento
+   corrispondente deve essere eliminato dalla lista che rappresenta la riga
+
+   \param r puntatore alla riga
+   \param j colonna dell'elemento
+   \param d valore dell'elemento da scrivere
+
+   \retval -1 se si e' verificato un errore 
+   \retval 0 altrimenti
+ */
+int put_elem_row(elem_t ** r,int j, int d)
+{
+	elem_t * tmpElem;
+	if(*r!=NULL)
+	{
+		if(j < (*r)->col)
+		{
+			if(d!=0)
+			{
+				tmpElem=malloc(sizeof(elem_t*));
+				if(tmpElem==NULL)
+					return -1;
+				else
+				{
+					tmpElem->col=j;
+					tmpElem->val=d;
+					tmpElem->next=*r;
+					(*r)=tmpElem;
+					return 0;
+				}
+			}
+			else
+				return 0;
+		}
+		else
+			if(j == (*r)->col)
+			{
+				if(d!=0)
+				{
+					(*r)->val=d;
+					return 0;
+				}
+				else
+				{
+					tmpElem=*r;
+					*r=(*r)->next;
+					free(tmpElem);
+					return 0;
+				}
+			}
+			else
+			{
+				return 0 + put_elem_row(&(r->next),j,d);
+			}
+	}
+	else
+	{
+		tmpElem=malloc(sizeof(elem_t*));
+		if(tmpElem==NULL)
+			return -1;
+		else
+		{
+			tmpElem->col=j;
+			tmpElem->val=d;
+			tmpElem->next=NULL;
+			*r=tmpElem;
+			return 0;
+		}
+	}
+
+}
 /**
    scrive un valore nell'elemento i,j, per mantenere la
    rappresentazione consistente se il valore scritto è 0 l'elemento
@@ -141,84 +215,35 @@ bool_t is_equal_smat ( smatrix_t * a , smatrix_t * b ){
    \retval 0 altrimenti
  */
 int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d ){
-	elem_t *tmpRow;
-	elem_t tmpElem;
-	int inserito;
 	if(i >= m->nrow)
-		inserito = -1;
+		return -1;
 	else
 		if(j >= m->ncol)
-			inserito = -1;
+			return -1;
 		else
 		{
-			tmpRow=m[i];
-			if(tmpRow==NULL)
+			if(m->mat[i]==NULL)
 			{
 				if(d!=0)
 				{
-					m[i]=malloc(sizeof(elem_t*));
-					if(m[i]==NULL)
-						inserito = -1
+					m->mat[i]=malloc(sizeof(elem_t*));
+					if(m->mat[i]==NULL)
+						return -1;
 					else
 					{
-							m[i]->col=j;
-							m[i]->val=d;
-							m[i]->next=NULL;
-							inserito = 0;
+							m->mat[i]->col=j;
+							m->mat[i]->val=d;
+							m->mat[i]->next=NULL;
+							return 0;
 					}
 				}
 				else
-					inserito = 0;
+					return 0;
 
 			}
 			else
 			{
-				if(j < tmpRow->col)
-				{
-					if(d!=0)
-					{
-						tmpElem.col=j;
-						tmpElem.val=d;
-						tmpElem.next=tmpRow;
-						m[i]=*tmpElem;
-						inserito = 0;
-					}
-					else
-						inserito = 0;
-				}
-				else
-					if(j == tmpRow->col)
-					{
-						if(d!=0)
-						{
-							m[i]->val=d;
-							inserito = 0;
-						}
-						else
-						{
-							m[i]->tmpRow->next;
-							free(tmpRow);
-							inserito = 0;
-						}
-					}
-					else
-					{
-						if(m[i]->next == NULL)
-						{
-							if(d!=0)
-							{
-								tmpElem.col=j;
-								tmpElem.val=d;
-								tmpElem.next=tmpRow;
-								m[i]->next=*tmpElem;
-								inserito = 0;
-							}
-							else
-								inserito = 0;
-						}
-						/** DA QUIIIIIIIIIII */
-						
-					}
+				return put_elem_row(&(m->mat[i]),j,d);	
 			}
 		}
 }

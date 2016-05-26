@@ -84,6 +84,20 @@ smatrix_t * new_smat ( unsigned n, unsigned m ) ;
 bool_t is_equal_smat ( smatrix_t * a , smatrix_t * b );
 
 /**
+   inserisce un elemento in r passata con indice colonna j, per mantenere la
+   rappresentazione consistente se il valore scritto è 0 l'elemento
+   corrispondente deve essere eliminato dalla lista che rappresenta la riga
+
+   \param r puntatore alla riga
+   \param j colonna dell'elemento
+   \param d valore dell'elemento da scrivere
+
+   \retval -1 se si e' verificato un errore 
+   \retval 0 altrimenti
+ */
+int put_elem_row(elem_t ** r,int j, int d);
+
+/**
    scrive un valore nell'elemento i,j, per mantenere la
    rappresentazione consistente se il valore scritto è 0 l'elemento
    corrispondente deve essere eliminato dalla lista che rappresenta la riga
