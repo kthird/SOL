@@ -268,10 +268,21 @@ int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d )
 int get_elem_row ( elem_t ** r,int j, double* pd )
 {
 	/* Se trovo NULL senza che si sia verificato un errore, vuol dire che l'elemento letto è uno ZERO */
-	if(r!=NULL)
+	if(*r!=NULL)
 	{
-		
-		
+		if(j < (*r)->val)
+		{
+			*pd=0;
+			return 0;
+		}
+		else
+			if(j == (*r)->val)
+			{
+				*pd=(*r)->val;
+				return 0;
+			}
+			else
+				return 0 + get_elem_row(&((*r)->next),j,pd);
 	}
 	else
 	{
