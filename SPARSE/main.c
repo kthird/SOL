@@ -11,8 +11,11 @@
 int main()
 {
 	smatrix_t *A,*B;
+	double *pd;
 	
 	FILE *fA,*fB;
+	
+	pd=NULL;
 	
 	A=new_smat(3,3);
 	B=new_smat(3,3);
@@ -30,6 +33,10 @@ int main()
 	printf("%s",((put_elem(B,1,2,30)==0)?"INSERITO 30\n":"ERRORE\n"));
 	printf("%s",((put_elem(B,2,1,59.61)==0)?"INSERITO 59.61\n":"ERRORE\n"));
 	printf("%s",((put_elem(B,1,0,451)==0)?"INSERITO 451\n":"ERRORE\n"));
+	
+	
+	printf("%s %lf",((get_elem(A,2,1,pd)==0)?"LETTO DALLA MATRICE A\n":"ERRORE\n"),*pd);
+	printf("%s %lf",((get_elem(B,1,0,pd)==0)?"LETTO DALLA MATRICE B\n":"ERRORE\n"),*pd);
 	
 	
 	fA=fopen("print/A.txt","w");
