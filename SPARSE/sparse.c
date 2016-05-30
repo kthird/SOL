@@ -13,26 +13,31 @@
   \param f puntatore al file su cui scrivere
 
 */
-static void print_elem_r(FILE * f, elem_t* p)  {
-  if ( p == NULL ) return ;
-  fprintf(f, "<%d,%f>",p->col,p->val);
-  print_elem_r(f,p->next);
-  return;
+static void print_elem_r(FILE * f, elem_t* p)  
+{
+	if ( p == NULL ) 
+		return ;
+	fprintf(f, "<%d,%f>",p->col,p->val);
+	print_elem_r(f,p->next);
+	return;
 }
-void print_smat (FILE * f, smatrix_t * a) { 
-  int i;
+void print_smat (FILE * f, smatrix_t * a) 
+{ 
+	int i;
+	  
+	if ( f == NULL || a == NULL )
+		return ;
   
- if ( f == NULL || a == NULL )
-    return ;
-
-  
-  for (i=0; i< a->nrow ; i++) {
-	  if(a->mat[i]!=NULL) {
-		  fprintf(f,"%d: ",i);
-		  print_elem_r(f,a->mat[i]);
-          fprintf(f,"\n");}
-  } 
-  fprintf(f,"\n");
+	for (i=0; i< a->nrow ; i++) 
+	{
+		if(a->mat[i]!=NULL) 
+		{
+			fprintf(f,"%d: ",i);
+			print_elem_r(f,a->mat[i]);
+			fprintf(f,"\n");
+		}
+	} 
+	fprintf(f,"\n");
 } 
 
 /** 
@@ -352,15 +357,11 @@ void free_row (elem_t ** pr)
 	{
 		if(*pr!=NULL)
 		{
-			if((*pr)->next == NULL)
-			{
-				free(*pr);
-			}
-			else
+			if((*pr)->next != NULL)
 			{
 				free_row(&((*pr)->next));
-				free(*pr);
 			}
+			free(*pr);
 			*pr = NULL;
 		}
 	}

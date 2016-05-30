@@ -7,30 +7,27 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <mcheck.h>
 
 int main()
 {
+	mtrace();
 	smatrix_t *A,*B;
-	double d;
+	/*double d;
 	double *pd;
+	
 	
 	FILE *fA,*fB;
 	
-	d=3;
+	
+	d=0;
 	pd=&d;
-	
-	printf("D: %lf \n *PD: %lf \n",d,*pd);
-	
-	*pd=1;
-	
-	printf("D: %lf \n *PD: %lf \n",d,*pd);
-	
-	
+	*/
 	A=new_smat(3,3);
 	B=new_smat(3,3);
 	
 	printf("%s",((put_elem(A,0,0,25)==0)?"INSERITO 25\n":"ERRORE\n"));
-	printf("%s",((put_elem(A,0,1,42)==0)?"INSERITO 42\n":"ERRORE\n"));
+	/*printf("%s",((put_elem(A,0,1,42)==0)?"INSERITO 42\n":"ERRORE\n"));
 	printf("%s",((put_elem(A,1,0,1)==0)?"INSERITO 1\n":"ERRORE\n"));
 	printf("%s",((put_elem(A,1,2,30)==0)?"INSERITO 30\n":"ERRORE\n"));
 	printf("%s",((put_elem(A,2,1,59.61)==0)?"INSERITO 59.61\n":"ERRORE\n"));
@@ -61,11 +58,13 @@ int main()
 		printf("UGUALI\n");
 	else
 		printf("DIVERSE\n");
-	
+	*/
 	
 	free_smat(&A);
 	free_smat(&B);
-	
+	free(A);
+	free(B);
+	/*
 	fA=fopen("print/A.txt","w");
 	fB=fopen("print/B.txt","w");
 	
@@ -74,6 +73,9 @@ int main()
 	
 	fclose(fA);
 	fclose(fB);
+	
+	*/
+	muntrace();
 	
 	return 0;
 }
