@@ -408,7 +408,7 @@ smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b)
 	smatrix_t *c;
 	int i,j;
 	double da,db;
-	bool errore;
+	bool_t errore;
 	errore = FALSE;
 	da=0;
 	db=0;
@@ -420,11 +420,10 @@ smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b)
 			{
 				c = new_smat(a->nrow,a->ncol);
 				i=0;
-				j=0;
-				while(!errore && ())d 
-				for(i=0;i<a->nrow;i++)
+				while(!errore && (i < a->nrow)) 
 				{
-					for(j=0;j<a->ncol;i++)
+					j=0;
+					while(!errore && (j < a->ncol))
 					{
 						if(get_elem(a,i,j,&da) == 0)
 						{
@@ -432,11 +431,34 @@ smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b)
 							{
 								if(put_elem(c,i,j,(da + db)) == 0)
 								{
-								
+									j++;
+								}
+								else
+								{
+									free_smat(&c);
+									errore = TRUE;
 								}
 							}
+							else
+							{
+								free_smat(&c);
+								errore = TRUE;
+							}
+						}
+						else
+						{
+							free_smat(&c);
+							errore = TRUE;
 						}
 					}
+					i++;
+				}
+				if(!errore)
+					return c;
+				else
+				{
+					free_smat(&c);
+					return NULL;
 				}
 			}
 			else 
@@ -458,7 +480,79 @@ smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b)
     \retval NULL se si è verificato un errore
 
 */
-smatrix_t* prod_smat (smatrix_t* a, smatrix_t* b); 
+smatrix_t* prod_smat (smatrix_t* a, smatrix_t* b)
+{
+	/* Due matrici a e b possono essere moltiplicate tra loro solo se il numero di colonne di a è uguale al numero di righe di b */
+	smatrix_t *c;
+	int i,j,k;
+	double da,db,somma;
+	bool_t errore;
+	errore = FALSE;
+	da=0;
+	db=0;
+	somma=0;
+	/** DA CONTROLLAREEEEEEEEEEEEEEEEEEEEEEEEE */
+	if(a!=NULL && b!=NULL)
+	{
+		if(a->ncol == b->nrow)
+		{
+			c = new_smat(a->nrow,b->ncol);
+			i=0;
+			while(!errore && (i < a->nrow))
+			{
+				j=0;
+				while(!errore && (j < b->ncol))
+				{
+					k=0;
+					while(!errore && (k < a->ncol))
+					{
+						if(get_elem(a,i,k,&da)==0)
+						{
+							if(get_elem(b,k,j,&db)==0)
+							{
+								somma = somma + (da*db);
+							}
+							else
+							{
+								free_smat(&c);
+								errore = TRUE;
+							}
+						}
+						else
+						{
+							free_smat(&c);
+							errore = TRUE;
+						}
+						k++;
+					}
+					if(!errore)
+					{
+						if(put_elem(c,i,j,somma) != 0)
+						{
+							free_smat(&c);
+							errore = TRUE;
+						}
+						else
+							j++;
+					}
+				}
+				i++;
+				
+			}
+			if(errore)
+			{
+				free_smat(&c);
+				return NULL;
+			}
+			else
+				return c;
+		}
+		else
+			return NULL;
+	}
+	else
+		return NULL;
+}
 
 /** 
     calcola la trasposta di una matrice
