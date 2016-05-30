@@ -205,7 +205,7 @@ int put_elem_row(elem_t ** r,int j, int d)
 			{
 				tmpElem->col=j;
 				tmpElem->val=d;
-				tmpElem->next=*r;
+				tmpElem->next=NULL;
 				(*r)=tmpElem;
 				return 0;
 			}
@@ -402,7 +402,52 @@ void free_smat (smatrix_t ** pm)
     \retval NULL se si è verificato un errore
 
 */
-smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b); 
+smatrix_t* sum_smat (smatrix_t* a, smatrix_t* b)
+{
+	/* La somma fra matrici è possibile solo nel caso in cui abbiano lo stesso numero di righe e colonne */
+	smatrix_t *c;
+	int i,j;
+	double da,db;
+	bool errore;
+	errore = FALSE;
+	da=0;
+	db=0;
+	if(a!=NULL && b!=NULL)
+	{
+		if(a->nrow == b->nrow)
+		{
+			if(a->ncol == b->ncol)
+			{
+				c = new_smat(a->nrow,a->ncol);
+				i=0;
+				j=0;
+				while(!errore && ())d 
+				for(i=0;i<a->nrow;i++)
+				{
+					for(j=0;j<a->ncol;i++)
+					{
+						if(get_elem(a,i,j,&da) == 0)
+						{
+							if(get_elem(b,i,j,&db) == 0)
+							{
+								if(put_elem(c,i,j,(da + db)) == 0)
+								{
+								
+								}
+							}
+						}
+					}
+				}
+			}
+			else 
+				return NULL;
+		}
+		else
+			return NULL;
+	}
+	else 
+		return NULL;
+}
 
 /** 
     moltiplica due matrici
