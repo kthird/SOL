@@ -11,11 +11,20 @@
 int main()
 {
 	smatrix_t *A,*B;
+	double d;
 	double *pd;
 	
 	FILE *fA,*fB;
 	
-	pd=NULL;
+	d=3;
+	pd=&d;
+	
+	printf("D: %lf \n *PD: %lf \n",d,*pd);
+	
+	*pd=1;
+	
+	printf("D: %lf \n *PD: %lf \n",d,*pd);
+	
 	
 	A=new_smat(3,3);
 	B=new_smat(3,3);
@@ -34,10 +43,10 @@ int main()
 	printf("%s",((put_elem(B,2,1,59.61)==0)?"INSERITO 59.61\n":"ERRORE\n"));
 	printf("%s",((put_elem(B,1,0,451)==0)?"INSERITO 451\n":"ERRORE\n"));
 	
-	
-	printf("%s %lf",((get_elem(A,2,1,pd)==0)?"LETTO DALLA MATRICE A\n":"ERRORE\n"),*pd);
-	printf("%s %lf",((get_elem(B,1,0,pd)==0)?"LETTO DALLA MATRICE B\n":"ERRORE\n"),*pd);
-	
+	printf("%s  \n",((get_elem(A,2,2,pd)==0)?"LETTO DALLA MATRICE A\n":"ERRORE\n"));
+	printf(" - %lf\n",d);
+	printf("%s  \n",((get_elem(B,1,0,pd)==0)?"LETTO DALLA MATRICE B\n":"ERRORE\n"));
+	printf(" - %lf\n",d);
 	
 	fA=fopen("print/A.txt","w");
 	fB=fopen("print/B.txt","w");
@@ -54,8 +63,17 @@ int main()
 		printf("DIVERSE\n");
 	
 	
+	free_smat(&A);
+	free_smat(&B);
 	
+	fA=fopen("print/A.txt","w");
+	fB=fopen("print/B.txt","w");
 	
+	print_smat(fA,A);
+	print_smat(fB,B);
+	
+	fclose(fA);
+	fclose(fB);
 	
 	return 0;
 }

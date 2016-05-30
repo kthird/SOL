@@ -122,7 +122,7 @@ int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d );
    \retval -1 se si e' verificato un errore 
    \retval 0 altrimenti
  */
-int get_elem_row ( elem_t ** r,int j, double* pd );
+int get_elem_row ( elem_t * r,int j, double* pd );
 
 /**
    legge il valore nell'elemento i,j
@@ -135,6 +135,15 @@ int get_elem_row ( elem_t ** r,int j, double* pd );
    \retval 0 altrimenti
  */
 int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd );
+
+/**
+  dealloca tutta la riga di una matrice
+
+  \param pr puntatore al putatore della riga da deallocare
+            (*pr viene messo a NULL dalla funzione)
+
+ */
+void free_row (elem_t ** pr);
 
 /**
   dealloca tutta la matrice

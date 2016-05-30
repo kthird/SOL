@@ -47,16 +47,18 @@ void print_smat (FILE * f, smatrix_t * a) {
 smatrix_t * new_smat ( unsigned n, unsigned m ) {
 	smatrix_t * p;
 	int i;
-	p=malloc(sizeof(smatrix_t));
+	p=(smatrix_t*) malloc(sizeof(smatrix_t));
 	if(p==NULL)
 		errno=ENOMEM;
 	else
 	{
 		p->nrow=n;
 		p->ncol=m;
-		p->mat=malloc(n*sizeof(elem_t*));
+		p->mat=(elem_t**) malloc(n*sizeof(elem_t*));
 		for(i=0;i<n;i++)
+		{
 			p->mat[i]=NULL;
+		}
 	}
 	return p;
 }
@@ -150,7 +152,7 @@ int put_elem_row(elem_t ** r,int j, int d)
 		{
 			if(d!=0)
 			{
-				tmpElem=malloc(sizeof(elem_t*));
+				tmpElem=(elem_t*) malloc(sizeof(elem_t));
 				if(tmpElem==NULL)
 					return -1;
 				else
@@ -159,6 +161,7 @@ int put_elem_row(elem_t ** r,int j, int d)
 					tmpElem->val=d;
 					tmpElem->next=*r;
 					(*r)=tmpElem;
+					free(tmpElem);
 					return 0;
 				}
 			}
@@ -188,17 +191,22 @@ int put_elem_row(elem_t ** r,int j, int d)
 	}
 	else
 	{
-		tmpElem=malloc(sizeof(elem_t*));
-		if(tmpElem==NULL)
-			return -1;
-		else
+		if(d!=0)
 		{
-			tmpElem->col=j;
-			tmpElem->val=d;
-			tmpElem->next=NULL;
-			*r=tmpElem;
-			return 0;
+			tmpElem=(elem_t*) malloc(sizeof(elem_t));
+			if(tmpElem==NULL)
+				return -1;
+			else
+			{
+				tmpElem->col=j;
+				tmpElem->val=d;
+				tmpElem->next=*r;
+				(*r)=tmpElem;
+				return 0;
+			}
 		}
+		else
+			return 0;
 	}
 
 }
@@ -229,7 +237,7 @@ int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d )
 				{
 					if(d!=0)
 					{
-						m->mat[i]=malloc(sizeof(elem_t*));
+						m->mat[i]=(elem_t*) malloc(sizeof(elem_t));
 						if(m->mat[i]==NULL)
 							return -1;
 						else
@@ -265,24 +273,24 @@ int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d )
    \retval -1 se si e' verificato un errore 
    \retval 0 altrimenti
  */
-int get_elem_row ( elem_t ** r,int j, double* pd )
+int get_elem_row ( elem_t * r,int j, double* pd )
 {
 	/* Se trovo NULL senza che si sia verificato un errore, vuol dire che l'elemento letto è uno ZERO */
-	if(*r!=NULL)
+	if(r!=NULL)
 	{
-		if(j < (*r)->val)
+		if(j < r->col)
 		{
 			*pd=0;
 			return 0;
 		}
 		else
-			if(j == (*r)->val)
+			if(j == r->col)
 			{
-				*pd=(*r)->val;
+				*pd=r->val;
 				return 0;
 			}
 			else
-				return 0 + get_elem_row(&((*r)->next),j,pd);
+				return 0 + get_elem_row(r->next,j,pd);
 	}
 	else
 	{
@@ -321,12 +329,41 @@ int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd )
 					}
 					else
 					{
-						return get_elem_row(&(m->mat[i]),j,pd);	
+						return get_elem_row(m->mat[i],j,pd);	
 					}
 				}
 	}
 	else
+	{
 		return -1;
+	}
+}
+
+/**
+  dealloca tutta la riga di una matrice
+
+  \param pr puntatore al putatore della riga da deallocare
+            (*pr viene messo a NULL dalla funzione)
+
+ */
+void free_row (elem_t ** pr)
+{
+	if(pr!=NULL)
+	{
+		if(*pr!=NULL)
+		{
+			if((*pr)->next == NULL)
+			{
+				free(*pr);
+			}
+			else
+			{
+				free_row(&((*pr)->next));
+				free(*pr);
+			}
+			*pr = NULL;
+		}
+	}
 }
 
 /**
@@ -336,7 +373,24 @@ int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd )
             (*pm viene messo a NULL dalla funzione)
 
  */
-void free_smat (smatrix_t ** pm);
+void free_smat (smatrix_t ** pm)
+{
+	int i;
+	if(pm!=NULL)
+	{
+		if(*pm!=NULL)
+		{
+			for(i=0;i<((*pm)->nrow);i++)
+			{
+				free_row(&((*pm)->mat[i]));
+				free((*pm)->mat[i]);
+			}
+			free((*pm)->mat);
+			free(*pm);
+			*pm = NULL;
+		}
+	}
+}
 
 /** 
     somma due matrici
