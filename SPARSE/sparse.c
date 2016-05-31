@@ -6,6 +6,8 @@
 #include "sparse.h"
 #include <errno.h>
 #include <stdlib.h>
+#include <string.h>
+
 /** 
   stampa la matrice in forma canonica (FORNITA DAI DOCENTI)
 
@@ -49,23 +51,29 @@ void print_smat (FILE * f, smatrix_t * a)
   \retval p ppuntatore alla matrice appena allocata
 
 */
-smatrix_t * new_smat ( unsigned n, unsigned m ) {
-	smatrix_t * p;
-	int i;
-	p=(smatrix_t*) malloc(sizeof(smatrix_t));
-	if(p==NULL)
-		errno=ENOMEM;
-	else
+smatrix_t * new_smat ( unsigned n, unsigned m ) 
+{
+	if((n > 0) && (m>0))
 	{
-		p->nrow=n;
-		p->ncol=m;
-		p->mat=(elem_t**) malloc(n*sizeof(elem_t*));
-		for(i=0;i<n;i++)
+		smatrix_t * p;
+		int i;
+		p=(smatrix_t*) malloc(sizeof(smatrix_t));
+		if(p==NULL)
+			errno=ENOMEM;
+		else
 		{
-			p->mat[i]=NULL;
+			p->nrow=n;
+			p->ncol=m;
+			p->mat=(elem_t**) malloc(n*sizeof(elem_t*));
+			for(i=0;i<n;i++)
+			{
+				p->mat[i]=NULL;
+			}
 		}
+		return p;
 	}
-	return p;
+	else
+		return NULL;
 }
 
 /**
@@ -491,7 +499,6 @@ smatrix_t* prod_smat (smatrix_t* a, smatrix_t* b)
 	da=0;
 	db=0;
 	somma=0;
-	/** DA CONTROLLAREEEEEEEEEEEEEEEEEEEEEEEEE */
 	if(a!=NULL && b!=NULL)
 	{
 		if(a->ncol == b->nrow)
@@ -533,9 +540,13 @@ smatrix_t* prod_smat (smatrix_t* a, smatrix_t* b)
 							errore = TRUE;
 						}
 						else
+						{
+							somma=0;
 							j++;
+						}
 					}
 				}
+				somma=0;
 				i++;
 				
 			}
@@ -563,7 +574,56 @@ smatrix_t* prod_smat (smatrix_t* a, smatrix_t* b)
     \retval NULL se si è verificato un errore
 
 */
-smatrix_t* transp_smat (smatrix_t* a); 
+smatrix_t* transp_smat (smatrix_t* a)
+{
+	smatrix_t *c;
+	int i,j;
+	double da;
+	bool_t errore;
+	errore = FALSE;
+	da=0;
+	if(a!=NULL)
+	{
+		c=new_smat(a->ncol,a->nrow);
+		if(c == NULL)
+			return NULL;
+		else
+		{
+			i=0;
+			while(!errore && (i < a->nrow))
+			{
+				j=0;
+				while(!errore && (j < a->ncol))
+				{
+					if(get_elem(a,i,j,&da) == 0)
+					{
+						if(put_elem(c,j,i,da) == 0)
+						{
+							j++;
+						}
+						else
+						{
+							free_smat(&c);
+							errore = TRUE;
+						}
+					}
+					else
+					{
+						free_smat(&c);
+						errore = TRUE;
+					}
+				}
+				i++;
+			}
+			if(!errore)
+				return c;
+			else
+				return NULL; 
+		}
+	}
+	else
+		return NULL;
+}
 
 /** 
     carica da file una matrice nel formato
@@ -592,16 +652,64 @@ smatrix_t* transp_smat (smatrix_t* a);
     \retval NULL se si è verificato un errore (setta errno)
 
 */
-smatrix_t* load_smat (FILE* fd); 
+smatrix_t* load_smat (FILE* fd)
+{
+	/* Estraggo ogni record del file e li memorizzo dal terzo in poi in una stringa temporanea su cui lavorare volta volta per estrarre i campi in altre 2 stringhe di appoggio*/
+	smatrix_t * p;
+	char *sappo,*sI,*sJ;
+	int ncol;
+	int nrow;
+	int i,j;
+	double val;
+	bool_t errore;
+	
+	errore = FALSE;
+	sappo=NULL;
+	sI=NULL;
+	sJ=NULL;
+	
+	if(fd != NULL)
+	{	
+		fscanf(fd,"%d \n", &nrow);
+		fscanf(fd,"%d \n", &ncol);
+		p=new_smat(nrow,ncol);
+		if(p == NULL)
+		{
+			errno=ENOMEM;
+			return NULL;
+		}
+		else
+			while(!errore && !feof(fd))
+			{
+				fscanf(fd,"%s \n",sappo);
+				if(sappo != NULL)
+				{
+					sJ=strchr(sappo,'\n');
+					sI=(char*) (sappo-sJ);
+					printf("I: %s\nJ: %s\n",sI,sJ);
+				}
+				else
+				{
+					printf("SAPPO E' VUOTA");
+					free_smat(&p);
+					errore = TRUE;
+					errno = EINVAL;
+				}
+			
+			}
+	}
+	fclose(fd);
+	return p;
+} 
 
-/* salva una matrice su file nel formato specificato per la funzione load_smat
+/** salva una matrice su file nel formato specificato per la funzione load_smat
   
    \param fd file su cui scrivere la matrice (gia' aperto)
    \param mat la matrice da scrivere su file
 
    \retval 0 se tutto e' andato bene
    \retval -1 se si è verificato un errore (setta errno)
- */
+*/
 int save_smat (FILE* fd, smatrix_t* mat);
  
 /** 
