@@ -216,7 +216,7 @@ smatrix_t* transp_smat (smatrix_t* a);
 */
 smatrix_t* load_smat (FILE* fd); 
 
-/* salva una matrice su file nel formato specificato per la funzione load_smat
+/** salva una matrice su file nel formato specificato per la funzione load_smat
   
    \param fd file su cui scrivere la matrice (gia' aperto)
    \param mat la matrice da scrivere su file
@@ -237,7 +237,7 @@ int save_smat (FILE* fd, smatrix_t* mat);
 */
 smatrix_t* loadbin_smat (FILE* fd); 
 
-/* salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+/** salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
   
    \param fd file su cui scrivere la matrice (gia' aperto)
    \param mat la matrice da scrivere su file
