@@ -1,0 +1,53 @@
+\hypertarget{structelem}{}\section{Riferimenti per la struct elem}
+\label{structelem}\index{elem@{elem}}
+
+
+{\ttfamily \#include $<$sparse.\+h$>$}
+
+
+
+Diagramma di collaborazione per elem\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{structelem__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Attributi pubblici}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{structelem_aca409f3a7c1c9621b262a230c78ef37b}{col}
+\item 
+double \hyperlink{structelem_a52a0b099052bdf7611aa32acdb3f5449}{val}
+\item 
+struct \hyperlink{structelem}{elem} $\ast$ \hyperlink{structelem_ab9cf5c2e1c9a0ec2938275b90d39d5ca}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente.
+
+Ad esempio la matrice
+
+3.\+1 0 0 0 0 0 0 0 0 7.\+2 0 9.\+0
+
+è rappresentata come
+
+0 $\vert$ ------$>$(\mbox{[}0,3.\+1\mbox{]} , N\+U\+LL) 1 $\vert$ N\+U\+LL 2 $\vert$ ------$>$(\mbox{[}1,7.\+2\mbox{]} , --)--$>$( \mbox{[}3,9.\+0\mbox{]} ,N\+U\+LL)elemento della matrice sparsa 
+
+\subsection{Documentazione dei membri dato}
+\index{elem@{elem}!col@{col}}
+\index{col@{col}!elem@{elem}}
+\subsubsection[{\texorpdfstring{col}{col}}]{\setlength{\rightskip}{0pt plus 5cm}unsigned elem\+::col}\hypertarget{structelem_aca409f3a7c1c9621b262a230c78ef37b}{}\label{structelem_aca409f3a7c1c9621b262a230c78ef37b}
+indice di colonna \index{elem@{elem}!next@{next}}
+\index{next@{next}!elem@{elem}}
+\subsubsection[{\texorpdfstring{next}{next}}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf elem}$\ast$ elem\+::next}\hypertarget{structelem_ab9cf5c2e1c9a0ec2938275b90d39d5ca}{}\label{structelem_ab9cf5c2e1c9a0ec2938275b90d39d5ca}
+puntatore al prossimo elemento nella riga \index{elem@{elem}!val@{val}}
+\index{val@{val}!elem@{elem}}
+\subsubsection[{\texorpdfstring{val}{val}}]{\setlength{\rightskip}{0pt plus 5cm}double elem\+::val}\hypertarget{structelem_a52a0b099052bdf7611aa32acdb3f5449}{}\label{structelem_a52a0b099052bdf7611aa32acdb3f5449}
+valore dell\textquotesingle{}elemento 
+
+La documentazione per questa struct è stata generata a partire dal seguente file\+:\begin{DoxyCompactItemize}
+\item 
+sparse.\+h\end{DoxyCompactItemize}
