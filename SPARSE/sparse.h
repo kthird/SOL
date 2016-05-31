@@ -95,7 +95,7 @@ bool_t is_equal_smat ( smatrix_t * a , smatrix_t * b );
    \retval -1 se si e' verificato un errore 
    \retval 0 altrimenti
  */
-int put_elem_row(elem_t ** r,int j, int d);
+int put_elem_row(elem_t ** r,int j, double d);
 
 /**
    scrive un valore nell'elemento i,j, per mantenere la

@@ -45,13 +45,21 @@ int main()
 	fA=fopen("print/A.txt","w");
 	fB=fopen("print/B.txt","w");
 	fC=fopen("print/C.txt","w");
+	
 	fP=fopen("DATA/data1.txt","r");
 	
 	P=load_smat(fP);
 	
+	fP=fopen("print/P.txt","w");
+	
 	print_smat(fA,A);
 	print_smat(fB,B);
 	print_smat(fC,C);
+	
+	if(save_smat(fP,P)==0)
+		printf("SALVATA\n");
+	else
+		printf("NON SALVATA\n");
 	
 	fclose(fA);
 	fclose(fB);
