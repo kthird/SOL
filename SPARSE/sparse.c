@@ -789,7 +789,7 @@ int save_smat (FILE* fd, smatrix_t* mat)
 		return -1;
 	}
 }
- 
+
 /** 
     carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
 
@@ -799,7 +799,120 @@ int save_smat (FILE* fd, smatrix_t* mat)
     \retval NULL se si è verificato un errore (setta errno)
 
 */
-smatrix_t* loadbin_smat (FILE* fd);
+smatrix_t* loadbin_smat (FILE* fd)
+{
+	/**
+		mantenendo lo stesso formato delle matrici scritte su file di testo, nel file binario sarà presente un unico blocco di byte da cui si procede a leggere in questo modo:
+		il primo blocco di dimensione int è il numrow
+		il secondo blocco di dimensione int è il numcol
+		il resto del blocco viene letto un pezzo alla volta come segue:
+			un blocco di dimensione int per l'indice di riga
+			un blocco di dimensione int per l'indice di colonna
+			e un blocco di dimensione double per il valore dell'elemento
+		si leggerà tutto il blocco finchè non finisce il file
+	*/
+	
+	smatrix_t * p;
+	int ncol;
+	int nrow;
+	int i,j;
+	double val;
+	bool_t errore;
+		
+	errore = FALSE;
+	
+	ncol=0;
+	nrow=0;
+	i=0;
+	j=0;
+	val=0;
+	
+		
+	if(fd != NULL)
+	{	
+		
+	    if(fread(&nrow, sizeof(int),1, fd) != 0)
+	    {
+	    	if(fread(&ncol, sizeof(int),1, fd) !=0)
+	    	{
+				p=new_smat(nrow,ncol);
+				if(p == NULL)
+				{
+					fclose(fd);
+					errno=ENOMEM;
+					return NULL;
+				}
+			}
+			else
+			{
+				fclose(fd);
+				errno=EINVAL;
+				return NULL;
+			}
+		}
+		else
+		{
+			fclose(fd);
+			errno=EINVAL;
+			return NULL;
+		}
+		
+		while(!errore && !feof(fd))
+		{
+			if(fread(&i, sizeof(int),1, fd) != 0)
+			{
+				if(fread(&j, sizeof(int),1, fd) !=0)
+				{
+					if(fread(&val, sizeof(double),1, fd) !=0)
+					{
+						if(put_elem(p,i,j,val) != 0)
+						{
+							free_smat(&p);
+							errno = EINVAL;
+							errore = TRUE;
+						}
+					}
+					else
+					{
+						free_smat(&p);
+						errno = EINVAL;
+						errore = TRUE;
+					}
+				}
+				else
+				{
+					free_smat(&p);
+					errno = EINVAL;
+					errore = TRUE;
+				}
+			}
+			else
+			{
+				free_smat(&p);
+				errno = EINVAL;
+				errore = TRUE;
+			}
+		}
+		if(errore)
+		{
+			fclose(fd);
+			return NULL;
+		}
+		else
+		{
+			fclose(fd);
+			return p;
+		}
+	}
+	else
+	{
+		errno = EBADF;
+		fclose(fd);
+		return NULL;
+	}
+	
+	
+}
 
 /** salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
   
@@ -809,6 +922,73 @@ smatrix_t* loadbin_smat (FILE* fd);
    \retval 0 se tutto e' andato bene
    \retval -1 se si è verificato un errore (setta errno)
  */
-int savebin_smat (FILE* fd, smatrix_t* mat);  
-
-
+int savebin_smat (FILE* fd, smatrix_t* mat)
+{
+	int i,j;
+	double val;
+	bool_t errore;
+		
+	errore = FALSE;
+	
+	val=0;
+	
+		
+	if(fd != NULL)
+	{	
+		if(mat!=NULL)
+		{
+			 if(fprintf(mat->nrow, sizeof(int),1, fd) != 0)
+			 {
+			 	if(fprintf(mat->ncol, sizeof(int),1, fd) !=0)
+			 	{
+			 	/**  CONTINUARE DA QUIIIIIIIIIIIIIIIIIII   */
+			i=0;
+			while(!errore && (i < mat->nrow))
+			{
+				j=0;
+				while(!errore && (j < mat->ncol))
+				{
+					if(get_elem(mat,i,j,&val) == 0)
+					{
+						if(val!=0)
+						{
+							fprintf(fd,"%d ",i);
+							fprintf(fd,"%d ",j);
+							fprintf(fd,"%lf\n",val);
+						}
+					}
+					else
+					{
+						errno = EINVAL;
+						errore = TRUE;
+					}
+					j++;
+				}
+				i++;
+			}
+			if(errore)
+			{
+				fclose(fd);
+				return -1;
+			}
+			else
+			{
+				fclose(fd);
+				return 0;
+			}
+		}
+		else
+		{
+			errno = EINVAL;
+			fclose(fd);
+			return -1;
+		}
+				
+	}
+	else
+	{
+		errno = EBADF;
+		fclose(fd);
+		return -1;
+	}
+}
