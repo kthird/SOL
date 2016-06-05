@@ -7,7 +7,7 @@
 # inserire i nomi di tutti i file da consegnare
 # se si usa piu' di un file modificare adeguatamente il makefile
 
-FILE_DA_CONSEGNARE=sparse.c
+FILE_DA_CONSEGNARE=sparse.c sparse.h doxy/.
 
 # preferenze compilatore e flag di compilazione
 CC=gcc
@@ -40,7 +40,7 @@ test_four.o: test_four.c sparse.h
 # DA COMPLETARE inserire qua i target per eventuali file aggiuntivi
 # (anche eventuali test aggiuntivi definiti dallo studente) 
 
-sparse.o: sparse.c sparse.h
+sparse.o: sparse.c sparse.h 
 
 
 

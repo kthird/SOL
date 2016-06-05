@@ -802,14 +802,17 @@ int save_smat (FILE* fd, smatrix_t* mat)
 smatrix_t* loadbin_smat (FILE* fd)
 {
 	/**
-		mantenendo lo stesso formato delle matrici scritte su file di testo, nel file binario sarà presente un unico blocco di byte da cui si procede a leggere in questo modo:
-		il primo blocco di dimensione int è il numrow
-		il secondo blocco di dimensione int è il numcol
-		il resto del blocco viene letto un pezzo alla volta come segue:
-			un blocco di dimensione int per l'indice di riga
-			un blocco di dimensione int per l'indice di colonna
-			e un blocco di dimensione double per il valore dell'elemento
-		si leggerà tutto il blocco finchè non finisce il file
+		Il file binario si presenta come un'unica stringa di bit
+			110010101110..............010101
+		
+		i primi sizeof(int) bit  indicano il numrow
+		i secondi sizeof(int) bit  indicano il numcol
+		i successivi bit indicano il contenuto della matrice esono disposti come segue:
+			un blocco di sizeof(int) per l'indice di riga
+			un blocco di sizeof(int) per l'indice di colonna
+			e un blocco di sizeof(double) per il valore dell'elemento
+		e così via per ogni elemento della matrice
+		
 	*/
 	
 	smatrix_t * p;
@@ -827,20 +830,61 @@ smatrix_t* loadbin_smat (FILE* fd)
 	j=0;
 	val=0;
 	
-		
 	if(fd != NULL)
 	{	
-		
-	    if(fread(&nrow, sizeof(int),1, fd) != 0)
+		if(fread(&nrow, sizeof(int),1, fd) != 0)
 	    {
 	    	if(fread(&ncol, sizeof(int),1, fd) !=0)
 	    	{
-				p=new_smat(nrow,ncol);
+	    		p=new_smat(nrow,ncol);
 				if(p == NULL)
 				{
 					fclose(fd);
 					errno=ENOMEM;
 					return NULL;
+				}
+				else
+				{
+					while(!errore && !feof(fd))
+					{
+						if(fread(&i, sizeof(int),1, fd) != 0)
+						{
+							if(fread(&j, sizeof(int),1, fd) !=0)
+							{
+								if(fread(&val, sizeof(double),1, fd) !=0)
+								{
+									if(put_elem(p,i,j,val) != 0)
+									{
+										free_smat(&p);
+										errno = EINVAL;
+										errore = TRUE;
+									}
+								}
+								else
+								{
+									free_smat(&p);
+									errno = EINVAL;
+									errore = TRUE;
+								}
+							}
+							else
+							{
+								free_smat(&p);
+								errno = EINVAL;
+								errore = TRUE;
+							}
+						}
+					}
+					if(errore)
+					{
+						fclose(fd);
+						return NULL;
+					}
+					else
+					{
+						fclose(fd);
+						return p;
+					}
 				}
 			}
 			else
@@ -857,52 +901,7 @@ smatrix_t* loadbin_smat (FILE* fd)
 			return NULL;
 		}
 		
-		while(!errore && !feof(fd))
-		{
-			if(fread(&i, sizeof(int),1, fd) != 0)
-			{
-				if(fread(&j, sizeof(int),1, fd) !=0)
-				{
-					if(fread(&val, sizeof(double),1, fd) !=0)
-					{
-						if(put_elem(p,i,j,val) != 0)
-						{
-							free_smat(&p);
-							errno = EINVAL;
-							errore = TRUE;
-						}
-					}
-					else
-					{
-						free_smat(&p);
-						errno = EINVAL;
-						errore = TRUE;
-					}
-				}
-				else
-				{
-					free_smat(&p);
-					errno = EINVAL;
-					errore = TRUE;
-				}
-			}
-			else
-			{
-				free_smat(&p);
-				errno = EINVAL;
-				errore = TRUE;
-			}
-		}
-		if(errore)
-		{
-			fclose(fd);
-			return NULL;
-		}
-		else
-		{
-			fclose(fd);
-			return p;
-		}
+		
 	}
 	else
 	{
@@ -937,44 +936,57 @@ int savebin_smat (FILE* fd, smatrix_t* mat)
 	{	
 		if(mat!=NULL)
 		{
-			 if(fprintf(mat->nrow, sizeof(int),1, fd) != 0)
+			 if(fwrite(&(mat->nrow), sizeof(int),1, fd) != 0)
 			 {
-			 	if(fprintf(mat->ncol, sizeof(int),1, fd) !=0)
+			 	if(fwrite(&(mat->ncol), sizeof(int),1, fd) !=0)
 			 	{
-			 	/**  CONTINUARE DA QUIIIIIIIIIIIIIIIIIII   */
-			i=0;
-			while(!errore && (i < mat->nrow))
-			{
-				j=0;
-				while(!errore && (j < mat->ncol))
-				{
-					if(get_elem(mat,i,j,&val) == 0)
+			 	    i=0;
+					while(!errore && (i < mat->nrow))
 					{
-						if(val!=0)
+						j=0;
+						while(!errore && (j < mat->ncol))
 						{
-							fprintf(fd,"%d ",i);
-							fprintf(fd,"%d ",j);
-							fprintf(fd,"%lf\n",val);
+							if(get_elem(mat,i,j,&val) == 0)
+							{
+								if(val!=0)
+								{
+									fwrite(&i,sizeof(int),1,fd);
+									fwrite(&j,sizeof(int),1,fd);
+									fwrite(&val,sizeof(double),1,fd);
+								}
+							}
+							else
+							{
+								errno = EINVAL;
+								errore = TRUE;
+							}
+							j++;
 						}
+						i++;
+					}
+					if(errore)
+					{
+						fclose(fd);
+						return -1;
 					}
 					else
 					{
-						errno = EINVAL;
-						errore = TRUE;
+						fclose(fd);
+						return 0;
 					}
-					j++;
 				}
-				i++;
-			}
-			if(errore)
-			{
-				fclose(fd);
-				return -1;
+				else
+				{
+					fclose(fd);
+					errno = EINVAL;
+					return -1;
+				}
 			}
 			else
 			{
 				fclose(fd);
-				return 0;
+				errno = EINVAL;
+				return -1;
 			}
 		}
 		else

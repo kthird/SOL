@@ -12,14 +12,13 @@
 int main()
 {
 
-	smatrix_t *A,*B,*C,*P;
+	smatrix_t *A,*Bin;
 	
 	
-	FILE *fA,*fB,*fC,*fP;
+	FILE *fA,*fBin;
 	
 	
 	A=new_smat(4,3);
-	B=new_smat(3,4);
 	
 	printf("%s",((put_elem(A,0,0,1)==0)?"INSERITO \n":"ERRORE\n"));
 	printf("%s",((put_elem(A,0,1,1)==0)?"INSERITO \n":"ERRORE\n"));
@@ -28,48 +27,38 @@ int main()
 	printf("%s",((put_elem(A,2,2,1)==0)?"INSERITO \n":"ERRORE\n"));
 	printf("%s",((put_elem(A,3,1,1)==0)?"INSERITO \n":"ERRORE\n"));
 	
-	printf("%s",((put_elem(B,0,1,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(B,0,3,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(B,1,0,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(B,1,2,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(B,2,0,1)==0)?"INSERITO \n":"ERRORE\n"));
 	
 	
-	C=transp_smat(A);
+	fA=fopen("print/Ab.bin","wb");
 	
-	if(C!=NULL)
-		printf("MATRICE TRASPOSTA \n");
-	else
-		printf("ERRORE DI TRASPOSIZIONE\n");
-	
-	fA=fopen("print/A.txt","w");
-	fB=fopen("print/B.txt","w");
-	fC=fopen("print/C.txt","w");
-	
-	fP=fopen("DATA/data1.txt","r");
-	
-	P=load_smat(fP);
-	
-	fP=fopen("print/P.txt","w");
-	
-	print_smat(fA,A);
-	print_smat(fB,B);
-	print_smat(fC,C);
-	
-	if(save_smat(fP,P)==0)
-		printf("SALVATA\n");
+
+	if(savebin_smat(fA,A)==0)
+		printf("SALVATA IN BINARIO\n");
 	else
 		printf("NON SALVATA\n");
 	
-	fclose(fA);
-	fclose(fB);
-	fclose(fC);
+	fBin=fopen("print/Ab.bin","rb");
+	
+	if((Bin=loadbin_smat(fBin))!=NULL)
+	{
+		fA=fopen("print/A.txt","w");
+		fBin=fopen("print/Bin.txt","w");
+		print_smat(fA,A);
+		print_smat(fBin,Bin);
+		if(is_equal_smat(A,Bin)==TRUE)
+			printf("UGUALI\n");
+		else
+			printf("DIVERSE\n");
+		fclose(fA);
+		fclose(fBin);
+	}
+	else
+		printf("BIN VUOTA");
+	
 	
 		
 	free_smat(&A);
-	free_smat(&B);
-	free_smat(&C);
-	free_smat(&P);
+	free_smat(&Bin);
 	
 	return 0;
 }
