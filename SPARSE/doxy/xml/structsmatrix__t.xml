@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structsmatrix__t" kind="struct" language="C++" prot="public">
+    <compoundname>smatrix_t</compoundname>
+    <includes refid="sparse_8h" local="no">sparse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" prot="public" static="no" mutable="no">
+        <type><ref refid="structelem" kindref="compound">elem_t</ref> **</type>
+        <definition>elem_t** smatrix_t::mat</definition>
+        <argsstring></argsstring>
+        <name>mat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>puntatore all&apos;array delle righe </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="48" column="1" bodyfile="sparse.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smatrix_t::nrow</definition>
+        <argsstring></argsstring>
+        <name>nrow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>numero di righe </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="50" column="1" bodyfile="sparse.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int smatrix_t::ncol</definition>
+        <argsstring></argsstring>
+        <name>ncol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>numero di colonne </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="52" column="1" bodyfile="sparse.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>rappresentazione della matrice sparsa </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>smatrix_t</label>
+        <link refid="structsmatrix__t"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>mat</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>elem</label>
+        <link refid="structelem"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="sparse.h" line="46" column="1" bodyfile="sparse.h" bodystart="46" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" prot="public" virt="non-virtual"><scope>smatrix_t</scope><name>mat</name></member>
+      <member refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" prot="public" virt="non-virtual"><scope>smatrix_t</scope><name>ncol</name></member>
+      <member refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" prot="public" virt="non-virtual"><scope>smatrix_t</scope><name>nrow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

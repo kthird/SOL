@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structelem" kind="struct" language="C++" prot="public">
+    <compoundname>elem</compoundname>
+    <includes refid="sparse_8h" local="no">sparse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structelem_1aca409f3a7c1c9621b262a230c78ef37b" prot="public" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned elem::col</definition>
+        <argsstring></argsstring>
+        <name>col</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>indice di colonna </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="37" column="1" bodyfile="sparse.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelem_1a52a0b099052bdf7611aa32acdb3f5449" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double elem::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>valore dell&apos;elemento </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="39" column="1" bodyfile="sparse.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structelem" kindref="compound">elem</ref> *</type>
+        <definition>struct elem* elem::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>puntatore al prossimo elemento nella riga </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="41" column="1" bodyfile="sparse.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente.</para><para>Ad esempio la matrice</para><para>3.1 0 0 0 0 0 0 0 0 7.2 0 9.0</para><para>è rappresentata come</para><para>0 | <mdash/><mdash/>&gt;([0,3.1] , NULL) 1 | NULL 2 | <mdash/><mdash/>&gt;([1,7.2] , <ndash/>)<ndash/>&gt;( [3,9.0] ,NULL)elemento della matrice sparsa </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>elem</label>
+        <link refid="structelem"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="sparse.h" line="35" column="1" bodyfile="sparse.h" bodystart="35" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" prot="public" virt="non-virtual"><scope>elem</scope><name>col</name></member>
+      <member refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" prot="public" virt="non-virtual"><scope>elem</scope><name>next</name></member>
+      <member refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" prot="public" virt="non-virtual"><scope>elem</scope><name>val</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

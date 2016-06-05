@@ -9,40 +9,6 @@
 #include <string.h>
 
 /** 
-  stampa la matrice in forma canonica (FORNITA DAI DOCENTI)
-
-  \param l putatore alla matrice da stampare
-  \param f puntatore al file su cui scrivere
-
-*/
-static void print_elem_r(FILE * f, elem_t* p)  
-{
-	if ( p == NULL ) 
-		return ;
-	fprintf(f, "<%d,%f>",p->col,p->val);
-	print_elem_r(f,p->next);
-	return;
-}
-void print_smat (FILE * f, smatrix_t * a) 
-{ 
-	int i;
-	  
-	if ( f == NULL || a == NULL )
-		return ;
-  
-	for (i=0; i< a->nrow ; i++) 
-	{
-		if(a->mat[i]!=NULL) 
-		{
-			fprintf(f,"%d: ",i);
-			print_elem_r(f,a->mat[i]);
-			fprintf(f,"\n");
-		}
-	} 
-	fprintf(f,"\n");
-} 
-
-/** 
   crea una nuova matrice vuota
   \param n numero di righe
   \param m numero di colonne
@@ -174,7 +140,6 @@ int put_elem_row(elem_t ** r,int j, double d)
 					tmpElem->val=d;
 					tmpElem->next=*r;
 					(*r)=tmpElem;
-					free(tmpElem);
 					return 0;
 				}
 			}
@@ -239,10 +204,10 @@ int put_elem ( smatrix_t * m , unsigned i, unsigned j, double d )
 {
 	if(m!=NULL)
 	{
-		if(i >= m->nrow)
+		if((i >= m->nrow) || (i < 0))
 			return -1;
 		else
-			if(j >= m->ncol)
+			if((j >= m->ncol) || (j < 0))
 				return -1;
 			else
 			{
@@ -328,10 +293,10 @@ int get_elem ( smatrix_t * m , unsigned i, unsigned j, double* pd )
 	/* Se la riga è NULL vuol dire che ha tutti ZERI */
 	if(m!=NULL)
 	{
-		if(i >= m->nrow)
+		if((i >= m->nrow) || (i < 0))
 				return -1;
 			else
-				if(j >= m->ncol)
+				if((j >= m->ncol) || (j < 0))
 					return -1;
 				else
 				{
@@ -696,19 +661,16 @@ smatrix_t* load_smat (FILE* fd)
 			}
 			if(errore)
 			{
-				fclose(fd);
 				return NULL;
 			}
 			else
 			{
-				fclose(fd);
 				return p;
 			}
 	}
 	else
 	{
 		errno = EBADF;
-		fclose(fd);
 		return NULL;
 	}
 	
@@ -765,19 +727,16 @@ int save_smat (FILE* fd, smatrix_t* mat)
 			}
 			if(errore)
 			{
-				fclose(fd);
 				return -1;
 			}
 			else
 			{
-				fclose(fd);
 				return 0;
 			}
 		}
 		else
 		{
 			errno = EINVAL;
-			fclose(fd);
 			return -1;
 		}
 				
@@ -785,7 +744,6 @@ int save_smat (FILE* fd, smatrix_t* mat)
 	else
 	{
 		errno = EBADF;
-		fclose(fd);
 		return -1;
 	}
 }
@@ -877,26 +835,22 @@ smatrix_t* loadbin_smat (FILE* fd)
 					}
 					if(errore)
 					{
-						fclose(fd);
 						return NULL;
 					}
 					else
 					{
-						fclose(fd);
 						return p;
 					}
 				}
 			}
 			else
 			{
-				fclose(fd);
 				errno=EINVAL;
 				return NULL;
 			}
 		}
 		else
 		{
-			fclose(fd);
 			errno=EINVAL;
 			return NULL;
 		}
@@ -906,7 +860,6 @@ smatrix_t* loadbin_smat (FILE* fd)
 	else
 	{
 		errno = EBADF;
-		fclose(fd);
 		return NULL;
 	}
 	
@@ -921,6 +874,10 @@ smatrix_t* loadbin_smat (FILE* fd)
    \retval 0 se tutto e' andato bene
    \retval -1 se si è verificato un errore (setta errno)
  */
+ 
+/**
+	salva la matrice binaria nel formato descritto nella loadbin_smat
+*/
 int savebin_smat (FILE* fd, smatrix_t* mat)
 {
 	int i,j;
@@ -966,25 +923,21 @@ int savebin_smat (FILE* fd, smatrix_t* mat)
 					}
 					if(errore)
 					{
-						fclose(fd);
 						return -1;
 					}
 					else
 					{
-						fclose(fd);
 						return 0;
 					}
 				}
 				else
 				{
-					fclose(fd);
 					errno = EINVAL;
 					return -1;
 				}
 			}
 			else
 			{
-				fclose(fd);
 				errno = EINVAL;
 				return -1;
 			}
@@ -992,7 +945,6 @@ int savebin_smat (FILE* fd, smatrix_t* mat)
 		else
 		{
 			errno = EINVAL;
-			fclose(fd);
 			return -1;
 		}
 				
@@ -1000,7 +952,6 @@ int savebin_smat (FILE* fd, smatrix_t* mat)
 	else
 	{
 		errno = EBADF;
-		fclose(fd);
 		return -1;
 	}
 }

@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structelem">
+<title>elem struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="sparse_8h">&lt;sparse.h&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for elem</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="structelem__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for elem</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="structelem__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Attributi pubblici</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>unsigned col</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>double val</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct elem * next</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Descrizione dettagliata</title>
+
+<para>Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente.</para>
+
+<para>Ad esempio la matrice</para>
+
+<para>3.1 0 0 0 0 0 0 0 0 7.2 0 9.0</para>
+
+<para>è rappresentata come</para>
+
+<para>0 | &#8212;&#8212;&gt;([0,3.1] , NULL) 1 | NULL 2 | &#8212;&#8212;&gt;([1,7.2] , &#8211;)&#8211;&gt;( [3,9.0] ,NULL)elemento della matrice sparsa </para>
+                <para>Definition at line 35 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Documentazione dei membri dato</title>
+            <simplesect>
+                <title>unsigned elem::col</title>                
+<para>indice di colonna </para>
+
+                <para>Definition at line 37 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>double elem::val</title>                
+<para>valore dell&apos;elemento </para>
+
+                <para>Definition at line 39 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>struct elem* elem::next</title>                
+<para>puntatore al prossimo elemento nella riga </para>
+
+                <para>Definition at line 41 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+</section>

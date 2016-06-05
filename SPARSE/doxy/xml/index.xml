@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="structelem" kind="struct"><name>elem</name>
+    <member refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" kind="variable"><name>col</name></member>
+    <member refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" kind="variable"><name>val</name></member>
+    <member refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="structsmatrix__t" kind="struct"><name>smatrix_t</name>
+    <member refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" kind="variable"><name>mat</name></member>
+    <member refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" kind="variable"><name>nrow</name></member>
+    <member refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" kind="variable"><name>ncol</name></member>
+  </compound>
+  <compound refid="sparse_8c" kind="file"><name>sparse.c</name>
+    <member refid="sparse_8c_1aacd91b4066e949852144fb80cf11420b" kind="function"><name>print_elem_r</name></member>
+    <member refid="sparse_8c_1a908b6cb8261c0131e8c71d842a4381c1" kind="function"><name>print_smat</name></member>
+    <member refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kind="function"><name>new_smat</name></member>
+    <member refid="sparse_8c_1a4232552afd0fdc736d90fded1f272759" kind="function"><name>is_equal_smat</name></member>
+    <member refid="sparse_8c_1a098b33ab9b543c109d655b9afc081bb7" kind="function"><name>put_elem_row</name></member>
+    <member refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kind="function"><name>put_elem</name></member>
+    <member refid="sparse_8c_1a23f27b0ac759a8c6cf94ca624a7367d3" kind="function"><name>get_elem_row</name></member>
+    <member refid="sparse_8c_1a03efbfc08da3aa936597103784ddbe45" kind="function"><name>get_elem</name></member>
+    <member refid="sparse_8c_1a58e3ead06f0ecc684dfc90538947343a" kind="function"><name>free_row</name></member>
+    <member refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kind="function"><name>free_smat</name></member>
+    <member refid="sparse_8c_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" kind="function"><name>sum_smat</name></member>
+    <member refid="sparse_8c_1a633a6b934732ad44f5cf73e9c55c54e9" kind="function"><name>prod_smat</name></member>
+    <member refid="sparse_8c_1a7b9192596db334fe30a652e05ab45987" kind="function"><name>transp_smat</name></member>
+    <member refid="sparse_8c_1ac5049cd89f46bff8cd028382edf931e6" kind="function"><name>load_smat</name></member>
+    <member refid="sparse_8c_1a9ee2597119d106f30a1ba43ba3d6c642" kind="function"><name>save_smat</name></member>
+    <member refid="sparse_8c_1a1bb39d59a532967d5f507a19700aafb1" kind="function"><name>loadbin_smat</name></member>
+    <member refid="sparse_8c_1a8529b8bb59f8d259731ef88e5deb6d57" kind="function"><name>savebin_smat</name></member>
+  </compound>
+  <compound refid="sparse_8h" kind="file"><name>sparse.h</name>
+    <member refid="sparse_8h_1af6a258d8f3ee5206d682d799316314b1" kind="enum"><name>bool</name></member>
+    <member refid="sparse_8h_1af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a" kind="enumvalue"><name>FALSE</name></member>
+    <member refid="sparse_8h_1af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839" kind="enumvalue"><name>TRUE</name></member>
+    <member refid="sparse_8h_1a4ed992ceefff896353c1727143529d16" kind="typedef"><name>bool_t</name></member>
+    <member refid="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" kind="typedef"><name>elem_t</name></member>
+    <member refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kind="function"><name>print_smat</name></member>
+    <member refid="sparse_8h_1a13f7785dace4a2981b9b6f810ca34115" kind="function"><name>new_smat</name></member>
+    <member refid="sparse_8h_1a4232552afd0fdc736d90fded1f272759" kind="function"><name>is_equal_smat</name></member>
+    <member refid="sparse_8h_1a098b33ab9b543c109d655b9afc081bb7" kind="function"><name>put_elem_row</name></member>
+    <member refid="sparse_8h_1a19ab77e854480bb2c9e5032bc3f0ab9f" kind="function"><name>put_elem</name></member>
+    <member refid="sparse_8h_1a23f27b0ac759a8c6cf94ca624a7367d3" kind="function"><name>get_elem_row</name></member>
+    <member refid="sparse_8h_1a03efbfc08da3aa936597103784ddbe45" kind="function"><name>get_elem</name></member>
+    <member refid="sparse_8h_1a58e3ead06f0ecc684dfc90538947343a" kind="function"><name>free_row</name></member>
+    <member refid="sparse_8h_1ad3596ce2e271a24fada5c85f3b8ce0af" kind="function"><name>free_smat</name></member>
+    <member refid="sparse_8h_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" kind="function"><name>sum_smat</name></member>
+    <member refid="sparse_8h_1a633a6b934732ad44f5cf73e9c55c54e9" kind="function"><name>prod_smat</name></member>
+    <member refid="sparse_8h_1a7b9192596db334fe30a652e05ab45987" kind="function"><name>transp_smat</name></member>
+    <member refid="sparse_8h_1ac5049cd89f46bff8cd028382edf931e6" kind="function"><name>load_smat</name></member>
+    <member refid="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642" kind="function"><name>save_smat</name></member>
+    <member refid="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" kind="function"><name>loadbin_smat</name></member>
+    <member refid="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" kind="function"><name>savebin_smat</name></member>
+  </compound>
+</doxygenindex>

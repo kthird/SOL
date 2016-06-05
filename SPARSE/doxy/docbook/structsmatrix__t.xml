@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="structsmatrix__t">
+<title>smatrix_t struct Reference</title>
+<para>
+    <programlisting>#include <link linkend="sparse_8h">&lt;sparse.h&gt;</link></programlisting>
+</para>
+<para>Inheritance diagram for smatrix_t</para>
+<para>
+    <figure>
+        <title>Inheritance graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="structsmatrix__t__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Collaboration diagram for smatrix_t</para>
+<para>
+    <figure>
+        <title>Collaboration graph</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="structsmatrix__t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Attributi pubblici</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>elem_t ** mat</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int nrow</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int ncol</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <simplesect>
+            <title>Descrizione dettagliata</title>
+
+<para>rappresentazione della matrice sparsa </para>
+                <para>Definition at line 46 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+        </simplesect>
+        <section>
+            <title>Documentazione dei membri dato</title>
+            <simplesect>
+                <title>elem_t** smatrix_t::mat</title>                
+<para>puntatore all&apos;array delle righe </para>
+
+                <para>Definition at line 48 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int smatrix_t::nrow</title>                
+<para>numero di righe </para>
+
+                <para>Definition at line 50 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+            </simplesect>
+            <simplesect>
+                <title>int smatrix_t::ncol</title>                
+<para>numero di colonne </para>
+
+                <para>Definition at line 52 of file sparse.h</para>
+                <para>The Documentation for this struct was generated from the following file: </para>
+                <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
+            </simplesect>
+        </section>
+</section>

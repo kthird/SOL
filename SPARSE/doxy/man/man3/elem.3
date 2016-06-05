@@ -1,0 +1,46 @@
+.TH "elem" 3 "Dom 5 Giu 2016" "Version 1" "SOL - SPARSE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+elem \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sparse\&.h>\fP
+.SS "Attributi pubblici"
+
+.in +1c
+.ti -1c
+.RI "unsigned \fBcol\fP"
+.br
+.ti -1c
+.RI "double \fBval\fP"
+.br
+.ti -1c
+.RI "struct \fBelem\fP * \fBnext\fP"
+.br
+.in -1c
+.SH "Descrizione dettagliata"
+.PP 
+Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga\&. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente\&.
+.PP
+Ad esempio la matrice
+.PP
+3\&.1 0 0 0 0 0 0 0 0 7\&.2 0 9\&.0
+.PP
+è rappresentata come
+.PP
+0 | ------>([0,3\&.1] , NULL) 1 | NULL 2 | ------>([1,7\&.2] , --)-->( [3,9\&.0] ,NULL)elemento della matrice sparsa 
+.SH "Documentazione dei membri dato"
+.PP 
+.SS "unsigned elem::col"
+indice di colonna 
+.SS "struct \fBelem\fP* elem::next"
+puntatore al prossimo elemento nella riga 
+.SS "double elem::val"
+valore dell'elemento 
+
+.SH "Autore"
+.PP 
+Generato automaticamente da Doxygen per SOL - SPARSE a partire dal codice sorgente\&.

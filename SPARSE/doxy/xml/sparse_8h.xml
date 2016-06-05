@@ -1,0 +1,924 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="sparse_8h" kind="file" language="C++">
+    <compoundname>sparse.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includedby refid="sparse_8c" local="yes">sparse.c</includedby>
+    <incdepgraph>
+      <node id="7">
+        <label>sparse.h</label>
+        <link refid="sparse.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structelem" prot="public">elem</innerclass>
+    <innerclass refid="structsmatrix__t" prot="public">smatrix_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="sparse_8h_1af6a258d8f3ee5206d682d799316314b1" prot="public" static="no">
+        <name>bool</name>
+        <enumvalue id="sparse_8h_1af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a" prot="public">
+          <name>FALSE</name>
+          <initializer>=0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="sparse_8h_1af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839" prot="public">
+          <name>TRUE</name>
+          <initializer>=1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>header file primo frammento </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>sol-lab 2015/16valori booleani </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="11" column="1" bodyfile="sparse.h" bodystart="11" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="sparse_8h_1a4ed992ceefff896353c1727143529d16" prot="public" static="no">
+        <type>enum bool</type>
+        <definition>typedef enum bool  bool_t</definition>
+        <argsstring></argsstring>
+        <name>bool_t</name>
+        <briefdescription>
+<para>header file primo frammento </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>sol-lab 2015/16valori booleani </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" prot="public" static="no">
+        <type>struct <ref refid="structelem" kindref="compound">elem</ref></type>
+        <definition>typedef struct elem  elem_t</definition>
+        <argsstring></argsstring>
+        <name>elem_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente.</para><para>Ad esempio la matrice</para><para>3.1 0 0 0 0 0 0 0 0 7.2 0 9.0</para><para>è rappresentata come</para><para>0 | <mdash/><mdash/>&gt;([0,3.1] , NULL) 1 | NULL 2 | <mdash/><mdash/>&gt;([1,7.2] , <ndash/>)<ndash/>&gt;( [3,9.0] ,NULL)elemento della matrice sparsa </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="sparse_8h_1abe7c306fd1022398d6ee66088635d548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void print_smat</definition>
+        <argsstring>(FILE *f, smatrix_t *l)</argsstring>
+        <name>print_smat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>stampa la matrice in forma canonica (FORNITA DAI DOCENTI)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>putatore alla matrice da stampare </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al file su cui scrivere </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="62" column="1" bodyfile="sparse.c" bodystart="26" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a13f7785dace4a2981b9b6f810ca34115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+        <definition>smatrix_t* new_smat</definition>
+        <argsstring>(unsigned n, unsigned m)</argsstring>
+        <name>new_smat</name>
+        <param>
+          <type>unsigned</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>crea una nuova matrice vuota <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numero di righe </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>numero di colonne</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si e&apos; verificato un errore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ppuntatore alla matrice appena allocata </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="73" column="1" bodyfile="sparse.c" bodystart="54" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a4232552afd0fdc736d90fded1f272759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool_t</type>
+        <definition>bool_t is_equal_smat</definition>
+        <argsstring>(smatrix_t *a, smatrix_t *b)</argsstring>
+        <name>is_equal_smat</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Controlla se due matrici sono uguali, elemento per elemento</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla prima matrice da confrontare </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla seconda matrice da confrontare</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>TRUE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se sono uguali </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>FALSE</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altrimenti </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="84" column="1" bodyfile="sparse.c" bodystart="88" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a098b33ab9b543c109d655b9afc081bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int put_elem_row</definition>
+        <argsstring>(elem_t **r, int j, double d)</argsstring>
+        <name>put_elem_row</name>
+        <param>
+          <type><ref refid="structelem" kindref="compound">elem_t</ref> **</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>inserisce un elemento in r passata con indice colonna j, per mantenere la rappresentazione consistente se il valore scritto è 0 l&apos;elemento corrispondente deve essere eliminato dalla lista che rappresenta la riga</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla riga </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>colonna dell&apos;elemento </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valore dell&apos;elemento da scrivere</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si e&apos; verificato un errore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altrimenti </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="98" column="1" bodyfile="sparse.c" bodystart="159" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a19ab77e854480bb2c9e5032bc3f0ab9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int put_elem</definition>
+        <argsstring>(smatrix_t *m, unsigned i, unsigned j, double d)</argsstring>
+        <name>put_elem</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>scrive un valore nell&apos;elemento i,j, per mantenere la rappresentazione consistente se il valore scritto è 0 l&apos;elemento corrispondente deve essere eliminato dalla lista che rappresenta la riga</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla matrice </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>(i</parametername>
+<parametername>j)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>posizione dell&apos;elemento </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>valore dell&apos;elemento da scrivere</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si e&apos; verificato un errore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altrimenti </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="112" column="1" bodyfile="sparse.c" bodystart="238" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a23f27b0ac759a8c6cf94ca624a7367d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_elem_row</definition>
+        <argsstring>(elem_t *r, int j, double *pd)</argsstring>
+        <name>get_elem_row</name>
+        <param>
+          <type><ref refid="structelem" kindref="compound">elem_t</ref> *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>pd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>legge il valore dell&apos;elemento nella colonna j</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla riga da leggere </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>colonna dell&apos;elemento </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore della variabile in cui scrivere il valore dell&apos;elemento</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si e&apos; verificato un errore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altrimenti </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="125" column="1" bodyfile="sparse.c" bodystart="289" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a03efbfc08da3aa936597103784ddbe45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int get_elem</definition>
+        <argsstring>(smatrix_t *m, unsigned i, unsigned j, double *pd)</argsstring>
+        <name>get_elem</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>j</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>pd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>legge il valore nell&apos;elemento i,j</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla matrice </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>(i</parametername>
+<parametername>j)</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>posizione dell&apos;elemento </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore della variabile in cui scrivere il valore dell&apos;elemento</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si e&apos; verificato un errore </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>altrimenti </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="137" column="1" bodyfile="sparse.c" bodystart="326" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a58e3ead06f0ecc684dfc90538947343a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_row</definition>
+        <argsstring>(elem_t **pr)</argsstring>
+        <name>free_row</name>
+        <param>
+          <type><ref refid="structelem" kindref="compound">elem_t</ref> **</type>
+          <declname>pr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dealloca tutta la riga di una matrice</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al putatore della riga da deallocare (*pr viene messo a NULL dalla funzione) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="146" column="1" bodyfile="sparse.c" bodystart="362" bodyend="376"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1ad3596ce2e271a24fada5c85f3b8ce0af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void free_smat</definition>
+        <argsstring>(smatrix_t **pm)</argsstring>
+        <name>free_smat</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> **</type>
+          <declname>pm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dealloca tutta la matrice</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al putatore della matrice da deallocare (*pm viene messo a NULL dalla funzione) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="155" column="1" bodyfile="sparse.c" bodystart="385" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+        <definition>smatrix_t* sum_smat</definition>
+        <argsstring>(smatrix_t *a, smatrix_t *b)</argsstring>
+        <name>sum_smat</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>somma due matrici (se la somma è zero ricordarsi di non inserire l&apos;elemento corrispondente) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrici da sommare</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la matrice risultato (viene allocata dentro la funzione) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="166" column="1" bodyfile="sparse.c" bodystart="413" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a633a6b934732ad44f5cf73e9c55c54e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+        <definition>smatrix_t* prod_smat</definition>
+        <argsstring>(smatrix_t *a, smatrix_t *b)</argsstring>
+        <name>prod_smat</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>moltiplica due matrici (se il prodotto è zero ricordarsi di non inserire l&apos;elemento corrispondente) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrici da moltiplicare</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la matrice risultato (viene allocata dentro la funzione) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="177" column="1" bodyfile="sparse.c" bodystart="491" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a7b9192596db334fe30a652e05ab45987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+        <definition>smatrix_t* transp_smat</definition>
+        <argsstring>(smatrix_t *a)</argsstring>
+        <name>transp_smat</name>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>calcola la trasposta di una matrice (se un elemento è zero ricordarsi di non inserire) <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>matrice</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la matrice risultato (viene allocata dentro la funzione) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="188" column="1" bodyfile="sparse.c" bodystart="577" bodyend="626"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1ac5049cd89f46bff8cd028382edf931e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+        <definition>smatrix_t* load_smat</definition>
+        <argsstring>(FILE *fd)</argsstring>
+        <name>load_smat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>carica da file una matrice nel formato nrighe1 ncolonne1 riga1 colonna1 valore1 ... rigaN colonnaN valoreN</para><para>Ad esempio la matrice</para><para>3.1 0 0 0 0 0 0 0 0 7.2 0 9.0</para><para>è rappresentata come 3 3 0 0 3.1 2 1 7.2 2 2 9.0</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file da cui caricare la matrice (gia&apos; aperto)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla nuove matrice caricata (allocata dentro la funzione) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore (setta errno) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="217" column="1" bodyfile="sparse.c" bodystart="655" bodyend="715"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int save_smat</definition>
+        <argsstring>(FILE *fd, smatrix_t *mat)</argsstring>
+        <name>save_smat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>salva una matrice su file nel formato specificato per la funzione load_smat</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file su cui scrivere la matrice (gia&apos; aperto) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la matrice da scrivere su file</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se tutto e&apos; andato bene </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore (setta errno) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="227" column="1" bodyfile="sparse.c" bodystart="725" bodyend="791"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+        <definition>smatrix_t* loadbin_smat</definition>
+        <argsstring>(FILE *fd)</argsstring>
+        <name>loadbin_smat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file da cui caricare la matrice (gia&apos; aperto)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla nuove matrice caricata (allocata dentro la funzione) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore (setta errno) Il file binario si presenta come un&apos;unica stringa di bit 110010101110..............010101</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l&apos;indice di riga un blocco di sizeof(int) per l&apos;indice di colonna e un blocco di sizeof(double) per il valore dell&apos;elemento e così via per ogni elemento della matrice</para><para>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file da cui caricare la matrice (gia&apos; aperto)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore alla nuove matrice caricata (allocata dentro la funzione) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>NULL</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore (setta errno) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>Il file binario si presenta come un&apos;unica stringa di bit 110010101110..............010101</para><para>i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l&apos;indice di riga un blocco di sizeof(int) per l&apos;indice di colonna e un blocco di sizeof(double) per il valore dell&apos;elemento e così via per ogni elemento della matrice</para>        </inbodydescription>
+        <location file="sparse.h" line="253" column="1" bodyfile="sparse.c" bodystart="802" bodyend="914"/>
+      </memberdef>
+      <memberdef kind="function" id="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int savebin_smat</definition>
+        <argsstring>(FILE *fd, smatrix_t *mat)</argsstring>
+        <name>savebin_smat</name>
+        <param>
+          <type>FILE *</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file su cui scrivere la matrice (gia&apos; aperto) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>la matrice da scrivere su file</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="retval"><parameteritem>
+<parameternamelist>
+<parametername>0</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se tutto e&apos; andato bene </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>-1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sparse.h" line="268" column="1" bodyfile="sparse.c" bodystart="928" bodyend="1010"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>__SPARSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SPARSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{FALSE=0,<sp/>TRUE=1}<sp/>bool_t;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="structelem" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelem" kindref="compound">elem</ref><sp/>{</highlight></codeline>
+<codeline lineno="37" refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" kindref="member">col</ref>;</highlight></codeline>
+<codeline lineno="39" refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="41" refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelem" kindref="compound">elem</ref><sp/>*<sp/><ref refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structelem" kindref="compound">elem_t</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="structsmatrix__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48" refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/><ref refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" kindref="member">mat</ref>;</highlight></codeline>
+<codeline lineno="50" refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" kindref="member">nrow</ref>;</highlight></codeline>
+<codeline lineno="52" refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" kindref="member">ncol</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_smat<sp/>(FILE<sp/>*<sp/>f,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>l);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>new_smat<sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>m<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">bool_t<sp/>is_equal_smat<sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>a<sp/>,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>b<sp/>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>put_elem_row(<ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/>r,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>put_elem<sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>m<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_elem_row<sp/>(<sp/><ref refid="structelem" kindref="compound">elem_t</ref><sp/>*<sp/>r,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>pd<sp/>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_elem<sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>m<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>pd<sp/>);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_row<sp/>(<ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/>pr);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>**<sp/>pm);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>sum_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>b);<sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>prod_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>b);<sp/></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>transp_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a);<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>load_smat<sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>save_smat<sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>loadbin_smat<sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>savebin_smat<sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);<sp/></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="sparse.h"/>
+  </compounddef>
+</doxygen>

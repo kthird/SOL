@@ -9,56 +9,80 @@
 #include <stdio.h>
 #include <mcheck.h>
 
-int main()
-{
 
-	smatrix_t *A,*Bin;
-	
-	
-	FILE *fA,*fBin;
-	
-	
-	A=new_smat(4,3);
-	
-	printf("%s",((put_elem(A,0,0,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(A,0,1,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(A,1,2,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(A,2,0,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(A,2,2,1)==0)?"INSERITO \n":"ERRORE\n"));
-	printf("%s",((put_elem(A,3,1,1)==0)?"INSERITO \n":"ERRORE\n"));
-	
-	
-	
-	fA=fopen("print/Ab.bin","wb");
-	
+#define FDATA1 "data1.txt"
+#define FDATA2 "data2.txt"
+#define FDATA3 "data3.txt"
+#define FDATA4 "data4.txt"
+#define FOUT1 "data_out1.txt"
+#define FOUT2 "data_out2.txt"
+#define FOUT3 "data_out3.bin"
 
-	if(savebin_smat(fA,A)==0)
-		printf("SALVATA IN BINARIO\n");
-	else
-		printf("NON SALVATA\n");
+int main (void) {
+  FILE * fd1, * fd2;
+  smatrix_t *a, *b;
+
+  /* salvataggio formato testo corretto */
+  if ( (fd1 = fopen(FDATA1,"r") ) == NULL ) {
+    fprintf(stderr,"fopen:");
+    perror(FDATA1);
+    return (EXIT_FAILURE);
+  }
+
+  if ( ( a = load_smat(fd1) ) == NULL ) {
+    fprintf(stderr,"load smat:");
+    perror(FDATA1);
+    return (EXIT_FAILURE);
+  }
+
+  fclose(fd1);
+
+  print_smat(stdout,a);
+
+
+   if ( (fd2 = fopen(FOUT1,"w") ) == NULL ) {
+    fprintf(stderr,"fopen:");
+    perror(FOUT1);
+    return (EXIT_FAILURE);
+  }
+
+   if ( save_smat(fd2,a)  == -1 ) {
+    fprintf(stderr,"save smat:");
+    perror(FOUT1);
+    return (EXIT_FAILURE);
+  }
+
+  fclose(fd2);
+
+  /* ricarichiamo la matrice */
+  if ( (fd1 = fopen(FOUT1,"r") ) == NULL ) {
+    fprintf(stderr,"fopen:");
+    perror(FOUT1);
+    return (EXIT_FAILURE);
+  }
+
+ if ( ( b = load_smat(fd1) ) == NULL ) {
+    fprintf(stderr,"load smat:");
+    perror(FOUT1);
+    return (EXIT_FAILURE);
+  }
+
+  fclose(fd1);
+
+  print_smat(stdout,b);
+
+  if ( ! is_equal_smat ( a, b ) ) {
+    fprintf(stderr,"load smat:");
+    perror("is_equal_smat");
+    return (EXIT_FAILURE);
+  }
 	
-	fBin=fopen("print/Ab.bin","rb");
-	
-	if((Bin=loadbin_smat(fBin))!=NULL)
-	{
-		fA=fopen("print/A.txt","w");
-		fBin=fopen("print/Bin.txt","w");
-		print_smat(fA,A);
-		print_smat(fBin,Bin);
-		if(is_equal_smat(A,Bin)==TRUE)
-			printf("UGUALI\n");
-		else
-			printf("DIVERSE\n");
-		fclose(fA);
-		fclose(fBin);
-	}
-	else
-		printf("BIN VUOTA");
-	
-	
-		
-	free_smat(&A);
-	free_smat(&Bin);
-	
+  printf("PROVO A LIBERARE LE MATRICI\n");
+  free_smat(&a);
+  free_smat(&b);
+  if(a!=NULL || b!=NULL)
+  	printf("MATRICI NON LIBERATE");
+  else
+  	printf("MAATRICI LIBERATE");
 	return 0;
 }

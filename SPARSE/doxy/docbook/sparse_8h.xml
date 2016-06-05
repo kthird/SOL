@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="sparse_8h">
+    <title>sparse.h File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+<para>Include dependency diagram for sparse.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="sparse_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for sparse.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="sparse_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classi </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structelem">elem</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structsmatrix__t">smatrix_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Tipi enumerati (enum)</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="sparse_8h_1af6a258d8f3ee5206d682d799316314b1">bool</link> {
+<link linkend="sparse_8h_1af6a258d8f3ee5206d682d799316314b1aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</link>=0,
+<link linkend="sparse_8h_1af6a258d8f3ee5206d682d799316314b1aa82764c3079aea4e60c80e45befbb839">TRUE</link>=1
+}</literallayout>
+<para><emphasis>header file primo frammento</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Ridefinizioni di tipo (typedef)</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef enum bool  <link linkend="sparse_8h_1a4ed992ceefff896353c1727143529d16">bool_t</link><para><emphasis>header file primo frammento</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="structelem">elem</link>  <link linkend="sparse_8h_1a14aec81bdea9c2d34b666b7157117387">elem_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="sparse_8h_1abe7c306fd1022398d6ee66088635d548">print_smat</link> (
+FILE * f, <link linkend="structsmatrix__t">smatrix_t</link> * l)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8h_1a13f7785dace4a2981b9b6f810ca34115">new_smat</link> (
+unsigned n, unsigned m)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>bool_t <link linkend="sparse_8h_1a4232552afd0fdc736d90fded1f272759">is_equal_smat</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> * a, <link linkend="structsmatrix__t">smatrix_t</link> * b)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="sparse_8h_1a098b33ab9b543c109d655b9afc081bb7">put_elem_row</link> (
+<link linkend="structelem">elem_t</link> ** r, int j, double d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="sparse_8h_1a19ab77e854480bb2c9e5032bc3f0ab9f">put_elem</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> * m, unsigned i, unsigned j, double d)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="sparse_8h_1a23f27b0ac759a8c6cf94ca624a7367d3">get_elem_row</link> (
+<link linkend="structelem">elem_t</link> * r, int j, double * pd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="sparse_8h_1a03efbfc08da3aa936597103784ddbe45">get_elem</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> * m, unsigned i, unsigned j, double * pd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="sparse_8h_1a58e3ead06f0ecc684dfc90538947343a">free_row</link> (
+<link linkend="structelem">elem_t</link> ** pr)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="sparse_8h_1ad3596ce2e271a24fada5c85f3b8ce0af">free_smat</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> ** pm)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8h_1afa8c4ca1cb9e4e55f40dd35faa1d9f85">sum_smat</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> * a, <link linkend="structsmatrix__t">smatrix_t</link> * b)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8h_1a633a6b934732ad44f5cf73e9c55c54e9">prod_smat</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> * a, <link linkend="structsmatrix__t">smatrix_t</link> * b)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8h_1a7b9192596db334fe30a652e05ab45987">transp_smat</link> (
+<link linkend="structsmatrix__t">smatrix_t</link> * a)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8h_1ac5049cd89f46bff8cd028382edf931e6">load_smat</link> (
+FILE * fd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642">save_smat</link> (
+FILE * fd, <link linkend="structsmatrix__t">smatrix_t</link> * mat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1">loadbin_smat</link> (
+FILE * fd)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57">savebin_smat</link> (
+FILE * fd, <link linkend="structsmatrix__t">smatrix_t</link> * mat)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+    <para>Definition in file /home/kappa/Scrivania/SOL/SPARSE/sparse.h</para>
+    </simplesect>
+</section>
