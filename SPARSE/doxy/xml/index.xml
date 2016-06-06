@@ -10,9 +10,69 @@
     <member refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" kind="variable"><name>nrow</name></member>
     <member refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" kind="variable"><name>ncol</name></member>
   </compound>
+  <compound refid="DATA_2data1_8txt" kind="file"><name>data1.txt</name>
+  </compound>
+  <compound refid="data1_8txt" kind="file"><name>data1.txt</name>
+  </compound>
+  <compound refid="DATA_2data2_8txt" kind="file"><name>data2.txt</name>
+  </compound>
+  <compound refid="data2_8txt" kind="file"><name>data2.txt</name>
+  </compound>
+  <compound refid="DATA_2data3_8txt" kind="file"><name>data3.txt</name>
+  </compound>
+  <compound refid="data3_8txt" kind="file"><name>data3.txt</name>
+  </compound>
+  <compound refid="DATA_2data4_8txt" kind="file"><name>data4.txt</name>
+  </compound>
+  <compound refid="data4_8txt" kind="file"><name>data4.txt</name>
+  </compound>
+  <compound refid="data__out1_8txt" kind="file"><name>data_out1.txt</name>
+  </compound>
+  <compound refid="data__out2_8txt" kind="file"><name>data_out2.txt</name>
+  </compound>
+  <compound refid="gruppo_8txt" kind="file"><name>gruppo.txt</name>
+    <member refid="gruppo_8txt_1afe12ec104ad9bf72be255a491560b4b5" kind="variable"><name>Francesco</name></member>
+    <member refid="gruppo_8txt_1a219f5429b659319043a61795f5d2ac78" kind="variable"><name>Lorito</name></member>
+  </compound>
+  <compound refid="main_8c" kind="file"><name>main.c</name>
+    <member refid="main_8c_1abcc0669cfc31c6c83714c71931a33299" kind="define"><name>FDATA1</name></member>
+    <member refid="main_8c_1a95452bf7895b5a2b99615a63626a02d5" kind="define"><name>FDATA2</name></member>
+    <member refid="main_8c_1ad22fcbb7876c6fa28b42b0d8319d3b7a" kind="define"><name>FDATA3</name></member>
+    <member refid="main_8c_1ac2a555d0ef251da8b96d5c93824bd5a6" kind="define"><name>FDATA4</name></member>
+    <member refid="main_8c_1a118122eda36922ba1fc144dcadb5f522" kind="define"><name>FOUT1</name></member>
+    <member refid="main_8c_1afc948b7a395a332dcef95230717ac1a5" kind="define"><name>FOUT2</name></member>
+    <member refid="main_8c_1a5c307b89a257b988ee953b6285bdfa86" kind="define"><name>FOUT3</name></member>
+    <member refid="main_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="out__test__one_8txt" kind="file"><name>out_test_one.txt</name>
+    <member refid="out__test__one_8txt_1aff6b862551d6530eb6375f2063b91276" kind="variable"><name>__pad0__</name></member>
+    <member refid="out__test__one_8txt_1a8367c701683faafa9aaceb9ac617664e" kind="variable"><name>Test3</name></member>
+  </compound>
+  <compound refid="out__test__three_8txt" kind="file"><name>out_test_three.txt</name>
+    <member refid="out__test__three_8txt_1ae31ac69c75bb42f47c8d6a7cde4937c6" kind="variable"><name>__pad1__</name></member>
+  </compound>
+  <compound refid="out__test__two_8txt" kind="file"><name>out_test_two.txt</name>
+    <member refid="out__test__two_8txt_1acb405321a5c6ae16fef21290649f2666" kind="variable"><name>__pad2__</name></member>
+  </compound>
+  <compound refid="A_8txt" kind="file"><name>A.txt</name>
+    <member refid="A_8txt_1aa6f626203c740423c9dfcbbe727f90b4" kind="variable"><name>__pad3__</name></member>
+    <member refid="A_8txt_1aa126f02bcfcec342fb72926c73b4aeb3" kind="variable"><name>__pad4__</name></member>
+  </compound>
+  <compound refid="B_8txt" kind="file"><name>B.txt</name>
+    <member refid="B_8txt_1a445d93e639c02494afbdc5126d1d9f8a" kind="variable"><name>__pad5__</name></member>
+  </compound>
+  <compound refid="Bin_8txt" kind="file"><name>Bin.txt</name>
+    <member refid="Bin_8txt_1ad918d72d2eac09be60a9fc8847fe31a2" kind="variable"><name>__pad6__</name></member>
+    <member refid="Bin_8txt_1a33068e38fda059166af20232a02d2b55" kind="variable"><name>__pad7__</name></member>
+  </compound>
+  <compound refid="C_8txt" kind="file"><name>C.txt</name>
+    <member refid="C_8txt_1a5cfbf631ddc94882ec4e9aefed44a536" kind="variable"><name>__pad8__</name></member>
+  </compound>
+  <compound refid="P_8txt" kind="file"><name>P.txt</name>
+  </compound>
+  <compound refid="README_8txt" kind="file"><name>README.txt</name>
+  </compound>
   <compound refid="sparse_8c" kind="file"><name>sparse.c</name>
-    <member refid="sparse_8c_1aacd91b4066e949852144fb80cf11420b" kind="function"><name>print_elem_r</name></member>
-    <member refid="sparse_8c_1a908b6cb8261c0131e8c71d842a4381c1" kind="function"><name>print_smat</name></member>
     <member refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kind="function"><name>new_smat</name></member>
     <member refid="sparse_8c_1a4232552afd0fdc736d90fded1f272759" kind="function"><name>is_equal_smat</name></member>
     <member refid="sparse_8c_1a098b33ab9b543c109d655b9afc081bb7" kind="function"><name>put_elem_row</name></member>
@@ -51,5 +111,34 @@
     <member refid="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642" kind="function"><name>save_smat</name></member>
     <member refid="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" kind="function"><name>loadbin_smat</name></member>
     <member refid="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" kind="function"><name>savebin_smat</name></member>
+  </compound>
+  <compound refid="sparse__docenti_8c" kind="file"><name>sparse_docenti.c</name>
+    <member refid="sparse__docenti_8c_1aacd91b4066e949852144fb80cf11420b" kind="function"><name>print_elem_r</name></member>
+    <member refid="sparse__docenti_8c_1a908b6cb8261c0131e8c71d842a4381c1" kind="function"><name>print_smat</name></member>
+  </compound>
+  <compound refid="test__four_8c" kind="file"><name>test_four.c</name>
+    <member refid="test__four_8c_1abcc0669cfc31c6c83714c71931a33299" kind="define"><name>FDATA1</name></member>
+    <member refid="test__four_8c_1a95452bf7895b5a2b99615a63626a02d5" kind="define"><name>FDATA2</name></member>
+    <member refid="test__four_8c_1ad22fcbb7876c6fa28b42b0d8319d3b7a" kind="define"><name>FDATA3</name></member>
+    <member refid="test__four_8c_1ac2a555d0ef251da8b96d5c93824bd5a6" kind="define"><name>FDATA4</name></member>
+    <member refid="test__four_8c_1a118122eda36922ba1fc144dcadb5f522" kind="define"><name>FOUT1</name></member>
+    <member refid="test__four_8c_1afc948b7a395a332dcef95230717ac1a5" kind="define"><name>FOUT2</name></member>
+    <member refid="test__four_8c_1a5c307b89a257b988ee953b6285bdfa86" kind="define"><name>FOUT3</name></member>
+    <member refid="test__four_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__one_8c" kind="file"><name>test_one.c</name>
+    <member refid="test__one_8c_1a0240ac851181b84ac374872dc5434ee4" kind="define"><name>N</name></member>
+    <member refid="test__one_8c_1a52037c938e3c1b126c6277da5ca689d0" kind="define"><name>M</name></member>
+    <member refid="test__one_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__three_8c" kind="file"><name>test_three.c</name>
+    <member refid="test__three_8c_1a0240ac851181b84ac374872dc5434ee4" kind="define"><name>N</name></member>
+    <member refid="test__three_8c_1a52037c938e3c1b126c6277da5ca689d0" kind="define"><name>M</name></member>
+    <member refid="test__three_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__two_8c" kind="file"><name>test_two.c</name>
+    <member refid="test__two_8c_1a0240ac851181b84ac374872dc5434ee4" kind="define"><name>N</name></member>
+    <member refid="test__two_8c_1a52037c938e3c1b126c6277da5ca689d0" kind="define"><name>M</name></member>
+    <member refid="test__two_8c_1a840291bc02cba5474a4cb46a9b9566fe" kind="function"><name>main</name></member>
   </compound>
 </doxygenindex>

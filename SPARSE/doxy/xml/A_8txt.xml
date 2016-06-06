@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="A_8txt" kind="file" language="C++">
+    <compoundname>A.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="A_8txt_1aa6f626203c740423c9dfcbbe727f90b4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>__pad3__</definition>
+        <argsstring></argsstring>
+        <name>__pad3__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="print/A.txt" line="9" column="1" bodyfile="print/A.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="A_8txt_1aa126f02bcfcec342fb72926c73b4aeb3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>__pad4__</definition>
+        <argsstring></argsstring>
+        <name>__pad4__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="print/A.txt" line="9" column="1" bodyfile="print/A.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">1:<sp/>&lt;1,4.000000&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">2:<sp/>&lt;1,5.500000&gt;&lt;2,4.000000&gt;&lt;3,4.000000&gt;&lt;4,4.000000&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">3:<sp/>&lt;4,4.000000&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="print/A.txt"/>
+  </compounddef>
+</doxygen>

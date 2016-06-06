@@ -15,7 +15,7 @@
 <para>indice di colonna </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="37" column="1" bodyfile="sparse.h" bodystart="37" bodyend="-1"/>
+        <location file="sparse.h" line="38" column="1" bodyfile="sparse.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structelem_1a52a0b099052bdf7611aa32acdb3f5449" prot="public" static="no" mutable="no">
         <type>double</type>
@@ -28,7 +28,7 @@
 <para>valore dell&apos;elemento </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="39" column="1" bodyfile="sparse.h" bodystart="39" bodyend="-1"/>
+        <location file="sparse.h" line="40" column="1" bodyfile="sparse.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" prot="public" static="no" mutable="no">
         <type>struct <ref refid="structelem" kindref="compound">elem</ref> *</type>
@@ -41,7 +41,7 @@
 <para>puntatore al prossimo elemento nella riga </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="41" column="1" bodyfile="sparse.h" bodystart="41" bodyend="-1"/>
+        <location file="sparse.h" line="42" column="1" bodyfile="sparse.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,7 +57,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="sparse.h" line="35" column="1" bodyfile="sparse.h" bodystart="35" bodyend="42"/>
+    <location file="sparse.h" line="36" column="1" bodyfile="sparse.h" bodystart="36" bodyend="43"/>
     <listofallmembers>
       <member refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" prot="public" virt="non-virtual"><scope>elem</scope><name>col</name></member>
       <member refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" prot="public" virt="non-virtual"><scope>elem</scope><name>next</name></member>

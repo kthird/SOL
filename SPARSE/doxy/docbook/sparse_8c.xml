@@ -32,23 +32,6 @@
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>static void <link linkend="sparse_8c_1aacd91b4066e949852144fb80cf11420b">print_elem_r</link> (
-FILE * f, <link linkend="structelem">elem_t</link> * p)<para><emphasis>header file primo frammento</emphasis></para>
-</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
-                        <para>void <link linkend="sparse_8c_1a908b6cb8261c0131e8c71d842a4381c1">print_smat</link> (
-FILE * f, <link linkend="structsmatrix__t">smatrix_t</link> * l)</para>
-                    </listitem>
-                </itemizedlist>
-            </para>
-            <para>
-                <itemizedlist>
-                    <listitem>
                         <para><link linkend="structsmatrix__t">smatrix_t</link> * <link linkend="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115">new_smat</link> (
 unsigned n, unsigned m)</para>
                     </listitem>
@@ -57,7 +40,7 @@ unsigned n, unsigned m)</para>
             <para>
                 <itemizedlist>
                     <listitem>
-                        <para>bool_t <link linkend="sparse_8c_1a4232552afd0fdc736d90fded1f272759">is_equal_smat</link> (
+                        <para><link linkend="sparse_8h_1a4ed992ceefff896353c1727143529d16">bool_t</link> <link linkend="sparse_8c_1a4232552afd0fdc736d90fded1f272759">is_equal_smat</link> (
 <link linkend="structsmatrix__t">smatrix_t</link> * a, <link linkend="structsmatrix__t">smatrix_t</link> * b)</para>
                     </listitem>
                 </itemizedlist>
@@ -66,7 +49,7 @@ unsigned n, unsigned m)</para>
                 <itemizedlist>
                     <listitem>
                         <para>int <link linkend="sparse_8c_1a098b33ab9b543c109d655b9afc081bb7">put_elem_row</link> (
-<link linkend="structelem">elem_t</link> ** r, int j, double d)</para>
+<link linkend="sparse_8h_1a14aec81bdea9c2d34b666b7157117387">elem_t</link> ** r, int j, double d)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -82,7 +65,7 @@ unsigned n, unsigned m)</para>
                 <itemizedlist>
                     <listitem>
                         <para>int <link linkend="sparse_8c_1a23f27b0ac759a8c6cf94ca624a7367d3">get_elem_row</link> (
-<link linkend="structelem">elem_t</link> * r, int j, double * pd)</para>
+<link linkend="sparse_8h_1a14aec81bdea9c2d34b666b7157117387">elem_t</link> * r, int j, double * pd)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -98,7 +81,7 @@ unsigned n, unsigned m)</para>
                 <itemizedlist>
                     <listitem>
                         <para>void <link linkend="sparse_8c_1a58e3ead06f0ecc684dfc90538947343a">free_row</link> (
-<link linkend="structelem">elem_t</link> ** pr)</para>
+<link linkend="sparse_8h_1a14aec81bdea9c2d34b666b7157117387">elem_t</link> ** pr)</para>
                     </listitem>
                 </itemizedlist>
             </para>
@@ -169,6 +152,14 @@ FILE * fd, <link linkend="structsmatrix__t">smatrix_t</link> * mat)</para>
         </section>
     <simplesect>
         <title>Descrizione dettagliata</title>
+
+<para>prototipi implementati </para>
+
+<para><formalpara><title>Autore: </title>
+
+<para>Francesco Lorito 464604 </para>
+</formalpara>
+</para>
     <para>Definition in file /home/kappa/Scrivania/SOL/SPARSE/sparse.c</para>
     </simplesect>
 </section>

@@ -1,6 +1,7 @@
 /**
-  \brief header file primo frammento
-  \author sol-lab 2015/16
+  @file sparse.h
+  @brief header file contenente i prototipi da implementare
+  @author Francesco Lorito 464604
 */
 
 #ifndef __SPARSE_H

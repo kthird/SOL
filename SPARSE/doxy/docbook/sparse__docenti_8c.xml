@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="sparse__docenti_8c">
+    <title>sparse_docenti.c File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &quot;sparse.h&quot;</programlisting>
+<para>Include dependency diagram for sparse_docenti.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="sparse__docenti_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for sparse_docenti.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="sparse__docenti_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="sparse__docenti_8c_1aacd91b4066e949852144fb80cf11420b">print_elem_r</link> (
+FILE * f, <link linkend="sparse_8h_1a14aec81bdea9c2d34b666b7157117387">elem_t</link> * p)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void <link linkend="sparse__docenti_8c_1a908b6cb8261c0131e8c71d842a4381c1">print_smat</link> (
+FILE * f, <link linkend="structsmatrix__t">smatrix_t</link> * l)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>funzioni print smat implementata dai docenti </para>
+
+<para><formalpara><title>Autore: </title>
+
+<para>Docenti Sol Lab 2015/2016 </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/SPARSE/sparse_docenti.c</para>
+    </simplesect>
+</section>

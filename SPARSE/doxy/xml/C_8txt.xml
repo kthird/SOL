@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="C_8txt" kind="file" language="C++">
+    <compoundname>C.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="C_8txt_1a5cfbf631ddc94882ec4e9aefed44a536" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>__pad8__</definition>
+        <argsstring></argsstring>
+        <name>__pad8__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="print/C.txt" line="9" column="1" bodyfile="print/C.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">0:<sp/>&lt;0,1.000000&gt;&lt;2,1.000000&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">1:<sp/>&lt;0,1.000000&gt;&lt;3,1.000000&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">2:<sp/>&lt;1,1.000000&gt;&lt;2,1.000000&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="print/C.txt"/>
+  </compounddef>
+</doxygen>

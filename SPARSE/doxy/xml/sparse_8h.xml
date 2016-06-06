@@ -3,18 +3,42 @@
   <compounddef id="sparse_8h" kind="file" language="C++">
     <compoundname>sparse.h</compoundname>
     <includes local="no">stdio.h</includes>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
     <includedby refid="sparse_8c" local="yes">sparse.c</includedby>
+    <includedby refid="sparse__docenti_8c" local="yes">sparse_docenti.c</includedby>
+    <includedby refid="test__four_8c" local="yes">test_four.c</includedby>
+    <includedby refid="test__one_8c" local="yes">test_one.c</includedby>
+    <includedby refid="test__three_8c" local="yes">test_three.c</includedby>
+    <includedby refid="test__two_8c" local="yes">test_two.c</includedby>
     <incdepgraph>
-      <node id="7">
+      <node id="70">
         <label>sparse.h</label>
         <link refid="sparse.h"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="71" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="71">
         <label>stdio.h</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="73">
+        <label>sparse.c</label>
+        <link refid="sparse_8c"/>
+      </node>
+      <node id="72">
+        <label>sparse.h</label>
+        <link refid="sparse.h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>sparse_docenti.c</label>
+        <link refid="sparse__docenti_8c"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="structelem" prot="public">elem</innerclass>
     <innerclass refid="structsmatrix__t" prot="public">smatrix_t</innerclass>
       <sectiondef kind="enum">
@@ -37,29 +61,27 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>header file primo frammento </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="author"><para>sol-lab 2015/16valori booleani </para></simplesect>
-</para>        </detaileddescription>
+<para>valori booleani </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="11" column="1" bodyfile="sparse.h" bodystart="11" bodyend="11"/>
+        <location file="sparse.h" line="12" column="1" bodyfile="sparse.h" bodystart="12" bodyend="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="sparse_8h_1a4ed992ceefff896353c1727143529d16" prot="public" static="no">
-        <type>enum bool</type>
+        <type>enum <ref refid="sparse_8h_1af6a258d8f3ee5206d682d799316314b1" kindref="member">bool</ref></type>
         <definition>typedef enum bool  bool_t</definition>
         <argsstring></argsstring>
         <name>bool_t</name>
         <briefdescription>
-<para>header file primo frammento </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="author"><para>sol-lab 2015/16valori booleani </para></simplesect>
-</para>        </detaileddescription>
+<para>valori booleani </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="11" column="1"/>
+        <location file="sparse.h" line="12" column="1"/>
       </memberdef>
       <memberdef kind="typedef" id="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" prot="public" static="no">
         <type>struct <ref refid="structelem" kindref="compound">elem</ref></type>
@@ -72,7 +94,7 @@
 <para>Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente.</para><para>Ad esempio la matrice</para><para>3.1 0 0 0 0 0 0 0 0 7.2 0 9.0</para><para>è rappresentata come</para><para>0 | <mdash/><mdash/>&gt;([0,3.1] , NULL) 1 | NULL 2 | <mdash/><mdash/>&gt;([1,7.2] , <ndash/>)<ndash/>&gt;( [3,9.0] ,NULL)elemento della matrice sparsa </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="42" column="1"/>
+        <location file="sparse.h" line="43" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -110,7 +132,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="62" column="1" bodyfile="sparse.c" bodystart="26" bodyend="43"/>
+        <location file="sparse.h" line="63" column="1" bodyfile="sparse_docenti.c" bodystart="17" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a13f7785dace4a2981b9b6f810ca34115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
@@ -161,10 +183,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="73" column="1" bodyfile="sparse.c" bodystart="54" bodyend="77"/>
+        <location file="sparse.h" line="74" column="1" bodyfile="sparse.c" bodystart="23" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a4232552afd0fdc736d90fded1f272759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool_t</type>
+        <type><ref refid="sparse_8h_1a4ed992ceefff896353c1727143529d16" kindref="member">bool_t</ref></type>
         <definition>bool_t is_equal_smat</definition>
         <argsstring>(smatrix_t *a, smatrix_t *b)</argsstring>
         <name>is_equal_smat</name>
@@ -212,7 +234,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="84" column="1" bodyfile="sparse.c" bodystart="88" bodyend="144"/>
+        <location file="sparse.h" line="85" column="1" bodyfile="sparse.c" bodystart="57" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a098b33ab9b543c109d655b9afc081bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -220,7 +242,7 @@
         <argsstring>(elem_t **r, int j, double d)</argsstring>
         <name>put_elem_row</name>
         <param>
-          <type><ref refid="structelem" kindref="compound">elem_t</ref> **</type>
+          <type><ref refid="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" kindref="member">elem_t</ref> **</type>
           <declname>r</declname>
         </param>
         <param>
@@ -274,7 +296,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="98" column="1" bodyfile="sparse.c" bodystart="159" bodyend="225"/>
+        <location file="sparse.h" line="99" column="1" bodyfile="sparse.c" bodystart="128" bodyend="193"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a19ab77e854480bb2c9e5032bc3f0ab9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -341,7 +363,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="112" column="1" bodyfile="sparse.c" bodystart="238" bodyend="276"/>
+        <location file="sparse.h" line="113" column="1" bodyfile="sparse.c" bodystart="206" bodyend="244"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a23f27b0ac759a8c6cf94ca624a7367d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -349,7 +371,7 @@
         <argsstring>(elem_t *r, int j, double *pd)</argsstring>
         <name>get_elem_row</name>
         <param>
-          <type><ref refid="structelem" kindref="compound">elem_t</ref> *</type>
+          <type><ref refid="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" kindref="member">elem_t</ref> *</type>
           <declname>r</declname>
         </param>
         <param>
@@ -403,7 +425,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="125" column="1" bodyfile="sparse.c" bodystart="289" bodyend="313"/>
+        <location file="sparse.h" line="126" column="1" bodyfile="sparse.c" bodystart="257" bodyend="281"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a03efbfc08da3aa936597103784ddbe45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -470,7 +492,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="137" column="1" bodyfile="sparse.c" bodystart="326" bodyend="353"/>
+        <location file="sparse.h" line="138" column="1" bodyfile="sparse.c" bodystart="294" bodyend="321"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a58e3ead06f0ecc684dfc90538947343a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -478,7 +500,7 @@
         <argsstring>(elem_t **pr)</argsstring>
         <name>free_row</name>
         <param>
-          <type><ref refid="structelem" kindref="compound">elem_t</ref> **</type>
+          <type><ref refid="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" kindref="member">elem_t</ref> **</type>
           <declname>pr</declname>
         </param>
         <briefdescription>
@@ -495,7 +517,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="146" column="1" bodyfile="sparse.c" bodystart="362" bodyend="376"/>
+        <location file="sparse.h" line="147" column="1" bodyfile="sparse.c" bodystart="330" bodyend="344"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1ad3596ce2e271a24fada5c85f3b8ce0af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -520,7 +542,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="155" column="1" bodyfile="sparse.c" bodystart="385" bodyend="402"/>
+        <location file="sparse.h" line="156" column="1" bodyfile="sparse.c" bodystart="353" bodyend="370"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
@@ -565,7 +587,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="166" column="1" bodyfile="sparse.c" bodystart="413" bodyend="480"/>
+        <location file="sparse.h" line="167" column="1" bodyfile="sparse.c" bodystart="381" bodyend="448"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a633a6b934732ad44f5cf73e9c55c54e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
@@ -610,7 +632,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="177" column="1" bodyfile="sparse.c" bodystart="491" bodyend="566"/>
+        <location file="sparse.h" line="178" column="1" bodyfile="sparse.c" bodystart="459" bodyend="534"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a7b9192596db334fe30a652e05ab45987" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
@@ -650,7 +672,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="188" column="1" bodyfile="sparse.c" bodystart="577" bodyend="626"/>
+        <location file="sparse.h" line="189" column="1" bodyfile="sparse.c" bodystart="545" bodyend="594"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1ac5049cd89f46bff8cd028382edf931e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
@@ -690,7 +712,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="217" column="1" bodyfile="sparse.c" bodystart="655" bodyend="715"/>
+        <location file="sparse.h" line="218" column="1" bodyfile="sparse.c" bodystart="623" bodyend="685"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -741,7 +763,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="227" column="1" bodyfile="sparse.c" bodystart="725" bodyend="791"/>
+        <location file="sparse.h" line="228" column="1" bodyfile="sparse.c" bodystart="695" bodyend="757"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref> *</type>
@@ -804,7 +826,7 @@ i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il
 </para>        </detaileddescription>
         <inbodydescription>
 <para>Il file binario si presenta come un&apos;unica stringa di bit 110010101110..............010101</para><para>i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l&apos;indice di riga un blocco di sizeof(int) per l&apos;indice di colonna e un blocco di sizeof(double) per il valore dell&apos;elemento e così via per ogni elemento della matrice</para>        </inbodydescription>
-        <location file="sparse.h" line="253" column="1" bodyfile="sparse.c" bodystart="802" bodyend="914"/>
+        <location file="sparse.h" line="254" column="1" bodyfile="sparse.c" bodystart="768" bodyend="875"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -855,69 +877,70 @@ i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="268" column="1" bodyfile="sparse.c" bodystart="928" bodyend="1010"/>
+        <location file="sparse.h" line="269" column="1" bodyfile="sparse.c" bodystart="889" bodyend="965"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>header file contenente i prototipi da implementare </para>    </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para><simplesect kind="author"><para>Francesco Lorito 464604 </para></simplesect>
+</para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>__SPARSE_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SPARSE_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{FALSE=0,<sp/>TRUE=1}<sp/>bool_t;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="structelem" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelem" kindref="compound">elem</ref><sp/>{</highlight></codeline>
-<codeline lineno="37" refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" kindref="member">col</ref>;</highlight></codeline>
-<codeline lineno="39" refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" kindref="member">val</ref>;</highlight></codeline>
-<codeline lineno="41" refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelem" kindref="compound">elem</ref><sp/>*<sp/><ref refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" kindref="member">next</ref>;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">}<sp/><ref refid="structelem" kindref="compound">elem_t</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__SPARSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__SPARSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="sparse_8h_1af6a258d8f3ee5206d682d799316314b1" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>{FALSE=0,<sp/>TRUE=1}<sp/><ref refid="sparse_8h_1a4ed992ceefff896353c1727143529d16" kindref="member">bool_t</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="structelem" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelem" kindref="compound">elem</ref><sp/>{</highlight></codeline>
+<codeline lineno="38" refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="structelem_1aca409f3a7c1c9621b262a230c78ef37b" kindref="member">col</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="structelem_1a52a0b099052bdf7611aa32acdb3f5449" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structelem" kindref="compound">elem</ref><sp/>*<sp/><ref refid="structelem_1ab9cf5c2e1c9a0ec2938275b90d39d5ca" kindref="member">next</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}<sp/><ref refid="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" kindref="member">elem_t</ref>;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46" refid="structsmatrix__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48" refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/><ref refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" kindref="member">mat</ref>;</highlight></codeline>
-<codeline lineno="50" refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" kindref="member">nrow</ref>;</highlight></codeline>
-<codeline lineno="52" refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" kindref="member">ncol</ref>;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal">}<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="62"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print_smat<sp/>(FILE<sp/>*<sp/>f,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>l);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>new_smat<sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>m<sp/>)<sp/>;</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal">bool_t<sp/>is_equal_smat<sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>a<sp/>,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>b<sp/>);</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="98"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>put_elem_row(<ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/>r,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d);</highlight></codeline>
-<codeline lineno="99"><highlight class="normal"></highlight></codeline>
-<codeline lineno="112"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>put_elem<sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>m<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structsmatrix__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="49" refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/><ref refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" kindref="member">mat</ref>;</highlight></codeline>
+<codeline lineno="51" refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" kindref="member">nrow</ref>;</highlight></codeline>
+<codeline lineno="53" refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" kindref="member">ncol</ref>;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref><sp/>(FILE<sp/>*<sp/>f,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>l);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/><ref refid="sparse_8h_1a13f7785dace4a2981b9b6f810ca34115" kindref="member">new_smat</ref><sp/>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>m<sp/>)<sp/>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><ref refid="sparse_8h_1a4ed992ceefff896353c1727143529d16" kindref="member">bool_t</ref><sp/><ref refid="sparse_8h_1a4232552afd0fdc736d90fded1f272759" kindref="member">is_equal_smat</ref><sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>a<sp/>,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>b<sp/>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a098b33ab9b543c109d655b9afc081bb7" kindref="member">put_elem_row</ref>(<ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/>r,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref><sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>m<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>d<sp/>);</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_elem_row<sp/>(<sp/><ref refid="structelem" kindref="compound">elem_t</ref><sp/>*<sp/>r,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>pd<sp/>);</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>get_elem<sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>m<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>pd<sp/>);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_row<sp/>(<ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/>pr);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="155"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>free_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>**<sp/>pm);</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>sum_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>b);<sp/></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>prod_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>b);<sp/></highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>transp_smat<sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a);<sp/></highlight></codeline>
-<codeline lineno="189"><highlight class="normal"></highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>load_smat<sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
-<codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="227"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>save_smat<sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);</highlight></codeline>
-<codeline lineno="228"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>loadbin_smat<sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"></highlight></codeline>
-<codeline lineno="268"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>savebin_smat<sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);<sp/></highlight></codeline>
-<codeline lineno="269"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a23f27b0ac759a8c6cf94ca624a7367d3" kindref="member">get_elem_row</ref><sp/>(<sp/><ref refid="structelem" kindref="compound">elem_t</ref><sp/>*<sp/>r,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>pd<sp/>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a03efbfc08da3aa936597103784ddbe45" kindref="member">get_elem</ref><sp/>(<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>m<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>j,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">*<sp/>pd<sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a58e3ead06f0ecc684dfc90538947343a" kindref="member">free_row</ref><sp/>(<ref refid="structelem" kindref="compound">elem_t</ref><sp/>**<sp/>pr);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref><sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>**<sp/>pm);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" kindref="member">sum_smat</ref><sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>b);<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1a633a6b934732ad44f5cf73e9c55c54e9" kindref="member">prod_smat</ref><sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>b);<sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1a7b9192596db334fe30a652e05ab45987" kindref="member">transp_smat</ref><sp/>(<ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>a);<sp/></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1ac5049cd89f46bff8cd028382edf931e6" kindref="member">load_smat</ref><sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642" kindref="member">save_smat</ref><sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" kindref="member">loadbin_smat</ref><sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" kindref="member">savebin_smat</ref><sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);<sp/></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="sparse.h"/>
   </compounddef>

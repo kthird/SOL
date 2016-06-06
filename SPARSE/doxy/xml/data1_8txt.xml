@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="data1_8txt" kind="file" language="C++">
+    <compoundname>data1.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">3</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">4</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">1<sp/>1<sp/>4.5</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">2<sp/>0<sp/>9</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">2<sp/>2<sp/>89.67</highlight></codeline>
+    </programlisting>
+    <location file="data1.txt"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="test__three_8c" kind="file" language="C++">
+    <compoundname>test_three.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="sparse_8h" local="yes">sparse.h</includes>
+    <incdepgraph>
+      <node id="96">
+        <label>sparse.h</label>
+        <link refid="sparse_8h"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>stdlib.h</label>
+      </node>
+      <node id="95">
+        <label>string.h</label>
+      </node>
+      <node id="92">
+        <label>test_three.c</label>
+        <link refid="test_three.c"/>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="94" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="test__three_8c_1a0240ac851181b84ac374872dc5434ee4" prot="public" static="no">
+        <name>N</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>numero rige e colonne </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test_three.c" line="14" column="9" bodyfile="test_three.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__three_8c_1a52037c938e3c1b126c6277da5ca689d0" prot="public" static="no">
+        <name>M</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test_three.c" line="15" column="9" bodyfile="test_three.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__three_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test_three.c" line="17" column="1" bodyfile="test_three.c" bodystart="17" bodyend="57"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>\file</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/>\authors<sp/>sol-lab<sp/>2015/16<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>\brief<sp/>terzo<sp/>test<sp/>frammento<sp/>1</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sparse_8h" kindref="compound">sparse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#define<sp/>N<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>a,<sp/>*b,<sp/>*c;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>creazione<sp/>matrici<sp/>test<sp/>operazioni<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>a<sp/>=<sp/><ref refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kindref="member">new_smat</ref>(N,M);<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>b<sp/>=<sp/><ref refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kindref="member">new_smat</ref>(N,M);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i<sp/>&lt;<sp/>N<sp/>;<sp/>i<sp/>++)<sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j=0;<sp/>j<sp/>&lt;<sp/>M<sp/>;<sp/>j<sp/>++)<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>j)<sp/><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(a,i,j,(1.0))<sp/>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,<sp/>i,<sp/>j<sp/>,(2.0))<sp/>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>calcolo<sp/>la<sp/>trasposta<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>c<sp/>=<sp/><ref refid="sparse_8c_1a7b9192596db334fe30a652e05ab45987" kindref="member">transp_smat</ref>(b);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;b);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>stampo<sp/>le<sp/>matrici<sp/>da<sp/>moltiplicare<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,a);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,c);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>(<sp/>b<sp/>=<sp/><ref refid="sparse_8c_1a633a6b934732ad44f5cf73e9c55c54e9" kindref="member">prod_smat</ref>(a,c)<sp/>)<sp/>==<sp/>NULL<sp/>)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,b);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;a);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;b);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;c);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test_three.c"/>
+  </compounddef>
+</doxygen>

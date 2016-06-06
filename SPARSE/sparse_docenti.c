@@ -1,3 +1,8 @@
+/**
+  @file sparse_docenti.c
+  @brief funzioni print smat implementata dai docenti
+  @author Docenti Sol Lab 2015/2016
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include "sparse.h"

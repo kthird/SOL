@@ -1,0 +1,403 @@
+\hypertarget{sparse_8c}{}\section{Riferimenti per il file sparse.\+c}
+\label{sparse_8c}\index{sparse.\+c@{sparse.\+c}}
+
+
+prototipi implementati  
+
+
+{\ttfamily \#include \char`\"{}sparse.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+Grafo delle dipendenze di inclusione per sparse.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{sparse_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$ \hyperlink{sparse_8c_a13f7785dace4a2981b9b6f810ca34115}{new\+\_\+smat} (unsigned n, unsigned m)
+\item 
+\hyperlink{sparse_8h_a4ed992ceefff896353c1727143529d16}{bool\+\_\+t} \hyperlink{sparse_8c_a4232552afd0fdc736d90fded1f272759}{is\+\_\+equal\+\_\+smat} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$a, \hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$b)
+\item 
+int \hyperlink{sparse_8c_a098b33ab9b543c109d655b9afc081bb7}{put\+\_\+elem\+\_\+row} (\hyperlink{sparse_8h_a14aec81bdea9c2d34b666b7157117387}{elem\+\_\+t} $\ast$$\ast$r, int j, double d)
+\item 
+int \hyperlink{sparse_8c_a19ab77e854480bb2c9e5032bc3f0ab9f}{put\+\_\+elem} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$m, unsigned i, unsigned j, double d)
+\item 
+int \hyperlink{sparse_8c_a23f27b0ac759a8c6cf94ca624a7367d3}{get\+\_\+elem\+\_\+row} (\hyperlink{sparse_8h_a14aec81bdea9c2d34b666b7157117387}{elem\+\_\+t} $\ast$r, int j, double $\ast$pd)
+\item 
+int \hyperlink{sparse_8c_a03efbfc08da3aa936597103784ddbe45}{get\+\_\+elem} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$m, unsigned i, unsigned j, double $\ast$pd)
+\item 
+void \hyperlink{sparse_8c_a58e3ead06f0ecc684dfc90538947343a}{free\+\_\+row} (\hyperlink{sparse_8h_a14aec81bdea9c2d34b666b7157117387}{elem\+\_\+t} $\ast$$\ast$pr)
+\item 
+void \hyperlink{sparse_8c_ad3596ce2e271a24fada5c85f3b8ce0af}{free\+\_\+smat} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$$\ast$pm)
+\item 
+\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$ \hyperlink{sparse_8c_afa8c4ca1cb9e4e55f40dd35faa1d9f85}{sum\+\_\+smat} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$a, \hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$b)
+\item 
+\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$ \hyperlink{sparse_8c_a633a6b934732ad44f5cf73e9c55c54e9}{prod\+\_\+smat} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$a, \hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$b)
+\item 
+\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$ \hyperlink{sparse_8c_a7b9192596db334fe30a652e05ab45987}{transp\+\_\+smat} (\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$a)
+\item 
+\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$ \hyperlink{sparse_8c_ac5049cd89f46bff8cd028382edf931e6}{load\+\_\+smat} (F\+I\+LE $\ast$fd)
+\item 
+int \hyperlink{sparse_8c_a9ee2597119d106f30a1ba43ba3d6c642}{save\+\_\+smat} (F\+I\+LE $\ast$fd, \hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$mat)
+\item 
+\hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$ \hyperlink{sparse_8c_a1bb39d59a532967d5f507a19700aafb1}{loadbin\+\_\+smat} (F\+I\+LE $\ast$fd)
+\item 
+int \hyperlink{sparse_8c_a8529b8bb59f8d259731ef88e5deb6d57}{savebin\+\_\+smat} (F\+I\+LE $\ast$fd, \hyperlink{structsmatrix__t}{smatrix\+\_\+t} $\ast$mat)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+prototipi implementati 
+
+\begin{DoxyAuthor}{Autore}
+Francesco Lorito 464604 
+\end{DoxyAuthor}
+
+
+\subsection{Documentazione delle funzioni}
+\index{sparse.\+c@{sparse.\+c}!free\+\_\+row@{free\+\_\+row}}
+\index{free\+\_\+row@{free\+\_\+row}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+row(elem\+\_\+t $\ast$$\ast$pr)}{free_row(elem_t **pr)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{{\bf elem\+\_\+t} $\ast$$\ast$}]{pr}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a58e3ead06f0ecc684dfc90538947343a}{}\label{sparse_8c_a58e3ead06f0ecc684dfc90538947343a}
+dealloca tutta la riga di una matrice
+
+
+\begin{DoxyParams}{Parametri}
+{\em pr} & puntatore al putatore della riga da deallocare ($\ast$pr viene messo a N\+U\+LL dalla funzione) \\
+\hline
+\end{DoxyParams}
+\index{sparse.\+c@{sparse.\+c}!free\+\_\+smat@{free\+\_\+smat}}
+\index{free\+\_\+smat@{free\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{free\+\_\+smat(smatrix\+\_\+t $\ast$$\ast$pm)}{free_smat(smatrix_t **pm)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$$\ast$}]{pm}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_ad3596ce2e271a24fada5c85f3b8ce0af}{}\label{sparse_8c_ad3596ce2e271a24fada5c85f3b8ce0af}
+dealloca tutta la matrice
+
+
+\begin{DoxyParams}{Parametri}
+{\em pm} & puntatore al putatore della matrice da deallocare ($\ast$pm viene messo a N\+U\+LL dalla funzione) \\
+\hline
+\end{DoxyParams}
+\index{sparse.\+c@{sparse.\+c}!get\+\_\+elem@{get\+\_\+elem}}
+\index{get\+\_\+elem@{get\+\_\+elem}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+elem(smatrix\+\_\+t $\ast$m, unsigned i, unsigned j, double $\ast$pd)}{get_elem(smatrix_t *m, unsigned i, unsigned j, double *pd)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+elem (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{m, }
+\item[{unsigned}]{i, }
+\item[{unsigned}]{j, }
+\item[{double $\ast$}]{pd}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a03efbfc08da3aa936597103784ddbe45}{}\label{sparse_8c_a03efbfc08da3aa936597103784ddbe45}
+legge il valore nell\textquotesingle{}elemento i,j
+
+
+\begin{DoxyParams}{Parametri}
+{\em m} & puntatore alla matrice \\
+\hline
+{\em (i,j)} & posizione dell\textquotesingle{}elemento \\
+\hline
+{\em pd} & puntatore della variabile in cui scrivere il valore dell\textquotesingle{}elemento\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em -\/1} & se si e\textquotesingle{} verificato un errore \\
+\hline
+{\em 0} & altrimenti \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!get\+\_\+elem\+\_\+row@{get\+\_\+elem\+\_\+row}}
+\index{get\+\_\+elem\+\_\+row@{get\+\_\+elem\+\_\+row}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{get\+\_\+elem\+\_\+row(elem\+\_\+t $\ast$r, int j, double $\ast$pd)}{get_elem_row(elem_t *r, int j, double *pd)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+\_\+elem\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{{\bf elem\+\_\+t} $\ast$}]{r, }
+\item[{int}]{j, }
+\item[{double $\ast$}]{pd}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a23f27b0ac759a8c6cf94ca624a7367d3}{}\label{sparse_8c_a23f27b0ac759a8c6cf94ca624a7367d3}
+legge il valore dell\textquotesingle{}elemento nella colonna j
+
+
+\begin{DoxyParams}{Parametri}
+{\em r} & puntatore alla riga da leggere \\
+\hline
+{\em j} & colonna dell\textquotesingle{}elemento \\
+\hline
+{\em pd} & puntatore della variabile in cui scrivere il valore dell\textquotesingle{}elemento\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em -\/1} & se si e\textquotesingle{} verificato un errore \\
+\hline
+{\em 0} & altrimenti \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!is\+\_\+equal\+\_\+smat@{is\+\_\+equal\+\_\+smat}}
+\index{is\+\_\+equal\+\_\+smat@{is\+\_\+equal\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{is\+\_\+equal\+\_\+smat(smatrix\+\_\+t $\ast$a, smatrix\+\_\+t $\ast$b)}{is_equal_smat(smatrix_t *a, smatrix_t *b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool\+\_\+t} is\+\_\+equal\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{a, }
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a4232552afd0fdc736d90fded1f272759}{}\label{sparse_8c_a4232552afd0fdc736d90fded1f272759}
+Controlla se due matrici sono uguali, elemento per elemento
+
+
+\begin{DoxyParams}{Parametri}
+{\em a} & puntatore alla prima matrice da confrontare \\
+\hline
+{\em b} & puntatore alla seconda matrice da confrontare\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em T\+R\+UE} & se sono uguali \\
+\hline
+{\em F\+A\+L\+SE} & altrimenti \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!load\+\_\+smat@{load\+\_\+smat}}
+\index{load\+\_\+smat@{load\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{load\+\_\+smat(\+F\+I\+L\+E $\ast$fd)}{load_smat(FILE *fd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ load\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fd}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_ac5049cd89f46bff8cd028382edf931e6}{}\label{sparse_8c_ac5049cd89f46bff8cd028382edf931e6}
+carica da file una matrice nel formato nrighe1 ncolonne1 riga1 colonna1 valore1 ... rigaN colonnaN valoreN
+
+Ad esempio la matrice
+
+3.\+1 0 0 0 0 0 0 0 0 7.\+2 0 9.\+0
+
+è rappresentata come 3 3 0 0 3.\+1 2 1 7.\+2 2 2 9.\+0
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file da cui caricare la matrice (gia\textquotesingle{} aperto)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em p} & puntatore alla nuove matrice caricata (allocata dentro la funzione) \\
+\hline
+{\em N\+U\+LL} & se si è verificato un errore (setta errno) \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!loadbin\+\_\+smat@{loadbin\+\_\+smat}}
+\index{loadbin\+\_\+smat@{loadbin\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{loadbin\+\_\+smat(\+F\+I\+L\+E $\ast$fd)}{loadbin_smat(FILE *fd)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ loadbin\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fd}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a1bb39d59a532967d5f507a19700aafb1}{}\label{sparse_8c_a1bb39d59a532967d5f507a19700aafb1}
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file da cui caricare la matrice (gia\textquotesingle{} aperto)\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em p} & puntatore alla nuove matrice caricata (allocata dentro la funzione) \\
+\hline
+{\em N\+U\+LL} & se si è verificato un errore (setta errno) \\
+\hline
+\end{DoxyRetVals}
+Il file binario si presenta come un\textquotesingle{}unica stringa di bit 110010101110..............010101
+
+i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue\+: un blocco di sizeof(int) per l\textquotesingle{}indice di riga un blocco di sizeof(int) per l\textquotesingle{}indice di colonna e un blocco di sizeof(double) per il valore dell\textquotesingle{}elemento e così via per ogni elemento della matrice\index{sparse.\+c@{sparse.\+c}!new\+\_\+smat@{new\+\_\+smat}}
+\index{new\+\_\+smat@{new\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{new\+\_\+smat(unsigned n, unsigned m)}{new_smat(unsigned n, unsigned m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ new\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{n, }
+\item[{unsigned}]{m}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a13f7785dace4a2981b9b6f810ca34115}{}\label{sparse_8c_a13f7785dace4a2981b9b6f810ca34115}
+crea una nuova matrice vuota 
+\begin{DoxyParams}{Parametri}
+{\em n} & numero di righe \\
+\hline
+{\em m} & numero di colonne\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em N\+U\+LL} & se si e\textquotesingle{} verificato un errore \\
+\hline
+{\em p} & ppuntatore alla matrice appena allocata \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!prod\+\_\+smat@{prod\+\_\+smat}}
+\index{prod\+\_\+smat@{prod\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{prod\+\_\+smat(smatrix\+\_\+t $\ast$a, smatrix\+\_\+t $\ast$b)}{prod_smat(smatrix_t *a, smatrix_t *b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ prod\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{a, }
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a633a6b934732ad44f5cf73e9c55c54e9}{}\label{sparse_8c_a633a6b934732ad44f5cf73e9c55c54e9}
+moltiplica due matrici (se il prodotto è zero ricordarsi di non inserire l\textquotesingle{}elemento corrispondente) 
+\begin{DoxyParams}{Parametri}
+{\em a,b} & matrici da moltiplicare\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em c} & la matrice risultato (viene allocata dentro la funzione) \\
+\hline
+{\em N\+U\+LL} & se si è verificato un errore \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!put\+\_\+elem@{put\+\_\+elem}}
+\index{put\+\_\+elem@{put\+\_\+elem}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{put\+\_\+elem(smatrix\+\_\+t $\ast$m, unsigned i, unsigned j, double d)}{put_elem(smatrix_t *m, unsigned i, unsigned j, double d)}}]{\setlength{\rightskip}{0pt plus 5cm}int put\+\_\+elem (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{m, }
+\item[{unsigned}]{i, }
+\item[{unsigned}]{j, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a19ab77e854480bb2c9e5032bc3f0ab9f}{}\label{sparse_8c_a19ab77e854480bb2c9e5032bc3f0ab9f}
+scrive un valore nell\textquotesingle{}elemento i,j, per mantenere la rappresentazione consistente se il valore scritto è 0 l\textquotesingle{}elemento corrispondente deve essere eliminato dalla lista che rappresenta la riga
+
+
+\begin{DoxyParams}{Parametri}
+{\em m} & puntatore alla matrice \\
+\hline
+{\em (i,j)} & posizione dell\textquotesingle{}elemento \\
+\hline
+{\em d} & valore dell\textquotesingle{}elemento da scrivere\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em -\/1} & se si e\textquotesingle{} verificato un errore \\
+\hline
+{\em 0} & altrimenti \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!put\+\_\+elem\+\_\+row@{put\+\_\+elem\+\_\+row}}
+\index{put\+\_\+elem\+\_\+row@{put\+\_\+elem\+\_\+row}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{put\+\_\+elem\+\_\+row(elem\+\_\+t $\ast$$\ast$r, int j, double d)}{put_elem_row(elem_t **r, int j, double d)}}]{\setlength{\rightskip}{0pt plus 5cm}int put\+\_\+elem\+\_\+row (
+\begin{DoxyParamCaption}
+\item[{{\bf elem\+\_\+t} $\ast$$\ast$}]{r, }
+\item[{int}]{j, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a098b33ab9b543c109d655b9afc081bb7}{}\label{sparse_8c_a098b33ab9b543c109d655b9afc081bb7}
+inserisce un elemento in r passata con indice colonna j, per mantenere la rappresentazione consistente se il valore scritto è 0 l\textquotesingle{}elemento corrispondente deve essere eliminato dalla lista che rappresenta la riga
+
+
+\begin{DoxyParams}{Parametri}
+{\em r} & puntatore alla riga \\
+\hline
+{\em j} & colonna dell\textquotesingle{}elemento \\
+\hline
+{\em d} & valore dell\textquotesingle{}elemento da scrivere\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em -\/1} & se si e\textquotesingle{} verificato un errore \\
+\hline
+{\em 0} & altrimenti \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!save\+\_\+smat@{save\+\_\+smat}}
+\index{save\+\_\+smat@{save\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{save\+\_\+smat(\+F\+I\+L\+E $\ast$fd, smatrix\+\_\+t $\ast$mat)}{save_smat(FILE *fd, smatrix_t *mat)}}]{\setlength{\rightskip}{0pt plus 5cm}int save\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fd, }
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{mat}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a9ee2597119d106f30a1ba43ba3d6c642}{}\label{sparse_8c_a9ee2597119d106f30a1ba43ba3d6c642}
+salva una matrice su file nel formato specificato per la funzione load\+\_\+smat
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file su cui scrivere la matrice (gia\textquotesingle{} aperto) \\
+\hline
+{\em mat} & la matrice da scrivere su file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em 0} & se tutto e\textquotesingle{} andato bene \\
+\hline
+{\em -\/1} & se si è verificato un errore (setta errno) \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!savebin\+\_\+smat@{savebin\+\_\+smat}}
+\index{savebin\+\_\+smat@{savebin\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{savebin\+\_\+smat(\+F\+I\+L\+E $\ast$fd, smatrix\+\_\+t $\ast$mat)}{savebin_smat(FILE *fd, smatrix_t *mat)}}]{\setlength{\rightskip}{0pt plus 5cm}int savebin\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{fd, }
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{mat}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a8529b8bb59f8d259731ef88e5deb6d57}{}\label{sparse_8c_a8529b8bb59f8d259731ef88e5deb6d57}
+salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+
+
+\begin{DoxyParams}{Parametri}
+{\em fd} & file su cui scrivere la matrice (gia\textquotesingle{} aperto) \\
+\hline
+{\em mat} & la matrice da scrivere su file\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em 0} & se tutto e\textquotesingle{} andato bene \\
+\hline
+{\em -\/1} & se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin\+\_\+smat \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!sum\+\_\+smat@{sum\+\_\+smat}}
+\index{sum\+\_\+smat@{sum\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{sum\+\_\+smat(smatrix\+\_\+t $\ast$a, smatrix\+\_\+t $\ast$b)}{sum_smat(smatrix_t *a, smatrix_t *b)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ sum\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{a, }
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_afa8c4ca1cb9e4e55f40dd35faa1d9f85}{}\label{sparse_8c_afa8c4ca1cb9e4e55f40dd35faa1d9f85}
+somma due matrici (se la somma è zero ricordarsi di non inserire l\textquotesingle{}elemento corrispondente) 
+\begin{DoxyParams}{Parametri}
+{\em a,b} & matrici da sommare\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em c} & la matrice risultato (viene allocata dentro la funzione) \\
+\hline
+{\em N\+U\+LL} & se si è verificato un errore \\
+\hline
+\end{DoxyRetVals}
+\index{sparse.\+c@{sparse.\+c}!transp\+\_\+smat@{transp\+\_\+smat}}
+\index{transp\+\_\+smat@{transp\+\_\+smat}!sparse.\+c@{sparse.\+c}}
+\subsubsection[{\texorpdfstring{transp\+\_\+smat(smatrix\+\_\+t $\ast$a)}{transp_smat(smatrix_t *a)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ transp\+\_\+smat (
+\begin{DoxyParamCaption}
+\item[{{\bf smatrix\+\_\+t} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{sparse_8c_a7b9192596db334fe30a652e05ab45987}{}\label{sparse_8c_a7b9192596db334fe30a652e05ab45987}
+calcola la trasposta di una matrice (se un elemento è zero ricordarsi di non inserire) 
+\begin{DoxyParams}{Parametri}
+{\em a} & matrice\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Valori di ritorno}
+{\em c} & la matrice risultato (viene allocata dentro la funzione) \\
+\hline
+{\em N\+U\+LL} & se si è verificato un errore \\
+\hline
+\end{DoxyRetVals}

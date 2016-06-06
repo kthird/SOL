@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="out__test__one_8txt" kind="file" language="C++">
+    <compoundname>out_test_one.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="out__test__one_8txt_1aff6b862551d6530eb6375f2063b91276" prot="public" static="no" mutable="no">
+        <type>Test1</type>
+        <definition>Test1 __pad0__</definition>
+        <argsstring></argsstring>
+        <name>__pad0__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="out_test_one.txt" line="1" column="1" bodyfile="out_test_one.txt" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="out__test__one_8txt_1a8367c701683faafa9aaceb9ac617664e" prot="public" static="no" mutable="no">
+        <type>Test1&lt; 4, 8.000000 &gt;&lt; 2, 4.000000 &gt;&lt; 3, 4.000000 &gt;&lt; 4, 4.000000 &gt;</type>
+        <definition>Test1&lt;4,8.000000&gt;&lt;2,4.000000&gt;&lt;3,4.000000&gt;&lt;4,4.000000&gt; Test3</definition>
+        <argsstring></argsstring>
+        <name>Test3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="out_test_one.txt" line="9" column="1" bodyfile="out_test_one.txt" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Test1:</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Test2:</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">1:<sp/>&lt;1,4.000000&gt;&lt;4,8.000000&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">2:<sp/>&lt;1,5.500000&gt;&lt;2,4.000000&gt;&lt;3,4.000000&gt;&lt;4,4.000000&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">3:<sp/>&lt;4,4.000000&gt;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">5:<sp/>&lt;1,3.000000&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">Test3:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">0:<sp/>&lt;1,7.000000&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">1:<sp/>&lt;1,4.000000&gt;&lt;4,8.000000&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">2:<sp/>&lt;2,4.000000&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">3:<sp/>&lt;4,4.000000&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">5:<sp/>&lt;1,3.000000&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="out_test_one.txt"/>
+  </compounddef>
+</doxygen>

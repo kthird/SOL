@@ -1,0 +1,411 @@
+.TH "sparse.h" 3 "Lun 6 Giu 2016" "Version 1" "SOL - SPARSE" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sparse.h \- header file contenente i prototipi da implementare  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Composti"
+
+.in +1c
+.ti -1c
+.RI "struct \fBelem\fP"
+.br
+.ti -1c
+.RI "struct \fBsmatrix_t\fP"
+.br
+.in -1c
+.SS "Ridefinizioni di tipo (typedef)"
+
+.in +1c
+.ti -1c
+.RI "typedef enum \fBbool\fP \fBbool_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBelem\fP \fBelem_t\fP"
+.br
+.in -1c
+.SS "Tipi enumerati (enum)"
+
+.in +1c
+.ti -1c
+.RI "enum \fBbool\fP { \fBFALSE\fP =0, \fBTRUE\fP =1 }"
+.br
+.in -1c
+.SS "Funzioni"
+
+.in +1c
+.ti -1c
+.RI "void \fBprint_smat\fP (FILE *f, \fBsmatrix_t\fP *l)"
+.br
+.ti -1c
+.RI "\fBsmatrix_t\fP * \fBnew_smat\fP (unsigned n, unsigned m)"
+.br
+.ti -1c
+.RI "\fBbool_t\fP \fBis_equal_smat\fP (\fBsmatrix_t\fP *a, \fBsmatrix_t\fP *b)"
+.br
+.ti -1c
+.RI "int \fBput_elem_row\fP (\fBelem_t\fP **r, int j, double d)"
+.br
+.ti -1c
+.RI "int \fBput_elem\fP (\fBsmatrix_t\fP *m, unsigned i, unsigned j, double d)"
+.br
+.ti -1c
+.RI "int \fBget_elem_row\fP (\fBelem_t\fP *r, int j, double *pd)"
+.br
+.ti -1c
+.RI "int \fBget_elem\fP (\fBsmatrix_t\fP *m, unsigned i, unsigned j, double *pd)"
+.br
+.ti -1c
+.RI "void \fBfree_row\fP (\fBelem_t\fP **pr)"
+.br
+.ti -1c
+.RI "void \fBfree_smat\fP (\fBsmatrix_t\fP **pm)"
+.br
+.ti -1c
+.RI "\fBsmatrix_t\fP * \fBsum_smat\fP (\fBsmatrix_t\fP *a, \fBsmatrix_t\fP *b)"
+.br
+.ti -1c
+.RI "\fBsmatrix_t\fP * \fBprod_smat\fP (\fBsmatrix_t\fP *a, \fBsmatrix_t\fP *b)"
+.br
+.ti -1c
+.RI "\fBsmatrix_t\fP * \fBtransp_smat\fP (\fBsmatrix_t\fP *a)"
+.br
+.ti -1c
+.RI "\fBsmatrix_t\fP * \fBload_smat\fP (FILE *fd)"
+.br
+.ti -1c
+.RI "int \fBsave_smat\fP (FILE *fd, \fBsmatrix_t\fP *mat)"
+.br
+.ti -1c
+.RI "\fBsmatrix_t\fP * \fBloadbin_smat\fP (FILE *fd)"
+.br
+.ti -1c
+.RI "int \fBsavebin_smat\fP (FILE *fd, \fBsmatrix_t\fP *mat)"
+.br
+.in -1c
+.SH "Descrizione dettagliata"
+.PP 
+header file contenente i prototipi da implementare 
+
+
+.PP
+\fBAutore:\fP
+.RS 4
+Francesco Lorito 464604 
+.RE
+.PP
+
+.SH "Documentazione delle ridefinizioni di tipo (typedef)"
+.PP 
+.SS "typedef enum \fBbool\fP  \fBbool_t\fP"
+valori booleani 
+.SS "typedef struct \fBelem\fP  \fBelem_t\fP"
+Le matrici sparse di valori double sono rappresentate da un array di liste ciascuna delle quali rappresenta una riga\&. In ogni lista sono contenuti solo gli elementi non uguali a zero con il numero di colonna corrispondente\&.
+.PP
+Ad esempio la matrice
+.PP
+3\&.1 0 0 0 0 0 0 0 0 7\&.2 0 9\&.0
+.PP
+è rappresentata come
+.PP
+0 | ------>([0,3\&.1] , NULL) 1 | NULL 2 | ------>([1,7\&.2] , --)-->( [3,9\&.0] ,NULL)elemento della matrice sparsa 
+.SH "Documentazione dei tipi enumerati"
+.PP 
+.SS "enum \fBbool\fP"
+valori booleani 
+.SH "Documentazione delle funzioni"
+.PP 
+.SS "void free_row (\fBelem_t\fP ** pr)"
+dealloca tutta la riga di una matrice
+.PP
+\fBParametri:\fP
+.RS 4
+\fIpr\fP puntatore al putatore della riga da deallocare (*pr viene messo a NULL dalla funzione) 
+.RE
+.PP
+
+.SS "void free_smat (\fBsmatrix_t\fP ** pm)"
+dealloca tutta la matrice
+.PP
+\fBParametri:\fP
+.RS 4
+\fIpm\fP puntatore al putatore della matrice da deallocare (*pm viene messo a NULL dalla funzione) 
+.RE
+.PP
+
+.SS "int get_elem (\fBsmatrix_t\fP * m, unsigned i, unsigned j, double * pd)"
+legge il valore nell'elemento i,j
+.PP
+\fBParametri:\fP
+.RS 4
+\fIm\fP puntatore alla matrice 
+.br
+\fI(i,j)\fP posizione dell'elemento 
+.br
+\fIpd\fP puntatore della variabile in cui scrivere il valore dell'elemento
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fI-1\fP se si e' verificato un errore 
+.br
+\fI0\fP altrimenti 
+.RE
+.PP
+
+.SS "int get_elem_row (\fBelem_t\fP * r, int j, double * pd)"
+legge il valore dell'elemento nella colonna j
+.PP
+\fBParametri:\fP
+.RS 4
+\fIr\fP puntatore alla riga da leggere 
+.br
+\fIj\fP colonna dell'elemento 
+.br
+\fIpd\fP puntatore della variabile in cui scrivere il valore dell'elemento
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fI-1\fP se si e' verificato un errore 
+.br
+\fI0\fP altrimenti 
+.RE
+.PP
+
+.SS "\fBbool_t\fP is_equal_smat (\fBsmatrix_t\fP * a, \fBsmatrix_t\fP * b)"
+Controlla se due matrici sono uguali, elemento per elemento
+.PP
+\fBParametri:\fP
+.RS 4
+\fIa\fP puntatore alla prima matrice da confrontare 
+.br
+\fIb\fP puntatore alla seconda matrice da confrontare
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fITRUE\fP se sono uguali 
+.br
+\fIFALSE\fP altrimenti 
+.RE
+.PP
+
+.SS "\fBsmatrix_t\fP* load_smat (FILE * fd)"
+carica da file una matrice nel formato nrighe1 ncolonne1 riga1 colonna1 valore1 \&.\&.\&. rigaN colonnaN valoreN
+.PP
+Ad esempio la matrice
+.PP
+3\&.1 0 0 0 0 0 0 0 0 7\&.2 0 9\&.0
+.PP
+è rappresentata come 3 3 0 0 3\&.1 2 1 7\&.2 2 2 9\&.0
+.PP
+\fBParametri:\fP
+.RS 4
+\fIfd\fP file da cui caricare la matrice (gia' aperto)
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fIp\fP puntatore alla nuove matrice caricata (allocata dentro la funzione) 
+.br
+\fINULL\fP se si è verificato un errore (setta errno) 
+.RE
+.PP
+
+.SS "\fBsmatrix_t\fP* loadbin_smat (FILE * fd)"
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
+.PP
+\fBParametri:\fP
+.RS 4
+\fIfd\fP file da cui caricare la matrice (gia' aperto)
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fIp\fP puntatore alla nuove matrice caricata (allocata dentro la funzione) 
+.br
+\fINULL\fP se si è verificato un errore (setta errno) Il file binario si presenta come un'unica stringa di bit 110010101110\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.010101
+.RE
+.PP
+i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e così via per ogni elemento della matrice
+.PP
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
+.PP
+\fBParametri:\fP
+.RS 4
+\fIfd\fP file da cui caricare la matrice (gia' aperto)
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fIp\fP puntatore alla nuove matrice caricata (allocata dentro la funzione) 
+.br
+\fINULL\fP se si è verificato un errore (setta errno) 
+.RE
+.PP
+Il file binario si presenta come un'unica stringa di bit 110010101110\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.010101
+.PP
+i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e così via per ogni elemento della matrice
+.SS "\fBsmatrix_t\fP* new_smat (unsigned n, unsigned m)"
+crea una nuova matrice vuota 
+.PP
+\fBParametri:\fP
+.RS 4
+\fIn\fP numero di righe 
+.br
+\fIm\fP numero di colonne
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fINULL\fP se si e' verificato un errore 
+.br
+\fIp\fP ppuntatore alla matrice appena allocata 
+.RE
+.PP
+
+.SS "void print_smat (FILE * f, \fBsmatrix_t\fP * l)"
+stampa la matrice in forma canonica (FORNITA DAI DOCENTI)
+.PP
+\fBParametri:\fP
+.RS 4
+\fIl\fP putatore alla matrice da stampare 
+.br
+\fIf\fP puntatore al file su cui scrivere 
+.RE
+.PP
+
+.SS "\fBsmatrix_t\fP* prod_smat (\fBsmatrix_t\fP * a, \fBsmatrix_t\fP * b)"
+moltiplica due matrici (se il prodotto è zero ricordarsi di non inserire l'elemento corrispondente) 
+.PP
+\fBParametri:\fP
+.RS 4
+\fIa,b\fP matrici da moltiplicare
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fIc\fP la matrice risultato (viene allocata dentro la funzione) 
+.br
+\fINULL\fP se si è verificato un errore 
+.RE
+.PP
+
+.SS "int put_elem (\fBsmatrix_t\fP * m, unsigned i, unsigned j, double d)"
+scrive un valore nell'elemento i,j, per mantenere la rappresentazione consistente se il valore scritto è 0 l'elemento corrispondente deve essere eliminato dalla lista che rappresenta la riga
+.PP
+\fBParametri:\fP
+.RS 4
+\fIm\fP puntatore alla matrice 
+.br
+\fI(i,j)\fP posizione dell'elemento 
+.br
+\fId\fP valore dell'elemento da scrivere
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fI-1\fP se si e' verificato un errore 
+.br
+\fI0\fP altrimenti 
+.RE
+.PP
+
+.SS "int put_elem_row (\fBelem_t\fP ** r, int j, double d)"
+inserisce un elemento in r passata con indice colonna j, per mantenere la rappresentazione consistente se il valore scritto è 0 l'elemento corrispondente deve essere eliminato dalla lista che rappresenta la riga
+.PP
+\fBParametri:\fP
+.RS 4
+\fIr\fP puntatore alla riga 
+.br
+\fIj\fP colonna dell'elemento 
+.br
+\fId\fP valore dell'elemento da scrivere
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fI-1\fP se si e' verificato un errore 
+.br
+\fI0\fP altrimenti 
+.RE
+.PP
+
+.SS "int save_smat (FILE * fd, \fBsmatrix_t\fP * mat)"
+salva una matrice su file nel formato specificato per la funzione load_smat
+.PP
+\fBParametri:\fP
+.RS 4
+\fIfd\fP file su cui scrivere la matrice (gia' aperto) 
+.br
+\fImat\fP la matrice da scrivere su file
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fI0\fP se tutto e' andato bene 
+.br
+\fI-1\fP se si è verificato un errore (setta errno) 
+.RE
+.PP
+
+.SS "int savebin_smat (FILE * fd, \fBsmatrix_t\fP * mat)"
+salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+.PP
+\fBParametri:\fP
+.RS 4
+\fIfd\fP file su cui scrivere la matrice (gia' aperto) 
+.br
+\fImat\fP la matrice da scrivere su file
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fI0\fP se tutto e' andato bene 
+.br
+\fI-1\fP se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat 
+.RE
+.PP
+
+.SS "\fBsmatrix_t\fP* sum_smat (\fBsmatrix_t\fP * a, \fBsmatrix_t\fP * b)"
+somma due matrici (se la somma è zero ricordarsi di non inserire l'elemento corrispondente) 
+.PP
+\fBParametri:\fP
+.RS 4
+\fIa,b\fP matrici da sommare
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fIc\fP la matrice risultato (viene allocata dentro la funzione) 
+.br
+\fINULL\fP se si è verificato un errore 
+.RE
+.PP
+
+.SS "\fBsmatrix_t\fP* transp_smat (\fBsmatrix_t\fP * a)"
+calcola la trasposta di una matrice (se un elemento è zero ricordarsi di non inserire) 
+.PP
+\fBParametri:\fP
+.RS 4
+\fIa\fP matrice
+.RE
+.PP
+\fBValori di ritorno:\fP
+.RS 4
+\fIc\fP la matrice risultato (viene allocata dentro la funzione) 
+.br
+\fINULL\fP se si è verificato un errore 
+.RE
+.PP
+
+.SH "Autore"
+.PP 
+Generato automaticamente da Doxygen per SOL - SPARSE a partire dal codice sorgente\&.

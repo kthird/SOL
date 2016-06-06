@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mat',['mat',['../structsmatrix__t.html#aa60ccb45be474ec81f6daab4fcdab2c4',1,'smatrix_t']]]
+  ['elem',['elem',['../structelem.html',1,'']]],
+  ['elem_5ft',['elem_t',['../sparse_8h.html#a14aec81bdea9c2d34b666b7157117387',1,'sparse.h']]]
 ];

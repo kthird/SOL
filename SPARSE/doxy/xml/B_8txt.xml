@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="B_8txt" kind="file" language="C++">
+    <compoundname>B.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="B_8txt_1a445d93e639c02494afbdc5126d1d9f8a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>__pad5__</definition>
+        <argsstring></argsstring>
+        <name>__pad5__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="print/B.txt" line="9" column="1" bodyfile="print/B.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">0:<sp/>&lt;1,1.000000&gt;&lt;3,1.000000&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">1:<sp/>&lt;0,1.000000&gt;&lt;2,1.000000&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">2:<sp/>&lt;0,1.000000&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="print/B.txt"/>
+  </compounddef>
+</doxygen>

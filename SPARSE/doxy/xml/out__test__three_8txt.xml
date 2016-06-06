@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="out__test__three_8txt" kind="file" language="C++">
+    <compoundname>out_test_three.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="out__test__three_8txt_1ae31ac69c75bb42f47c8d6a7cde4937c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>__pad1__</definition>
+        <argsstring></argsstring>
+        <name>__pad1__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="out_test_three.txt" line="9" column="1" bodyfile="out_test_three.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">0:<sp/>&lt;1,1.000000&gt;&lt;2,1.000000&gt;&lt;3,1.000000&gt;&lt;4,1.000000&gt;&lt;5,1.000000&gt;&lt;6,1.000000&gt;&lt;7,1.000000&gt;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">1:<sp/>&lt;0,1.000000&gt;&lt;2,1.000000&gt;&lt;3,1.000000&gt;&lt;4,1.000000&gt;&lt;5,1.000000&gt;&lt;6,1.000000&gt;&lt;7,1.000000&gt;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">2:<sp/>&lt;0,1.000000&gt;&lt;1,1.000000&gt;&lt;3,1.000000&gt;&lt;4,1.000000&gt;&lt;5,1.000000&gt;&lt;6,1.000000&gt;&lt;7,1.000000&gt;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">3:<sp/>&lt;0,1.000000&gt;&lt;1,1.000000&gt;&lt;2,1.000000&gt;&lt;4,1.000000&gt;&lt;5,1.000000&gt;&lt;6,1.000000&gt;&lt;7,1.000000&gt;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">4:<sp/>&lt;0,1.000000&gt;&lt;1,1.000000&gt;&lt;2,1.000000&gt;&lt;3,1.000000&gt;&lt;5,1.000000&gt;&lt;6,1.000000&gt;&lt;7,1.000000&gt;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">0:<sp/>&lt;1,2.000000&gt;&lt;2,2.000000&gt;&lt;3,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">1:<sp/>&lt;0,2.000000&gt;&lt;2,2.000000&gt;&lt;3,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">2:<sp/>&lt;0,2.000000&gt;&lt;1,2.000000&gt;&lt;3,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">3:<sp/>&lt;0,2.000000&gt;&lt;1,2.000000&gt;&lt;2,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">4:<sp/>&lt;0,2.000000&gt;&lt;1,2.000000&gt;&lt;2,2.000000&gt;&lt;3,2.000000&gt;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">5:<sp/>&lt;0,2.000000&gt;&lt;1,2.000000&gt;&lt;2,2.000000&gt;&lt;3,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">6:<sp/>&lt;0,2.000000&gt;&lt;1,2.000000&gt;&lt;2,2.000000&gt;&lt;3,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">7:<sp/>&lt;0,2.000000&gt;&lt;1,2.000000&gt;&lt;2,2.000000&gt;&lt;3,2.000000&gt;&lt;4,2.000000&gt;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">0:<sp/>&lt;0,14.000000&gt;&lt;1,12.000000&gt;&lt;2,12.000000&gt;&lt;3,12.000000&gt;&lt;4,12.000000&gt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">1:<sp/>&lt;0,12.000000&gt;&lt;1,14.000000&gt;&lt;2,12.000000&gt;&lt;3,12.000000&gt;&lt;4,12.000000&gt;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">2:<sp/>&lt;0,12.000000&gt;&lt;1,12.000000&gt;&lt;2,14.000000&gt;&lt;3,12.000000&gt;&lt;4,12.000000&gt;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">3:<sp/>&lt;0,12.000000&gt;&lt;1,12.000000&gt;&lt;2,12.000000&gt;&lt;3,14.000000&gt;&lt;4,12.000000&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">4:<sp/>&lt;0,12.000000&gt;&lt;1,12.000000&gt;&lt;2,12.000000&gt;&lt;3,12.000000&gt;&lt;4,14.000000&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="out_test_three.txt"/>
+  </compounddef>
+</doxygen>

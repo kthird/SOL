@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="gruppo_8txt" kind="file" language="C++">
+    <compoundname>gruppo.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="gruppo_8txt_1afe12ec104ad9bf72be255a491560b4b5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Francesco</definition>
+        <argsstring></argsstring>
+        <name>Francesco</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gruppo.txt" line="1" column="1" bodyfile="gruppo.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gruppo_8txt_1a219f5429b659319043a61795f5d2ac78" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Lorito</definition>
+        <argsstring></argsstring>
+        <name>Lorito</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="gruppo.txt" line="1" column="1" bodyfile="gruppo.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Francesco,<sp/>Lorito,<sp/>464604,<sp/>francesco.lorito.91@gmail.com</highlight></codeline>
+    </programlisting>
+    <location file="gruppo.txt"/>
+  </compounddef>
+</doxygen>

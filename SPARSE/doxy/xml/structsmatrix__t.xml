@@ -5,7 +5,7 @@
     <includes refid="sparse_8h" local="no">sparse.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" prot="public" static="no" mutable="no">
-        <type><ref refid="structelem" kindref="compound">elem_t</ref> **</type>
+        <type><ref refid="sparse_8h_1a14aec81bdea9c2d34b666b7157117387" kindref="member">elem_t</ref> **</type>
         <definition>elem_t** smatrix_t::mat</definition>
         <argsstring></argsstring>
         <name>mat</name>
@@ -15,7 +15,7 @@
 <para>puntatore all&apos;array delle righe </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="48" column="1" bodyfile="sparse.h" bodystart="48" bodyend="-1"/>
+        <location file="sparse.h" line="49" column="1" bodyfile="sparse.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsmatrix__t_1ae0b8f31ddab7ed23ca14a46758291f37" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
 <para>numero di righe </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="50" column="1" bodyfile="sparse.h" bodystart="50" bodyend="-1"/>
+        <location file="sparse.h" line="51" column="1" bodyfile="sparse.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
 <para>numero di colonne </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="52" column="1" bodyfile="sparse.h" bodystart="52" bodyend="-1"/>
+        <location file="sparse.h" line="53" column="1" bodyfile="sparse.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,7 +64,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="sparse.h" line="46" column="1" bodyfile="sparse.h" bodystart="46" bodyend="53"/>
+    <location file="sparse.h" line="47" column="1" bodyfile="sparse.h" bodystart="47" bodyend="54"/>
     <listofallmembers>
       <member refid="structsmatrix__t_1aa60ccb45be474ec81f6daab4fcdab2c4" prot="public" virt="non-virtual"><scope>smatrix_t</scope><name>mat</name></member>
       <member refid="structsmatrix__t_1a7a7218430298fc18a42dfa43ecc41635" prot="public" virt="non-virtual"><scope>smatrix_t</scope><name>ncol</name></member>

@@ -10,7 +10,33 @@
     </chapter>
     <chapter>
         <title>Documentazione dei file</title>
+        <xi:include href="DATA_2data1_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="data1_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="DATA_2data2_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="data2_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="DATA_2data3_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="data3_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="DATA_2data4_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="data4_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="data__out1_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="data__out2_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="gruppo_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="main_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="out__test__one_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="out__test__three_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="out__test__two_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="A_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="B_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="Bin_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="C_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="P_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="README_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="sparse_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
         <xi:include href="sparse_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="sparse__docenti_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test__four_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test__one_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test__three_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test__two_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     </chapter>
 </book>

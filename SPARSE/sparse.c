@@ -1,12 +1,15 @@
 /**
-  \brief header file primo frammento
-  \author Francesco Lorito 464604
+  @file sparse.c
+  @brief prototipi implementati
+  @author Francesco Lorito 464604
 */
 
 #include "sparse.h"
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
+
+
 
 /** 
   crea una nuova matrice vuota

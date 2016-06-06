@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="DATA_2data4_8txt" kind="file" language="C++">
+    <compoundname>data4.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">10</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">45</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">5<sp/>1<sp/>4.5</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">7<sp/>0<sp/>94</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">2<sp/>23<sp/>89.67</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">5<sp/>44<sp/>0.98</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">6<sp/>35<sp/>11.1</highlight></codeline>
+    </programlisting>
+    <location file="DATA/data4.txt"/>
+  </compounddef>
+</doxygen>

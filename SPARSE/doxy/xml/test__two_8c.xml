@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="test__two_8c" kind="file" language="C++">
+    <compoundname>test_two.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes refid="sparse_8h" local="yes">sparse.h</includes>
+    <incdepgraph>
+      <node id="102">
+        <label>sparse.h</label>
+        <link refid="sparse_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>stdlib.h</label>
+      </node>
+      <node id="101">
+        <label>string.h</label>
+      </node>
+      <node id="98">
+        <label>test_two.c</label>
+        <link refid="test_two.c"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="test__two_8c_1a0240ac851181b84ac374872dc5434ee4" prot="public" static="no">
+        <name>N</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>numero rige e colonne </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test_two.c" line="14" column="9" bodyfile="test_two.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__two_8c_1a52037c938e3c1b126c6277da5ca689d0" prot="public" static="no">
+        <name>M</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test_two.c" line="15" column="9" bodyfile="test_two.c" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__two_8c_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test_two.c" line="17" column="1" bodyfile="test_two.c" bodystart="17" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>\file</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/>\authors<sp/>sol-lab<sp/>2015/16</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/>\brief<sp/>secondo<sp/>file<sp/>di<sp/>test<sp/>frammento<sp/>1</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sparse_8h" kindref="compound">sparse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor">#define<sp/>N<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref><sp/>*<sp/>a,<sp/>*b,<sp/>*c;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,j;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>creazione<sp/>matrici<sp/>vuote<sp/>test<sp/>operazioni<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>a<sp/>=<sp/><ref refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kindref="member">new_smat</ref>(N,M);<sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>b<sp/>=<sp/><ref refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kindref="member">new_smat</ref>(N,M);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>inserisco<sp/>elementi<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i<sp/>&lt;<sp/>N<sp/>;<sp/>i<sp/>++)<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j=0;<sp/>j<sp/>&lt;<sp/>M<sp/>;<sp/>j<sp/>++)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(a,i,j,1.0)<sp/>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,<sp/>i,<sp/>j<sp/>,1.0)<sp/>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>stampo<sp/>le<sp/>matrici<sp/>create<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,a);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,b);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>calcolo<sp/>la<sp/>matrice<sp/>somma<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>c<sp/>=<sp/><ref refid="sparse_8c_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" kindref="member">sum_smat</ref>(a,b);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>...<sp/>la<sp/>stampo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,c);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>dealloco<sp/>le<sp/>matrici<sp/>b<sp/>e<sp/>c<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;b);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;c);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>modifico<sp/>la<sp/>matrice<sp/>a<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;<sp/>N<sp/>;<sp/>i++)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j=0;<sp/>j<sp/>&lt;<sp/>M<sp/>;<sp/>j<sp/>++)<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(a,i,j,((3*i)+(2*j)));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>la<sp/>stampo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,a);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>creo<sp/>una<sp/>nuova<sp/>matrice<sp/>b<sp/>sparsa<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>b<sp/>=<sp/><ref refid="sparse_8c_1a13f7785dace4a2981b9b6f810ca34115" kindref="member">new_smat</ref>(N,M);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,2,1,-8.0)<sp/>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,2,4,-14.0)<sp/>;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,0,1,-2.0)<sp/>;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,0,4,-8.0)<sp/>;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,3,5,-23.0)<sp/>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(j=0;<sp/>j<sp/>&lt;<sp/>M;<sp/>j++)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sparse_8c_1a19ab77e854480bb2c9e5032bc3f0ab9f" kindref="member">put_elem</ref>(b,4,j,<sp/>-(12+(2*j)));<sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>la<sp/>stampo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,b);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>calcolo<sp/>la<sp/>somma<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>c<sp/>=<sp/><ref refid="sparse_8c_1afa8c4ca1cb9e4e55f40dd35faa1d9f85" kindref="member">sum_smat</ref>(a,b);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>la<sp/>stampo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="sparse_8h_1abe7c306fd1022398d6ee66088635d548" kindref="member">print_smat</ref>(stdout,c);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>dealloco<sp/>tutte<sp/>le<sp/>matrici<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;a);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;b);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><ref refid="sparse_8c_1ad3596ce2e271a24fada5c85f3b8ce0af" kindref="member">free_smat</ref>(&amp;c);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_SUCCESS;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="test_two.c"/>
+  </compounddef>
+</doxygen>

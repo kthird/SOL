@@ -62,7 +62,7 @@
 <para>è rappresentata come</para>
 
 <para>0 | &#8212;&#8212;&gt;([0,3.1] , NULL) 1 | NULL 2 | &#8212;&#8212;&gt;([1,7.2] , &#8211;)&#8211;&gt;( [3,9.0] ,NULL)elemento della matrice sparsa </para>
-                <para>Definition at line 35 of file sparse.h</para>
+                <para>Definition at line 36 of file sparse.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
         </simplesect>
@@ -72,7 +72,7 @@
                 <title>unsigned elem::col</title>                
 <para>indice di colonna </para>
 
-                <para>Definition at line 37 of file sparse.h</para>
+                <para>Definition at line 38 of file sparse.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
             </simplesect>
@@ -80,7 +80,7 @@
                 <title>double elem::val</title>                
 <para>valore dell&apos;elemento </para>
 
-                <para>Definition at line 39 of file sparse.h</para>
+                <para>Definition at line 40 of file sparse.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
             </simplesect>
@@ -88,7 +88,7 @@
                 <title>struct elem* elem::next</title>                
 <para>puntatore al prossimo elemento nella riga </para>
 
-                <para>Definition at line 41 of file sparse.h</para>
+                <para>Definition at line 42 of file sparse.h</para>
                 <para>The Documentation for this struct was generated from the following file: </para>
                 <para><itemizedlist><listitem><para>sparse.h</para></listitem></itemizedlist></para>
             </simplesect>
