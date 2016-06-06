@@ -13,8 +13,7 @@ Grafo delle dipendenze di inclusione per sparse.\+h\+:\nopagebreak
 \includegraphics[width=134pt]{sparse_8h__incl}
 \end{center}
 \end{figure}
-Questo grafo mostra quali altri file includono direttamente o indirettamente questo file\+:
-\nopagebreak
+Questo grafo mostra quali altri file includono direttamente o indirettamente questo file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -252,23 +251,18 @@ Ad esempio la matrice
 \item[{F\+I\+LE $\ast$}]{fd}
 \end{DoxyParamCaption}
 )}\hypertarget{sparse_8h_a1bb39d59a532967d5f507a19700aafb1}{}\label{sparse_8h_a1bb39d59a532967d5f507a19700aafb1}
-carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti) \begin{DoxyVerb}Il file binario si presenta come un'unica stringa di bit
+    110010101110..............010101
 
+i primi sizeof(int) bit  indicano il numrow
+i secondi sizeof(int) bit  indicano il numcol
+i successivi bit indicano il contenuto della matrice esono disposti come segue:
+    un blocco di sizeof(int) per l'indice di riga
+    un blocco di sizeof(int) per l'indice di colonna
+    e un blocco di sizeof(double) per il valore dell'elemento
+e così via per ogni elemento della matrice
+\end{DoxyVerb}
 
-\begin{DoxyParams}{Parametri}
-{\em fd} & file da cui caricare la matrice (gia\textquotesingle{} aperto)\\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{Valori di ritorno}
-{\em p} & puntatore alla nuove matrice caricata (allocata dentro la funzione) \\
-\hline
-{\em N\+U\+LL} & se si è verificato un errore (setta errno) Il file binario si presenta come un\textquotesingle{}unica stringa di bit 110010101110..............010101\\
-\hline
-\end{DoxyRetVals}
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue\+: un blocco di sizeof(int) per l\textquotesingle{}indice di riga un blocco di sizeof(int) per l\textquotesingle{}indice di colonna e un blocco di sizeof(double) per il valore dell\textquotesingle{}elemento e così via per ogni elemento della matrice
-
-carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
 
 
 \begin{DoxyParams}{Parametri}
@@ -282,9 +276,7 @@ carica da file una matrice in formato binario (scelto dallo studente e documenta
 {\em N\+U\+LL} & se si è verificato un errore (setta errno) \\
 \hline
 \end{DoxyRetVals}
-Il file binario si presenta come un\textquotesingle{}unica stringa di bit 110010101110..............010101
-
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue\+: un blocco di sizeof(int) per l\textquotesingle{}indice di riga un blocco di sizeof(int) per l\textquotesingle{}indice di colonna e un blocco di sizeof(double) per il valore dell\textquotesingle{}elemento e così via per ogni elemento della matrice\index{sparse.\+h@{sparse.\+h}!new\+\_\+smat@{new\+\_\+smat}}
+\index{sparse.\+h@{sparse.\+h}!new\+\_\+smat@{new\+\_\+smat}}
 \index{new\+\_\+smat@{new\+\_\+smat}!sparse.\+h@{sparse.\+h}}
 \subsubsection[{\texorpdfstring{new\+\_\+smat(unsigned n, unsigned m)}{new_smat(unsigned n, unsigned m)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf smatrix\+\_\+t}$\ast$ new\+\_\+smat (
 \begin{DoxyParamCaption}
@@ -430,7 +422,7 @@ salva una matrice su file nel formato specificato per la funzione load\+\_\+smat
 \item[{{\bf smatrix\+\_\+t} $\ast$}]{mat}
 \end{DoxyParamCaption}
 )}\hypertarget{sparse_8h_a8529b8bb59f8d259731ef88e5deb6d57}{}\label{sparse_8h_a8529b8bb59f8d259731ef88e5deb6d57}
-salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti) \mbox{[}stesso formato documentato in loadbin\+\_\+smat\mbox{]}
 
 
 \begin{DoxyParams}{Parametri}
@@ -443,7 +435,7 @@ salva una matrice su file in formato binario (scelto dallo studente e documentat
 \begin{DoxyRetVals}{Valori di ritorno}
 {\em 0} & se tutto e\textquotesingle{} andato bene \\
 \hline
-{\em -\/1} & se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin\+\_\+smat \\
+{\em -\/1} & se si è verificato un errore (setta errno) \\
 \hline
 \end{DoxyRetVals}
 \index{sparse.\+h@{sparse.\+h}!sum\+\_\+smat@{sum\+\_\+smat}}

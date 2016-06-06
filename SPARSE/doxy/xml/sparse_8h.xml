@@ -777,30 +777,17 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)</para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>fd</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>file da cui caricare la matrice (gia&apos; aperto)</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<parameterlist kind="retval"><parameteritem>
-<parameternamelist>
-<parametername>p</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>puntatore alla nuove matrice caricata (allocata dentro la funzione) </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>NULL</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>se si è verificato un errore (setta errno) Il file binario si presenta come un&apos;unica stringa di bit 110010101110..............010101</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l&apos;indice di riga un blocco di sizeof(int) per l&apos;indice di colonna e un blocco di sizeof(double) per il valore dell&apos;elemento e così via per ogni elemento della matrice</para><para>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)</para><para><parameterlist kind="param"><parameteritem>
+<para>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti) <verbatim>Il file binario si presenta come un&apos;unica stringa di bit
+    110010101110..............010101
+
+i primi sizeof(int) bit  indicano il numrow
+i secondi sizeof(int) bit  indicano il numcol
+i successivi bit indicano il contenuto della matrice esono disposti come segue:
+    un blocco di sizeof(int) per l&apos;indice di riga
+    un blocco di sizeof(int) per l&apos;indice di colonna
+    e un blocco di sizeof(double) per il valore dell&apos;elemento
+e così via per ogni elemento della matrice
+</verbatim></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fd</parametername>
 </parameternamelist>
@@ -825,8 +812,8 @@ i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
-<para>Il file binario si presenta come un&apos;unica stringa di bit 110010101110..............010101</para><para>i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l&apos;indice di riga un blocco di sizeof(int) per l&apos;indice di colonna e un blocco di sizeof(double) per il valore dell&apos;elemento e così via per ogni elemento della matrice</para>        </inbodydescription>
-        <location file="sparse.h" line="254" column="1" bodyfile="sparse.c" bodystart="768" bodyend="875"/>
+        </inbodydescription>
+        <location file="sparse.h" line="251" column="1" bodyfile="sparse.c" bodystart="780" bodyend="873"/>
       </memberdef>
       <memberdef kind="function" id="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -844,7 +831,7 @@ i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)</para><para><parameterlist kind="param"><parameteritem>
+<para>salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti) [stesso formato documentato in loadbin_smat]</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fd</parametername>
 </parameternamelist>
@@ -871,13 +858,13 @@ i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il
 <parametername>-1</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat </para></parameterdescription>
+<para>se si è verificato un errore (setta errno) </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="sparse.h" line="269" column="1" bodyfile="sparse.c" bodystart="889" bodyend="965"/>
+        <location file="sparse.h" line="264" column="1" bodyfile="sparse.c" bodystart="885" bodyend="961"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -935,12 +922,14 @@ i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il
 <codeline lineno="219"><highlight class="normal"></highlight></codeline>
 <codeline lineno="228"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a9ee2597119d106f30a1ba43ba3d6c642" kindref="member">save_smat</ref><sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);</highlight></codeline>
 <codeline lineno="229"><highlight class="normal"><sp/></highlight></codeline>
-<codeline lineno="254"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" kindref="member">loadbin_smat</ref><sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
-<codeline lineno="255"><highlight class="normal"></highlight></codeline>
-<codeline lineno="269"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" kindref="member">savebin_smat</ref><sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);<sp/></highlight></codeline>
-<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/><ref refid="sparse_8h_1a1bb39d59a532967d5f507a19700aafb1" kindref="member">loadbin_smat</ref><sp/>(FILE*<sp/>fd);<sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="sparse_8h_1a8529b8bb59f8d259731ef88e5deb6d57" kindref="member">savebin_smat</ref><sp/>(FILE*<sp/>fd,<sp/><ref refid="structsmatrix__t" kindref="compound">smatrix_t</ref>*<sp/>mat);<sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="sparse.h"/>
   </compounddef>

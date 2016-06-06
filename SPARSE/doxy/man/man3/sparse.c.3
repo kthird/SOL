@@ -178,7 +178,22 @@ Ad esempio la matrice
 .PP
 
 .SS "\fBsmatrix_t\fP* loadbin_smat (FILE * fd)"
-carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti) 
+.PP
+.nf
+Il file binario si presenta come un'unica stringa di bit
+    110010101110..............010101
+
+i primi sizeof(int) bit  indicano il numrow
+i secondi sizeof(int) bit  indicano il numcol
+i successivi bit indicano il contenuto della matrice esono disposti come segue:
+    un blocco di sizeof(int) per l'indice di riga
+    un blocco di sizeof(int) per l'indice di colonna
+    e un blocco di sizeof(double) per il valore dell'elemento
+e così via per ogni elemento della matrice
+
+.fi
+.PP
 .PP
 \fBParametri:\fP
 .RS 4
@@ -192,9 +207,7 @@ carica da file una matrice in formato binario (scelto dallo studente e documenta
 \fINULL\fP se si è verificato un errore (setta errno) 
 .RE
 .PP
-Il file binario si presenta come un'unica stringa di bit 110010101110\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.\&.010101
-.PP
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e così via per ogni elemento della matrice
+
 .SS "\fBsmatrix_t\fP* new_smat (unsigned n, unsigned m)"
 crea una nuova matrice vuota 
 .PP
@@ -288,7 +301,7 @@ salva una matrice su file nel formato specificato per la funzione load_smat
 .PP
 
 .SS "int savebin_smat (FILE * fd, \fBsmatrix_t\fP * mat)"
-salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti) [stesso formato documentato in loadbin_smat]
 .PP
 \fBParametri:\fP
 .RS 4
@@ -301,7 +314,7 @@ salva una matrice su file in formato binario (scelto dallo studente e documentat
 .RS 4
 \fI0\fP se tutto e' andato bene 
 .br
-\fI-1\fP se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat 
+\fI-1\fP se si è verificato un errore (setta errno) 
 .RE
 .PP
 

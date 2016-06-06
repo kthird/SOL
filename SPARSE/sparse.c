@@ -756,18 +756,10 @@ int save_smat (FILE* fd, smatrix_t* mat)
 	}
 }
 
+
 /** 
     carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)
-
-    \param fd file da cui caricare la matrice (gia' aperto)
-
-    \retval p puntatore alla nuove matrice caricata (allocata dentro la funzione)
-    \retval NULL se si è verificato un errore (setta errno)
-
-*/
-smatrix_t* loadbin_smat (FILE* fd)
-{
-	/**
+        
 		Il file binario si presenta come un'unica stringa di bit
 			110010101110..............010101
 		
@@ -778,9 +770,15 @@ smatrix_t* loadbin_smat (FILE* fd)
 			un blocco di sizeof(int) per l'indice di colonna
 			e un blocco di sizeof(double) per il valore dell'elemento
 		e così via per ogni elemento della matrice
-		
-	*/
-	
+
+    \param fd file da cui caricare la matrice (gia' aperto)
+
+    \retval p puntatore alla nuove matrice caricata (allocata dentro la funzione)
+    \retval NULL se si è verificato un errore (setta errno)
+
+*/
+smatrix_t* loadbin_smat (FILE* fd)
+{
 	smatrix_t * p;
 	int ncol;
 	int nrow;
@@ -875,6 +873,7 @@ smatrix_t* loadbin_smat (FILE* fd)
 }
 
 /** salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)
+  	[stesso formato documentato in loadbin_smat]
   
    \param fd file su cui scrivere la matrice (gia' aperto)
    \param mat la matrice da scrivere su file
@@ -883,9 +882,6 @@ smatrix_t* loadbin_smat (FILE* fd)
    \retval -1 se si è verificato un errore (setta errno)
  */
  
-/**
-	salva la matrice binaria nel formato descritto nella loadbin_smat
-*/
 int savebin_smat (FILE* fd, smatrix_t* mat)
 {
 	int i,j;

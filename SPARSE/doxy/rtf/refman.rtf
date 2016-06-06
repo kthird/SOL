@@ -85,7 +85,7 @@
 1 \par
 }}SOL - SPARSE}
 {\comment Generato daDoxgyen. }
-{\creatim \yr2016\mo6\dy6\hr17\min41\sec37}
+{\creatim \yr2016\mo6\dy6\hr17\min48\sec16}
 }\pard\plain 
 \sectd\pgnlcrm
 {\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
@@ -636,7 +636,20 @@ Valori di ritorno:\par}
 {
 \pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)\par
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti) {
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Il file binario si presenta come un'unica stringa di bit\par
+    110010101110..............010101\par
+\par
+i primi sizeof(int) bit  indicano il numrow\par
+i secondi sizeof(int) bit  indicano il numcol\par
+i successivi bit indicano il contenuto della matrice esono disposti come segue:\par
+    un blocco di sizeof(int) per l'indice di riga\par
+    un blocco di sizeof(int) per l'indice di colonna\par
+    e un blocco di sizeof(double) per il valore dell'elemento\par
+e cos\'EC via per ogni elemento della matrice\par
+}
+\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Parametri:\par}
 \pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
@@ -661,9 +674,6 @@ Valori di ritorno:\par}
 {{\i NULL} \cell }{se si \'E8 verificato un errore (setta errno) \cell }
 {\row }
 }
-}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Il file binario si presenta come un'unica stringa di bit 110010101110..............010101\par
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e cos\'EC via per ogni elemento della matrice\par
 }}
 {\xe \v new_smat\:sparse.c}
 {\xe \v sparse.c\:new_smat}
@@ -897,7 +907,7 @@ int savebin_smat (FILE *  {\i fd}, {\b smatrix_t} *  {\i mat})}}
 {
 \pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)\par
+salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti) [stesso formato documentato in loadbin_smat]\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Parametri:\par}
 \pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
@@ -925,7 +935,7 @@ Valori di ritorno:\par}
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i -1} \cell }{se si \'E8 verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat \cell }
+{{\i -1} \cell }{se si \'E8 verificato un errore (setta errno) \cell }
 {\row }
 }
 }}
@@ -1405,33 +1415,20 @@ Valori di ritorno:\par}
 {
 \pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)\par
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Parametri:\par}
-\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i fd} \cell }{file da cui caricare la matrice (gia' aperto)\cell }
-{\row }
+carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti) {
+\par
+\pard\plain \s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid Il file binario si presenta come un'unica stringa di bit\par
+    110010101110..............010101\par
+\par
+i primi sizeof(int) bit  indicano il numrow\par
+i secondi sizeof(int) bit  indicano il numcol\par
+i successivi bit indicano il contenuto della matrice esono disposti come segue:\par
+    un blocco di sizeof(int) per l'indice di riga\par
+    un blocco di sizeof(int) per l'indice di colonna\par
+    e un blocco di sizeof(double) per il valore dell'elemento\par
+e cos\'EC via per ogni elemento della matrice\par
 }
-{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
-Valori di ritorno:\par}
-\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i p} \cell }{puntatore alla nuove matrice caricata (allocata dentro la funzione) \cell }
-{\row }
-\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
-\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
-\pard \widctlpar\intbl\adjustright
-{{\i NULL} \cell }{se si \'E8 verificato un errore (setta errno) Il file binario si presenta come un'unica stringa di bit 110010101110..............010101\cell }
-{\row }
-}
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e cos\'EC via per ogni elemento della matrice\par
-carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)\par
+\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Parametri:\par}
 \pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
@@ -1456,9 +1453,6 @@ Valori di ritorno:\par}
 {{\i NULL} \cell }{se si \'E8 verificato un errore (setta errno) \cell }
 {\row }
 }
-}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-Il file binario si presenta come un'unica stringa di bit 110010101110..............010101\par
-i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e cos\'EC via per ogni elemento della matrice\par
 }}
 {\xe \v new_smat\:sparse.h}
 {\xe \v sparse.h\:new_smat}
@@ -1720,7 +1714,7 @@ int savebin_smat (FILE *  {\i fd}, {\b smatrix_t} *  {\i mat})}}
 {
 \pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
 {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
-salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)\par
+salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti) [stesso formato documentato in loadbin_smat]\par
 {{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
 Parametri:\par}
 \pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
@@ -1748,7 +1742,7 @@ Valori di ritorno:\par}
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
 \clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
 \pard \widctlpar\intbl\adjustright
-{{\i -1} \cell }{se si \'E8 verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat \cell }
+{{\i -1} \cell }{se si \'E8 verificato un errore (setta errno) \cell }
 {\row }
 }
 }}

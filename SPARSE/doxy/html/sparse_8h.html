@@ -451,23 +451,17 @@ Funzioni</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)</p>
-<dl class="params"><dt>Parametri</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">fd</td><td>file da cui caricare la matrice (gia' aperto)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Valori di ritorno</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">p</td><td>puntatore alla nuove matrice caricata (allocata dentro la funzione) </td></tr>
-    <tr><td class="paramname">NULL</td><td>se si è verificato un errore (setta errno) Il file binario si presenta come un'unica stringa di bit 110010101110..............010101</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e così via per ogni elemento della matrice</p>
-<p>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti)</p>
-<dl class="params"><dt>Parametri</dt><dd>
+<p>carica da file una matrice in formato binario (scelto dallo studente e documentato nei commenti) </p><pre class="fragment">Il file binario si presenta come un'unica stringa di bit
+    110010101110..............010101
+
+i primi sizeof(int) bit  indicano il numrow
+i secondi sizeof(int) bit  indicano il numcol
+i successivi bit indicano il contenuto della matrice esono disposti come segue:
+    un blocco di sizeof(int) per l'indice di riga
+    un blocco di sizeof(int) per l'indice di colonna
+    e un blocco di sizeof(double) per il valore dell'elemento
+e così via per ogni elemento della matrice
+</pre><dl class="params"><dt>Parametri</dt><dd>
   <table class="params">
     <tr><td class="paramname">fd</td><td>file da cui caricare la matrice (gia' aperto)</td></tr>
   </table>
@@ -480,8 +474,6 @@ Funzioni</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>Il file binario si presenta come un'unica stringa di bit 110010101110..............010101</p>
-<p>i primi sizeof(int) bit indicano il numrow i secondi sizeof(int) bit indicano il numcol i successivi bit indicano il contenuto della matrice esono disposti come segue: un blocco di sizeof(int) per l'indice di riga un blocco di sizeof(int) per l'indice di colonna e un blocco di sizeof(double) per il valore dell'elemento e così via per ogni elemento della matrice</p>
 
 </div>
 </div>
@@ -764,7 +756,7 @@ Funzioni</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti)</p>
+<p>salva una matrice su file in formato binario (scelto dallo studente e documentato nei commenti) [stesso formato documentato in loadbin_smat]</p>
 <dl class="params"><dt>Parametri</dt><dd>
   <table class="params">
     <tr><td class="paramname">fd</td><td>file su cui scrivere la matrice (gia' aperto) </td></tr>
@@ -775,7 +767,7 @@ Funzioni</h2></td></tr>
 <dl class="retval"><dt>Valori di ritorno</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>se tutto e' andato bene </td></tr>
-    <tr><td class="paramname">-1</td><td>se si è verificato un errore (setta errno) salva la matrice binaria nel formato descritto nella loadbin_smat </td></tr>
+    <tr><td class="paramname">-1</td><td>se si è verificato un errore (setta errno) </td></tr>
   </table>
   </dd>
 </dl>
