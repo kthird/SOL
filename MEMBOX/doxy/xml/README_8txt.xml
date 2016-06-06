@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="README_8txt" kind="file" language="C++">
+    <compoundname>README.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="README_8txt_1aa0ac8b1e62b114359027afaa79ba6fa8" prot="public" static="no" mutable="no">
+        <type>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client</type>
+        <definition>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client NON MODIFICARE IL CODICE DEL CLIENT test_hash c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="README.txt" line="25" column="1" bodyfile="README.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="README_8txt_1a8aa9ec37192bbbb3c431a5a9f5b57610" prot="public" static="no" mutable="no">
+        <type>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client</type>
+        <definition>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client sendRequest</definition>
+        <argsstring></argsstring>
+        <name>sendRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="README.txt" line="28" column="1" bodyfile="README.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="README_8txt_1a4997c6687ac85940681eab6d2bbc65bf" prot="public" static="no" mutable="no">
+        <type>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client</type>
+        <definition>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client readHeader</definition>
+        <argsstring></argsstring>
+        <name>readHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="README.txt" line="28" column="1" bodyfile="README.txt" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">=========================================================================<sp/><sp/></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">ISTRUZIONI<sp/>e<sp/>SPECIFICHE<sp/>per<sp/>il<sp/>secondo<sp/>frammento<sp/>del<sp/>progetto<sp/>2015/16</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">========================================================================<sp/><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">Il<sp/>progetto<sp/>prevede<sp/>lo<sp/>sviluppo<sp/>di<sp/>un<sp/>server<sp/>concorrente<sp/>che<sp/>implementa<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">un<sp/>repository<sp/>di<sp/>oggetti.<sp/>Il<sp/>nome<sp/>dato<sp/>al<sp/>server<sp/>e</highlight><highlight class="stringliteral">&apos;<sp/>membox.</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">------------------------------------------------<sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral">Estrarre<sp/>il<sp/>materiale<sp/>dal<sp/>KIT<sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral">------------------------------------------------<sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">Creare<sp/>una<sp/>directory<sp/>temporanea,<sp/>copiare<sp/>kit_f2.tar<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral">nella<sp/>directory<sp/>e<sp/>spostarsi<sp/>nella<sp/>directory<sp/>appena<sp/>creata.<sp/>Es.<sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral">$$<sp/>mkdir<sp/>Progetto_MemBox<sp/><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">$$<sp/>mv<sp/>kit_f2.tar<sp/>Progetto_MemBox<sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral">$$<sp/>cd<sp/>Progetto_MemBox<sp/><sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral">S-tarare<sp/>i<sp/>file<sp/>del<sp/>kit<sp/>con<sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral">$$<sp/>tar<sp/>xvf<sp/>kit_f2.tar<sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">questo<sp/>comando<sp/>crea<sp/>nella<sp/>directory<sp/>corrente<sp/>una<sp/>directory<sp/>&quot;membox&quot;<sp/>con<sp/>i<sp/>seguenti<sp/>file<sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral">$$<sp/>ls<sp/>membox<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral">client.c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>client<sp/>fornito<sp/>dai<sp/>docenti<sp/>che<sp/>deve<sp/>essere<sp/>utilizzato</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>per<sp/>effettuare<sp/>i<sp/>tests.<sp/>Per<sp/>far<sp/>funzionare<sp/>il<sp/>client<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e&apos;</highlight><highlight class="normal"><sp/>necessario<sp/>implementare<sp/>alcuni<sp/>metodi<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(es.<sp/>openConnection,<sp/>sendRequest,<sp/>readHeader,<sp/>...).</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(NON<sp/>MODIFICARE<sp/>IL<sp/>CODICE<sp/>DEL<sp/>CLIENT)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">test_hash.c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>file<sp/>fornito<sp/>dai<sp/>docenti<sp/>che<sp/>mostra<sp/>come<sp/>utilizzare<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>la<sp/>tabella<sp/>hash<sp/>icl_hash<sp/>implementata<sp/>nei<sp/>file<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>icl_hash.[ch]</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">connections.h</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">message.h</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">ops.h</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">stats.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>files<sp/>di<sp/>riferimento<sp/>forniti<sp/>dai<sp/>docenti,<sp/>questi<sp/>file<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>possono/devono<sp/>essere<sp/>modificati<sp/>dagli<sp/>studenti</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">icl_hash.[ch]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>implemantazione<sp/>di<sp/>una<sp/>tabella<sp/>hash</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(NON<sp/>MODIFICARE)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">membox.c<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>file<sp/>di<sp/>riferimento<sp/>contenente<sp/>il<sp/>main<sp/>del<sp/>server<sp/>membox.<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tale<sp/>file<sp/>va<sp/>modificato<sp/>dallo<sp/>studente<sp/>come<sp/>meglio<sp/>ritiene.</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">testput.sh</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">testlock.sh</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">testsize.sh</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">teststats.sh</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">testleaks.sh</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">teststress.sh</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>script<sp/>di<sp/>test</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(NON<sp/>MODIFICARE)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">Makefile<sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>file<sp/>per<sp/>il<sp/>make.<sp/>Il<sp/>Makefile<sp/>va<sp/>modificato<sp/>solo<sp/>nelle</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>parti<sp/>indicate.</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">DATI</highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>file<sp/>di<sp/>dati<sp/>necessari<sp/>per<sp/>i<sp/>tests.<sp/>Da<sp/>non<sp/>modificare</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>se<sp/>non<sp/>per<sp/>le<sp/>opzioni<sp/>UnixPath<sp/>e<sp/>StatFileName<sp/>(vedere<sp/>anche</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i<sp/>commenti<sp/>nel<sp/>Makefile).</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(NON<sp/>MODIFICARE)<sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="comment">README.txt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>questo<sp/>file<sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="comment">README.doxygen<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>informazioni<sp/>sul<sp/>dformato<sp/>doxygen<sp/>dei<sp/>commenti<sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alle<sp/>funzioni<sp/>(FACOLTATIVO)</highlight></codeline>
+<codeline lineno="69"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="comment">gruppo-check.pl<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>uno<sp/>script<sp/>Perl<sp/>che<sp/>controlla<sp/>il<sp/>formato<sp/>del<sp/>file<sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gruppo.txt<sp/>prima<sp/>di<sp/>effettuare<sp/>la<sp/>consegna<sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(NON<sp/>MODIFICARE)<sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="comment">gruppo.txt<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>un<sp/>file<sp/>di<sp/>esempio<sp/>di<sp/>specifica<sp/>del<sp/>gruppo<sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(massimo<sp/>2<sp/>studenti<sp/>per<sp/>gruppo)<sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(deve<sp/>essere<sp/>aggiornato<sp/>con<sp/>i<sp/>dati<sp/>di<sp/>chi<sp/>consegna,<sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>secondo<sp/>il<sp/>formato<sp/>esemplificato)<sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="comment">------------------<sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="comment">Come<sp/>procedere<sp/>:<sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="comment">-----------------<sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="comment">1)<sp/>leggere<sp/>attentamente<sp/>le<sp/>specifiche<sp/>e<sp/>capire<sp/>il<sp/>funzionamento<sp/>il<sp/>codice<sp/>di<sp/>test<sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/>fornito<sp/>dai<sp/>docenti.<sp/>In<sp/>particolare<sp/>leggere<sp/>attentamente<sp/>il<sp/>codice<sp/>del<sp/>client</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/>per<sp/>capire<sp/>cosa<sp/>e&apos;<sp/>necessario<sp/>implementare.<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="comment">2)<sp/>implementare<sp/>le<sp/>funzioni<sp/>richieste<sp/>ed<sp/>effettuare<sp/>testing<sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="comment"><sp/><sp/><sp/>preliminare<sp/>utilizzando<sp/>programmi<sp/>sviluppati<sp/>allo<sp/>scopo<sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="comment">3)<sp/>testare<sp/>il<sp/>software<sp/>con<sp/>i<sp/>test<sp/>forniti<sp/>dai<sp/>docenti.<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bash:~$<sp/>make<sp/>test1<sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bash:~$<sp/>make<sp/>test2<sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bash:~$<sp/>make<sp/>test3<sp/><sp/></highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bash:~$<sp/>make<sp/>test4<sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="comment">4)<sp/>preparare<sp/>la<sp/>documentazione:<sp/>ovvero<sp/>commentare<sp/>adeguatamente<sp/>il/i<sp/>file<sp/>che<sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/><sp/><sp/>contengono<sp/>la<sp/>soluzione<sp/><sp/>ed<sp/>inserire<sp/>un&apos;<sp/>intestazione<sp/>contenente<sp/>il<sp/>nome<sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/><sp/><sp/>dello<sp/>sviluppatore<sp/>ed<sp/>una<sp/>dichiarazione<sp/>di<sp/>originalita&apos;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="comment">5)<sp/>aggiornare<sp/>il<sp/>file<sp/>&quot;gruppo.txt&quot;<sp/>con<sp/>nomi<sp/>e<sp/>dati<sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="comment">6)<sp/>inserire<sp/>nel<sp/>Makefile<sp/>il<sp/>nome<sp/>dei<sp/>file<sp/>da<sp/>consegnare<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="comment"><sp/><sp/><sp/>(variabile<sp/>FILE_DA_CONSEGNARE)<sp/>ed<sp/>il<sp/>nome<sp/>del<sp/>tarball<sp/>da<sp/>produrre</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"><sp/><sp/><sp/>(variabile<sp/>TARNAME)</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="comment">8)<sp/>consegnare<sp/>il<sp/>file<sp/>ESCLUSIVAMENTE<sp/>eseguendo<sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/>bash:~$<sp/>make<sp/>consegna<sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/>e<sp/>seguendo<sp/>le<sp/>istruzioni.<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="comment"><sp/><sp/><sp/>Il<sp/>target<sp/>consegna<sp/>crea<sp/>un<sp/>file<sp/>tar<sp/>che<sp/>deve<sp/>essere<sp/>inviato<sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="comment"><sp/><sp/><sp/>alla<sp/>lista<sp/>lso.di@listgateway.unipi.it<sp/>(NON<sp/>E&apos;<sp/>NECESSARIO<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="comment"><sp/><sp/><sp/>ISCRIVERSI<sp/>ALLA<sp/>LISTA)<sp/>con<sp/>oggetto:</highlight></codeline>
+<codeline lineno="122"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="comment"><sp/><sp/><sp/>&quot;lso16:<sp/>frammento<sp/>2<sp/>-<sp/>corso<sp/>A&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="comment"><sp/><sp/><sp/>&quot;lso16:<sp/>frammento<sp/>2<sp/>-<sp/>corso<sp/>B&quot;<sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="comment"><sp/><sp/><sp/>Tutte<sp/>le<sp/>consegne<sp/>verranno<sp/>confermate<sp/>con<sp/>un<sp/>messaggio<sp/>entro<sp/>2/3<sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="comment"><sp/><sp/><sp/>giorni<sp/>all&apos;indirizzo<sp/>da<sp/>cui<sp/>e&apos;<sp/>stata<sp/>effettuata<sp/>la<sp/>consegna.<sp/>In<sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="comment"><sp/><sp/><sp/>caso<sp/>questo<sp/>non<sp/>si<sp/>verifichi<sp/>contattare<sp/>il<sp/>docente.<sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="comment">---------------------------------------<sp/><sp/></highlight></codeline>
+<codeline lineno="131"><highlight class="comment"><sp/>NOTE<sp/>IMPORTANTI:<sp/>LEGGERE<sp/>ATTENTAMENTE<sp/><sp/></highlight></codeline>
+<codeline lineno="132"><highlight class="comment">---------------------------------------<sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="comment">1)<sp/>gli<sp/>eleborati<sp/>contenenti<sp/>tar<sp/>non<sp/>creati<sp/>con<sp/>&quot;make<sp/>consegna&quot;<sp/>o</highlight></codeline>
+<codeline lineno="135"><highlight class="comment"><sp/><sp/><sp/>comunque<sp/>seguendo<sp/>le<sp/>istruzioni<sp/>riportate<sp/>sopra<sp/>non<sp/>verranno</highlight></codeline>
+<codeline lineno="136"><highlight class="comment"><sp/><sp/><sp/>accettati<sp/>(gli<sp/>studenti<sp/>sono<sp/>invitati<sp/>a<sp/>controllare<sp/>che<sp/>il<sp/>tar</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/>contenga<sp/>tutti<sp/>i<sp/>file<sp/>richiesti<sp/>sopra<sp/>con<sp/>il</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/>comando<sp/>&quot;<sp/>tar<sp/>tvf<sp/>nomefiletar<sp/>&quot;<sp/>prima<sp/>di<sp/>inviare<sp/>il<sp/>file)</highlight></codeline>
+<codeline lineno="139"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="comment">2)<sp/>tutti<sp/>gli<sp/>elaborati<sp/>verranno<sp/>confrontati<sp/>fra<sp/>di<sp/>loro<sp/>con<sp/>tool<sp/>automatici<sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="comment"><sp/><sp/><sp/>per<sp/>stabilire<sp/>eventuali<sp/>situazioni<sp/>di<sp/>PLAGIO.<sp/>Se<sp/>gli<sp/>elaborato<sp/>sono<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="comment"><sp/><sp/><sp/>ragionevolmente<sp/>simili<sp/>verranno<sp/>scartati.<sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="comment">3)<sp/>Chi<sp/>in<sp/>sede<sp/>di<sp/>orale<sp/>risulta<sp/>palesemente<sp/>non<sp/>essere<sp/>l&apos;autore<sp/>del<sp/>software<sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="comment"><sp/><sp/><sp/>consegnato<sp/>dovra&apos;<sp/>ricominicare<sp/>da<sp/>zero<sp/>con<sp/>un<sp/>altro<sp/>progetto</highlight></codeline>
+<codeline lineno="146"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="comment">4)<sp/>Tutti<sp/>i<sp/>comportamenti<sp/>scorretti<sp/>ai<sp/>punti<sp/>2<sp/>e<sp/>3<sp/>verranno<sp/>segnalati<sp/><sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/>ufficialmente<sp/>al<sp/>presidente<sp/>del<sp/>corso<sp/>di<sp/>laurea<sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="comment"><sp/><sp/></highlight></codeline>
+<codeline lineno="150"><highlight class="comment"><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="README.txt"/>
+  </compounddef>
+</doxygen>

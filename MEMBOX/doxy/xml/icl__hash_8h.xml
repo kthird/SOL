@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="icl__hash_8h" kind="file" language="C++">
+    <compoundname>icl_hash.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includedby refid="icl__hash_8c" local="yes">icl_hash.c</includedby>
+    <includedby refid="test__hash_8c" local="no">test_hash.c</includedby>
+    <incdepgraph>
+      <node id="77">
+        <label>icl_hash.h</label>
+        <link refid="icl_hash.h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="80">
+        <label>icl_hash.c</label>
+        <link refid="icl__hash_8c"/>
+      </node>
+      <node id="79">
+        <label>icl_hash.h</label>
+        <link refid="icl_hash.h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structicl__entry__s" prot="public">icl_entry_s</innerclass>
+    <innerclass refid="structicl__hash__s" prot="public">icl_hash_s</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="icl__hash_8h_1ac445362364e0a96ab259479c104a7670" prot="public" static="no">
+        <name>icl_hash_foreach</name>
+        <param><defname>ht</defname></param>
+        <param><defname>tmpint</defname></param>
+        <param><defname>tmpent</defname></param>
+        <param><defname>kp</defname></param>
+        <param><defname>dp</defname></param>
+        <initializer>for (tmpint=0;tmpint&lt;ht-&gt;nbuckets; tmpint++)        \
+        for (tmpent=ht-&gt;buckets[tmpint];                                \
+             tmpent!=NULL&amp;&amp;((kp=tmpent-&gt;key)!=NULL)&amp;&amp;((dp=tmpent-&gt;<ref refid="structdata" kindref="compound">data</ref>)!=NULL); \
+             tmpent=tmpent-&gt;next)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="50" column="9" bodyfile="icl_hash.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="icl__hash_8h_1acf4a693960a075af858870b4fdb63145" prot="public" static="no">
+        <type>struct <ref refid="structicl__entry__s" kindref="compound">icl_entry_s</ref></type>
+        <definition>typedef struct icl_entry_s  icl_entry_t</definition>
+        <argsstring></argsstring>
+        <name>icl_entry_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="icl__hash_8h_1a2a42248793d2b10c0c3306ed7c1619b6" prot="public" static="no">
+        <type>struct <ref refid="structicl__hash__s" kindref="compound">icl_hash_s</ref></type>
+        <definition>typedef struct icl_hash_s  icl_hash_t</definition>
+        <argsstring></argsstring>
+        <name>icl_hash_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="31" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="icl__hash_8h_1a7dd8c07b7cf001deceaf83273c08cb10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+        <definition>icl_hash_t* icl_hash_create</definition>
+        <argsstring>(int nbuckets, unsigned int(*hash_function)(void *), int(*hash_key_compare)(void *, void *))</argsstring>
+        <name>icl_hash_create</name>
+        <param>
+          <type>int</type>
+          <declname>nbuckets</declname>
+        </param>
+        <param>
+          <type>unsigned int(*)(void *)</type>
+          <declname>hash_function</declname>
+        </param>
+        <param>
+          <type>int(*)(void *, void *)</type>
+          <declname>hash_key_compare</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a new hash table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">nbuckets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> number of buckets to create </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> pointer to the hashing function to be used </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">hash_key_compare</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> pointer to the hash key comparison function to be used</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to new hash table. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="34" column="1" bodyfile="icl_hash.c" bodystart="73" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="icl__hash_8h_1a43d20a7bd87e903ed90106ecfee92e50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* icl_hash_find</definition>
+        <argsstring>(icl_hash_t *, void *)</argsstring>
+        <name>icl_hash_find</name>
+        <param>
+          <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+          <defname>ht</defname>
+        </param>
+        <param>
+          <type>void *</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Search for an entry in a hash table.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the hash table to be searched </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the key of the item to search for</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the data corresponding to the key. If the key was not found, returns NULL. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="37" column="1" bodyfile="icl_hash.c" bodystart="106" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="icl__hash_8h_1ade10c11884657c495a3b0b4db6e23d47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structicl__entry__s" kindref="compound">icl_entry_t</ref> *</type>
+        <definition>icl_entry_t* icl_hash_insert</definition>
+        <argsstring>(icl_hash_t *, void *, void *)</argsstring>
+        <name>icl_hash_insert</name>
+        <param>
+          <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <param>
+          <type>void *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="icl__hash_8h_1ab9fa2818d3299f96305126c1e80cdcf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structicl__entry__s" kindref="compound">icl_entry_t</ref> *</type>
+        <definition>icl_entry_t * icl_hash_update_insert</definition>
+        <argsstring>(icl_hash_t *, void *, void *, void **)</argsstring>
+        <name>icl_hash_update_insert</name>
+        <param>
+          <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+          <defname>ht</defname>
+        </param>
+        <param>
+          <type>void *</type>
+          <defname>key</defname>
+        </param>
+        <param>
+          <type>void *</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>void **</type>
+          <defname>olddata</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace entry in hash table with the given entry.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the hash table </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the key of the new item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> pointer to the new item&apos;s data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>olddata</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> pointer to the old item&apos;s data (set upon return)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>pointer to the new item. Returns NULL on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="41" column="1" bodyfile="icl_hash.c" bodystart="172" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="icl__hash_8h_1a3597dd0f42401d7283894644a8a7f0a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int icl_hash_destroy</definition>
+        <argsstring>(icl_hash_t *, void(*)(void *), void(*)(void *))</argsstring>
+        <name>icl_hash_destroy</name>
+        <param>
+          <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="icl__hash_8h_1a9640883d7da1e9594ee76cca8634a2c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int icl_hash_dump</definition>
+        <argsstring>(FILE *, icl_hash_t *)</argsstring>
+        <name>icl_hash_dump</name>
+        <param>
+          <type>FILE *</type>
+          <defname>stream</defname>
+        </param>
+        <param>
+          <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+          <defname>ht</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Dump the hash table&apos;s contents to the given file pointer.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the file to which the hash table should be dumped </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the hash table to be dumped</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="45" column="1" bodyfile="icl_hash.c" bodystart="295" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="icl__hash_8h_1a9a61a09d5f70d66cc668565645aa3e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int icl_hash_delete</definition>
+        <argsstring>(icl_hash_t *ht, void *key, void(*free_key)(void *), void(*free_data)(void *))</argsstring>
+        <name>icl_hash_delete</name>
+        <param>
+          <type><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref> *</type>
+          <declname>ht</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>free_key</declname>
+        </param>
+        <param>
+          <type>void(*)(void *)</type>
+          <declname>free_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Free one hash table entry located by key (key and data are freed using functions).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ht</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the hash table to be freed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> the key of the new item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> pointer to function that frees the key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>free_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ndash/> pointer to function that frees the data</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success, -1 on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="47" column="1" bodyfile="icl_hash.c" bodystart="223" bodyend="249"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Header file for icl_hash routines. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="comment">/*<sp/>$Id$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>$UTK_Copyright:<sp/>$<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>icl_hash_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>icl_hash_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(c_plusplus)<sp/>||<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="structicl__entry__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structicl__entry__s" kindref="compound">icl_entry_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structdata" kindref="compound">data</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structicl__entry__s" kindref="compound">icl_entry_s</ref>*<sp/>next;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/><ref refid="structicl__entry__s" kindref="compound">icl_entry_t</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="structicl__hash__s" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structicl__hash__s" kindref="compound">icl_hash_s</ref><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbuckets;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nentries;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structicl__entry__s" kindref="compound">icl_entry_t</ref><sp/>**buckets;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>int<sp/>(*hash_function)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>(*hash_key_compare)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}<sp/><ref refid="structicl__hash__s" kindref="compound">icl_hash_t</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">icl_hash_t<sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="icl__hash_8h_1a7dd8c07b7cf001deceaf83273c08cb10" kindref="member">icl_hash_create</ref>(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbuckets,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*hash_function)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>(*hash_key_compare)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">*<sp/><ref refid="icl__hash_8h_1a43d20a7bd87e903ed90106ecfee92e50" kindref="member">icl_hash_find</ref>(icl_hash_t<sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><ref refid="structicl__entry__s" kindref="compound">icl_entry_t</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">*<sp/><ref refid="icl__hash_8c_1a650b9755a4efce9df3093602ddb40414" kindref="member">icl_hash_insert</ref>(icl_hash_t<sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*),</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><ref refid="icl__hash_8h_1ab9fa2818d3299f96305126c1e80cdcf4" kindref="member">icl_hash_update_insert</ref>(icl_hash_t<sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="icl__hash_8c_1a4644f0e1c6aecfefd5ab9c378695d24a" kindref="member">icl_hash_destroy</ref>(icl_hash_t<sp/>*,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)),</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="icl__hash_8h_1a9640883d7da1e9594ee76cca8634a2c6" kindref="member">icl_hash_dump</ref>(FILE<sp/>*,<sp/>icl_hash_t<sp/>*);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="icl__hash_8h_1a9a61a09d5f70d66cc668565645aa3e88" kindref="member">icl_hash_delete</ref>(<sp/>icl_hash_t<sp/>*ht,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>key,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*free_key)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*),<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*free_data)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>icl_hash_foreach(ht,<sp/>tmpint,<sp/>tmpent,<sp/>kp,<sp/>dp)<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>for<sp/>(tmpint=0;tmpint&lt;ht-&gt;nbuckets;<sp/>tmpint++)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(tmpent=ht-&gt;buckets[tmpint];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpent!=NULL&amp;&amp;((kp=tmpent-&gt;key)!=NULL)&amp;&amp;((dp=tmpent-&gt;data)!=NULL);<sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpent=tmpent-&gt;next)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(c_plusplus)<sp/>||<sp/>defined(__cplusplus)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>icl_hash_h<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="icl_hash.h"/>
+  </compounddef>
+</doxygen>

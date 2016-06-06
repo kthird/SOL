@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="membox_8c" kind="file" language="C++">
+    <compoundname>membox.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">assert.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">pthread.h</includes>
+    <includes refid="stats_8h" local="no">stats.h</includes>
+    <incdepgraph>
+      <node id="85">
+        <label>assert.h</label>
+      </node>
+      <node id="84">
+        <label>stdlib.h</label>
+      </node>
+      <node id="87">
+        <label>pthread.h</label>
+      </node>
+      <node id="86">
+        <label>string.h</label>
+      </node>
+      <node id="81">
+        <label>membox.c</label>
+        <link refid="membox.c"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="84" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>unistd.h</label>
+      </node>
+      <node id="89">
+        <label>time.h</label>
+      </node>
+      <node id="88">
+        <label>stats.h</label>
+        <link refid="stats_8h_source"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="membox_8c_1a3024ccd4a9af5109d24e6c57565d74a1" prot="public" static="no">
+        <name>_POSIX_C_SOURCE</name>
+        <initializer>200809L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="membox.c" line="12" column="9" bodyfile="membox.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="membox_8c_1a506d0c94191e22ab8f8ffae18236d46b" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structstatistics" kindref="compound">statistics</ref></type>
+        <definition>struct statistics mboxStats</definition>
+        <argsstring></argsstring>
+        <name>mboxStats</name>
+        <initializer>= { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="membox.c" line="30" column="1" bodyfile="membox.c" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="membox_8c_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(int argc, char *argv[])</argsstring>
+        <name>main</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="membox.c" line="30" column="1" bodyfile="membox.c" bodystart="30" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>File principale del server membox. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>membox<sp/>Progetto<sp/>del<sp/>corso<sp/>di<sp/>LSO<sp/>2016<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Dipartimento<sp/>di<sp/>Informatica<sp/>Università<sp/>di<sp/>Pisa</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Docenti:<sp/>Pelagatti,<sp/>Torquati</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#define<sp/>_POSIX_C_SOURCE<sp/>200809L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;pthread.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>inserire<sp/>gli<sp/>altri<sp/>include<sp/>che<sp/>servono<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stats.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>struttura<sp/>che<sp/>memorizza<sp/>le<sp/>statistiche<sp/>del<sp/>server,<sp/>struct<sp/>statistics<sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>e&apos;<sp/>definita<sp/>in<sp/>stats.h.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structstatistics" kindref="compound">statistics</ref><sp/><sp/>mboxStats<sp/>=<sp/>{<sp/>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0<sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[])<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="membox.c"/>
+  </compounddef>
+</doxygen>

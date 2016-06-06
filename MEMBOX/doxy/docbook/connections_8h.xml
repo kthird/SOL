@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="connections_8h">
+    <title>connections.h File Reference</title>
+    <programlisting>#include &lt;message.h&gt;</programlisting>
+<para>Include dependency diagram for connections.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="connections_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for connections.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="connections_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Definizioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="connections_8h_1aecf13b8dc783db2202ca5c34fe117fc3">MAX_RETRIES</link> 10</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="connections_8h_1a763a071b50fb9cf7997861d0f5266387">MAX_SLEEPING</link> 3</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="connections_8h_1a7baab2aa5bf8eb14b6128e0f16634837">UNIX_PATH_MAX</link> 64</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="connections_8h_1a93ad31c416b2e2055827e5f684e89daf">openConnection</link> (
+char * path, unsigned int ntimes, unsigned int secs)<para><emphasis>Apre una connessione AF_UNIX verso il server membox.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="connections_8h_1a166a9f07b57f9684fc9e97863d97ff03">readHeader</link> (
+long fd, <link linkend="structmessage__hdr__t">message_hdr_t</link> * hdr)<para><emphasis>Legge l&apos;header del messaggio.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="connections_8h_1acf5cb8379636265d11a008d6aa94dc30">readData</link> (
+long fd, <link linkend="structmessage__data__t">message_data_t</link> * data)<para><emphasis>Legge il body del messaggio.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="connections_8h_1a3c23eb25de2ae8b5216eb6dd847521c0">sendRequest</link> (
+long fd, <link linkend="structmessage__t">message_t</link> * msg)<para><emphasis>Invia un messaggio di richiesta al server membox.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="connections_8h_1a9caa249e483ccf12bf8a2e6830a50a03">readReply</link> (
+long fd, <link linkend="structmessage__t">message_t</link> * msg)<para><emphasis>Legge un messaggio di risposta dal server membox.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/connections.h</para>
+    </simplesect>
+</section>

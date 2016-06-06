@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <info>
+    <title>SOL - MEMBOX</title>
+    </info>
+    <chapter>
+        <title>Documentazione delle classi</title>
+        <xi:include href="structdata.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structheader.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structicl__entry__s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structicl__hash__s.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmessage__data__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmessage__hdr__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmessage__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structmessaggio.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structoperation__t.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="structstatistics.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+    <chapter>
+        <title>Documentazione dei file</title>
+        <xi:include href="client_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="connections_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="gruppo_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="icl__hash_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="icl__hash_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="membox_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="message_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="ops_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="README_8txt.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="stats_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+        <xi:include href="test__hash_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    </chapter>
+</book>

@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="message_8h" kind="file" language="C++">
+    <compoundname>message.h</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes refid="ops_8h" local="no">ops.h</includes>
+    <includedby refid="connections_8h" local="no">connections.h</includedby>
+    <incdepgraph>
+      <node id="92">
+        <label>assert.h</label>
+      </node>
+      <node id="91">
+        <label>message.h</label>
+        <link refid="message.h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>ops.h</label>
+        <link refid="ops_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="96">
+        <label>client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="94">
+        <label>message.h</label>
+        <link refid="message.h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>connections.h</label>
+        <link refid="connections_8h_source"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structmessage__hdr__t" prot="public">message_hdr_t</innerclass>
+    <innerclass refid="structmessage__data__t" prot="public">message_data_t</innerclass>
+    <innerclass refid="structmessage__t" prot="public">message_t</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="message_8h_1a02d90ef6d091c6cca50db6fcc34a2d59" prot="public" static="no">
+        <type>unsigned long</type>
+        <definition>typedef unsigned long membox_key_t</definition>
+        <argsstring></argsstring>
+        <name>membox_key_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="20" column="1" bodyfile="message.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="message_8h_1a3874ff882664f04799f6dfea8ad834ea" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setKey</definition>
+        <argsstring>(membox_key_t *key_out, membox_key_t *key_in)</argsstring>
+        <name>setKey</name>
+        <param>
+          <type>membox_key_t *</type>
+          <declname>key_out</declname>
+        </param>
+        <param>
+          <type>membox_key_t *</type>
+          <declname>key_in</declname>
+        </param>
+        <briefdescription>
+<para>copia la chiave da in in out </para>        </briefdescription>
+        <detaileddescription>
+<para>setKey </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="64" column="1" bodyfile="message.h" bodystart="64" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="message_8h_1ad170b7b27f066fb4f0863810a354a990" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setHeader</definition>
+        <argsstring>(message_t *msg, op_t op, membox_key_t *key)</argsstring>
+        <name>setHeader</name>
+        <param>
+          <type><ref refid="structmessage__t" kindref="compound">message_t</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kindref="member">op_t</ref></type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>membox_key_t *</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>scrive l&apos;header del messaggio </para>        </briefdescription>
+        <detaileddescription>
+<para>setheader <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al messaggio </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>tipo di operazione da eseguire </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>chiave dell&apos;oggetto </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="77" column="1" bodyfile="message.h" bodystart="77" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="message_8h_1ab3e9b706eeac83b761d5e51a265cb2b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void setData</definition>
+        <argsstring>(message_t *msg, const char *buf, unsigned int len)</argsstring>
+        <name>setData</name>
+        <param>
+          <type><ref refid="structmessage__t" kindref="compound">message_t</ref> *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>scrive la parte dati del messaggio </para>        </briefdescription>
+        <detaileddescription>
+<para>setData <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al messaggio </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>puntatore al buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lunghezza del buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="93" column="1" bodyfile="message.h" bodystart="93" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contiene il formato del messaggio. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>membox<sp/>Progetto<sp/>del<sp/>corso<sp/>di<sp/>LSO<sp/>2016<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>Dipartimento<sp/>di<sp/>Informatica<sp/>Università<sp/>di<sp/>Pisa</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>Docenti:<sp/>Pelagatti,<sp/>Torquati</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MESSAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MESSAGE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="ops_8h" kindref="compound">ops.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>membox_key_t;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="structmessage__hdr__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kindref="member">op_t</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>op;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>membox_key_t<sp/><sp/><sp/>key;<sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structmessage__hdr__t" kindref="compound">message_hdr_t</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structmessage__data__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/>len;<sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*buf;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}<sp/><ref refid="structmessage__data__t" kindref="compound">message_data_t</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structmessage__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmessage__hdr__t" kindref="compound">message_hdr_t</ref><sp/><sp/>hdr;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structmessage__data__t" kindref="compound">message_data_t</ref><sp/><ref refid="structdata" kindref="compound">data</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/><ref refid="structmessage__t" kindref="compound">message_t</ref>;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>------<sp/>funzioni<sp/>di<sp/>utilità<sp/>-------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setKey(membox_key_t<sp/>*key_out,<sp/>membox_key_t<sp/>*key_in)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(key_out);<sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(key_in);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>*key_out<sp/>=<sp/>*key_in;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setHeader(<ref refid="structmessage__t" kindref="compound">message_t</ref><sp/>*msg,<sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kindref="member">op_t</ref><sp/>op,<sp/>membox_key_t<sp/>*key)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(MAKE_VALGRIND_HAPPY)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>((</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;(msg-&gt;hdr))[0]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>((</highlight><highlight class="keywordtype">long</highlight><highlight class="normal">*)&amp;(msg-&gt;hdr))[1]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>msg-&gt;hdr.op<sp/><sp/>=<sp/>op;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>setKey(&amp;msg-&gt;hdr.key,<sp/>key);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setData(<ref refid="structmessage__t" kindref="compound">message_t</ref><sp/>*msg,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*buf,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>msg-&gt;data.len<sp/>=<sp/>len;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>msg-&gt;data.buf<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*)buf;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>MESSAGE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="message.h"/>
+  </compounddef>
+</doxygen>

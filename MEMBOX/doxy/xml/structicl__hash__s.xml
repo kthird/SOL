@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structicl__hash__s" kind="struct" language="C++" prot="public">
+    <compoundname>icl_hash_s</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structicl__hash__s_1a18d5f1bc101356322a4db7a6cfeb9f7e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int icl_hash_s::nbuckets</definition>
+        <argsstring></argsstring>
+        <name>nbuckets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="26" column="1" bodyfile="icl_hash.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structicl__hash__s_1a7654114080ad222e0b8c2311ef3466fa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int icl_hash_s::nentries</definition>
+        <argsstring></argsstring>
+        <name>nentries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="27" column="1" bodyfile="icl_hash.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structicl__hash__s_1a8d8b17cad1aca47e27486e4f49882df4" prot="public" static="no" mutable="no">
+        <type><ref refid="structicl__entry__s" kindref="compound">icl_entry_t</ref> **</type>
+        <definition>icl_entry_t** icl_hash_s::buckets</definition>
+        <argsstring></argsstring>
+        <name>buckets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="28" column="1" bodyfile="icl_hash.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structicl__hash__s_1a06d96a5a8f9015e2ee6d6bf2e0876971" prot="public" static="no" mutable="no">
+        <type>unsigned int(*</type>
+        <definition>unsigned int(* icl_hash_s::hash_function) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>hash_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="29" column="1" bodyfile="icl_hash.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structicl__hash__s_1a6e3fc8d3a066a9c8fd5f45161119874e" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* icl_hash_s::hash_key_compare) (void *, void *)</definition>
+        <argsstring>)(void *, void *)</argsstring>
+        <name>hash_key_compare</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="30" column="1" bodyfile="icl_hash.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="30">
+        <label>icl_hash_s</label>
+        <link refid="structicl__hash__s"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>buckets</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>icl_entry_s</label>
+        <link refid="structicl__entry__s"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="icl_hash.h" line="25" column="1" bodyfile="icl_hash.h" bodystart="25" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structicl__hash__s_1a8d8b17cad1aca47e27486e4f49882df4" prot="public" virt="non-virtual"><scope>icl_hash_s</scope><name>buckets</name></member>
+      <member refid="structicl__hash__s_1a06d96a5a8f9015e2ee6d6bf2e0876971" prot="public" virt="non-virtual"><scope>icl_hash_s</scope><name>hash_function</name></member>
+      <member refid="structicl__hash__s_1a6e3fc8d3a066a9c8fd5f45161119874e" prot="public" virt="non-virtual"><scope>icl_hash_s</scope><name>hash_key_compare</name></member>
+      <member refid="structicl__hash__s_1a18d5f1bc101356322a4db7a6cfeb9f7e" prot="public" virt="non-virtual"><scope>icl_hash_s</scope><name>nbuckets</name></member>
+      <member refid="structicl__hash__s_1a7654114080ad222e0b8c2311ef3466fa" prot="public" virt="non-virtual"><scope>icl_hash_s</scope><name>nentries</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

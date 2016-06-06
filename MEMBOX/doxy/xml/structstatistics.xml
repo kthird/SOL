@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structstatistics" kind="struct" language="C++" prot="public">
+    <compoundname>statistics</compoundname>
+    <includes refid="stats_8h" local="no">stats.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structstatistics_1af6052d60054e79a5e9bd38f11f1cc9bb" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nput</definition>
+        <argsstring></argsstring>
+        <name>nput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="12" column="1" bodyfile="stats.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a526a898e02c6d4203017b39c8feae13c" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nput_failed</definition>
+        <argsstring></argsstring>
+        <name>nput_failed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="13" column="1" bodyfile="stats.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a0dc1842056c05fa05f5e14263be33a59" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nupdate</definition>
+        <argsstring></argsstring>
+        <name>nupdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="14" column="1" bodyfile="stats.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1aa3bd8bc20aa8f030176e02c30af18472" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nupdate_failed</definition>
+        <argsstring></argsstring>
+        <name>nupdate_failed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="15" column="1" bodyfile="stats.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a2c4b6cf66f83483b398a435c9e5c07b8" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nget</definition>
+        <argsstring></argsstring>
+        <name>nget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="16" column="1" bodyfile="stats.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a43380fe734194d3d48ec83e8348f5de8" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nget_failed</definition>
+        <argsstring></argsstring>
+        <name>nget_failed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="17" column="1" bodyfile="stats.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a586a706595dcc11bcbdd144f7c475bd7" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nremove</definition>
+        <argsstring></argsstring>
+        <name>nremove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="18" column="1" bodyfile="stats.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a6fcfd080f00c8293af00625a0719b44d" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nremove_failed</definition>
+        <argsstring></argsstring>
+        <name>nremove_failed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="19" column="1" bodyfile="stats.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1ac5c44d82b16d00e7f6eb7d64162bde6b" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nlock</definition>
+        <argsstring></argsstring>
+        <name>nlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="20" column="1" bodyfile="stats.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a3a2be58e1c3eccdd23469df4070697dd" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::nlock_failed</definition>
+        <argsstring></argsstring>
+        <name>nlock_failed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="21" column="1" bodyfile="stats.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a7bb318acbc8595f0be85cd45909c7d49" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::concurrent_connections</definition>
+        <argsstring></argsstring>
+        <name>concurrent_connections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="22" column="1" bodyfile="stats.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1acc592409461ecabdf1076126edccce2c" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::current_size</definition>
+        <argsstring></argsstring>
+        <name>current_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="23" column="1" bodyfile="stats.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1ab8956bbbb0148facbac74299f8b6cd5e" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::max_size</definition>
+        <argsstring></argsstring>
+        <name>max_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="24" column="1" bodyfile="stats.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a1a23a8b57e7ca1ecf4d49197a5a56ad2" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::current_objects</definition>
+        <argsstring></argsstring>
+        <name>current_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="25" column="1" bodyfile="stats.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structstatistics_1a21df893122b02d52a27f48df6032d0ef" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long statistics::max_objects</definition>
+        <argsstring></argsstring>
+        <name>max_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="stats.h" line="26" column="1" bodyfile="stats.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struttura dati contenente le informazioni da monitorare. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="stats.h" line="11" column="1" bodyfile="stats.h" bodystart="11" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structstatistics_1a7bb318acbc8595f0be85cd45909c7d49" prot="public" virt="non-virtual"><scope>statistics</scope><name>concurrent_connections</name></member>
+      <member refid="structstatistics_1a1a23a8b57e7ca1ecf4d49197a5a56ad2" prot="public" virt="non-virtual"><scope>statistics</scope><name>current_objects</name></member>
+      <member refid="structstatistics_1acc592409461ecabdf1076126edccce2c" prot="public" virt="non-virtual"><scope>statistics</scope><name>current_size</name></member>
+      <member refid="structstatistics_1a21df893122b02d52a27f48df6032d0ef" prot="public" virt="non-virtual"><scope>statistics</scope><name>max_objects</name></member>
+      <member refid="structstatistics_1ab8956bbbb0148facbac74299f8b6cd5e" prot="public" virt="non-virtual"><scope>statistics</scope><name>max_size</name></member>
+      <member refid="structstatistics_1a2c4b6cf66f83483b398a435c9e5c07b8" prot="public" virt="non-virtual"><scope>statistics</scope><name>nget</name></member>
+      <member refid="structstatistics_1a43380fe734194d3d48ec83e8348f5de8" prot="public" virt="non-virtual"><scope>statistics</scope><name>nget_failed</name></member>
+      <member refid="structstatistics_1ac5c44d82b16d00e7f6eb7d64162bde6b" prot="public" virt="non-virtual"><scope>statistics</scope><name>nlock</name></member>
+      <member refid="structstatistics_1a3a2be58e1c3eccdd23469df4070697dd" prot="public" virt="non-virtual"><scope>statistics</scope><name>nlock_failed</name></member>
+      <member refid="structstatistics_1af6052d60054e79a5e9bd38f11f1cc9bb" prot="public" virt="non-virtual"><scope>statistics</scope><name>nput</name></member>
+      <member refid="structstatistics_1a526a898e02c6d4203017b39c8feae13c" prot="public" virt="non-virtual"><scope>statistics</scope><name>nput_failed</name></member>
+      <member refid="structstatistics_1a586a706595dcc11bcbdd144f7c475bd7" prot="public" virt="non-virtual"><scope>statistics</scope><name>nremove</name></member>
+      <member refid="structstatistics_1a6fcfd080f00c8293af00625a0719b44d" prot="public" virt="non-virtual"><scope>statistics</scope><name>nremove_failed</name></member>
+      <member refid="structstatistics_1a0dc1842056c05fa05f5e14263be33a59" prot="public" virt="non-virtual"><scope>statistics</scope><name>nupdate</name></member>
+      <member refid="structstatistics_1aa3bd8bc20aa8f030176e02c30af18472" prot="public" virt="non-virtual"><scope>statistics</scope><name>nupdate_failed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

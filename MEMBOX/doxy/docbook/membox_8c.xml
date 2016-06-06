@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="membox_8c">
+    <title>membox.c File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;assert.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;pthread.h&gt;</programlisting>
+    <programlisting>#include &lt;stats.h&gt;</programlisting>
+<para>Include dependency diagram for membox.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="membox_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for membox.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="membox_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Definizioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="membox_8c_1a3024ccd4a9af5109d24e6c57565d74a1">_POSIX_C_SOURCE</link> 200809L</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Variabili</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structstatistics">statistics</link> <link linkend="membox_8c_1a506d0c94191e22ab8f8ffae18236d46b">mboxStats</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="membox_8c_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (
+int argc, char * argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>File principale del server membox. </para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/membox.c</para>
+    </simplesect>
+</section>

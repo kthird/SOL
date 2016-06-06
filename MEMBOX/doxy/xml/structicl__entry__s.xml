@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structicl__entry__s" kind="struct" language="C++" prot="public">
+    <compoundname>icl_entry_s</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structicl__entry__s_1a175ddfefe49a8f6fa16155e58c39c88e" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* icl_entry_s::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="20" column="1" bodyfile="icl_hash.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structicl__entry__s_1ac01964f2d85fcdbaa2d16c78fb1a99d6" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* icl_entry_s::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="21" column="1" bodyfile="icl_hash.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structicl__entry__s_1af5bc67953f51e75cf74066d616f3420c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structicl__entry__s" kindref="compound">icl_entry_s</ref> *</type>
+        <definition>struct icl_entry_s* icl_entry_s::next</definition>
+        <argsstring></argsstring>
+        <name>next</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="icl_hash.h" line="22" column="1" bodyfile="icl_hash.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="28">
+        <label>icl_entry_s</label>
+        <link refid="structicl__entry__s"/>
+        <childnode refid="28" relation="usage">
+          <edgelabel>next</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="icl_hash.h" line="19" column="1" bodyfile="icl_hash.h" bodystart="19" bodyend="23"/>
+    <listofallmembers>
+      <member refid="structicl__entry__s_1ac01964f2d85fcdbaa2d16c78fb1a99d6" prot="public" virt="non-virtual"><scope>icl_entry_s</scope><name>data</name></member>
+      <member refid="structicl__entry__s_1a175ddfefe49a8f6fa16155e58c39c88e" prot="public" virt="non-virtual"><scope>icl_entry_s</scope><name>key</name></member>
+      <member refid="structicl__entry__s_1af5bc67953f51e75cf74066d616f3420c" prot="public" virt="non-virtual"><scope>icl_entry_s</scope><name>next</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

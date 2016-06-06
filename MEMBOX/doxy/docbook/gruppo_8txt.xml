@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gruppo_8txt">
+    <title>gruppo.txt File Reference</title>
+<para>Include dependency diagram for gruppo.txt</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="gruppo_8txt__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for gruppo.txt</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="gruppo_8txt__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variabili</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="gruppo_8txt_1afe12ec104ad9bf72be255a491560b4b5">Francesco</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para> <link linkend="gruppo_8txt_1a219f5429b659319043a61795f5d2ac78">Lorito</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/gruppo.txt</para>
+    </simplesect>
+</section>

@@ -1,0 +1,67 @@
+.TH "client.c" 3 "Lun 6 Giu 2016" "Version 1" "SOL - MEMBOX" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+client.c \- Semplice client di test\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <time\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <getopt\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <signal\&.h>\fP
+.br
+\fC#include <connections\&.h>\fP
+.br
+\fC#include <ops\&.h>\fP
+.br
+
+.SS "Composti"
+
+.in +1c
+.ti -1c
+.RI "struct \fBoperation_t\fP"
+.br
+.in -1c
+.SS "Definizioni"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_POSIX_C_SOURCE\fP   200809L"
+.br
+.in -1c
+.SS "Funzioni"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Descrizione dettagliata"
+.PP 
+Semplice client di test\&. 
+
+Esempio di utilizzo:
+.IP "\(bu" 2
+progname -l socket_path -c 100:0:8192 Invia una richiesta di PUT (0) per un oggetto di chiave 100 con size 8192 bytes\&.
+.IP "\(bu" 2
+progname -l socket_path -c 100:2:0 -c 100:3:0 Invia una richiesta di GET (2) per un oggetto di chiave 100 seguita da una richiesta di REMOVE (3) dello stesso oggetto\&. La seconda richiesta viene eseguita solo se la prima richiesta e' andata a buon fine\&.
+.IP "\(bu" 2
+progname -s 500 -l socket_path -c 100:0:8192 -c 100:2:0 Invia una richiesta di PUT (0) per un oggetto di chiave 100 con size 8192 bytes, se la richiesta va a buon fine invia una seconda richiesta per la chiave 100 di tipo GET (2)\&. Tra le due richieste trascorrono circa 500 millisecondi (opzione -s 500) 
+.PP
+
+.SH "Autore"
+.PP 
+Generato automaticamente da Doxygen per SOL - MEMBOX a partire dal codice sorgente\&.

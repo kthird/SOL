@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structoperation__t" kind="struct" language="C++" prot="public">
+    <compoundname>operation_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structoperation__t_1a58422637d6b9ed0081270dff03a42f42" prot="public" static="no" mutable="no">
+        <type>membox_key_t</type>
+        <definition>membox_key_t operation_t::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="client.c" line="44" column="1" bodyfile="client.c" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoperation__t_1afa66e43cb50d2792e12f7a2b054bc396" prot="public" static="no" mutable="no">
+        <type><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kindref="member">op_t</ref></type>
+        <definition>op_t operation_t::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="client.c" line="45" column="1" bodyfile="client.c" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structoperation__t_1a453c2473442f61fbc268d30c8ebb4338" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long operation_t::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="client.c" line="46" column="1" bodyfile="client.c" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="client.c" line="43" column="1" bodyfile="client.c" bodystart="43" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structoperation__t_1a58422637d6b9ed0081270dff03a42f42" prot="public" virt="non-virtual"><scope>operation_t</scope><name>key</name></member>
+      <member refid="structoperation__t_1afa66e43cb50d2792e12f7a2b054bc396" prot="public" virt="non-virtual"><scope>operation_t</scope><name>op</name></member>
+      <member refid="structoperation__t_1a453c2473442f61fbc268d30c8ebb4338" prot="public" virt="non-virtual"><scope>operation_t</scope><name>size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="ops_8h" kind="file" language="C++">
+    <compoundname>ops.h</compoundname>
+    <includedby refid="message_8h" local="no">message.h</includedby>
+    <includedby refid="client_8c" local="no">client.c</includedby>
+    <invincdepgraph>
+      <node id="101">
+        <label>client.c</label>
+        <link refid="client_8c"/>
+      </node>
+      <node id="99">
+        <label>message.h</label>
+        <link refid="message_8h"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>connections.h</label>
+        <link refid="connections_8h_source"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>ops.h</label>
+        <link refid="ops.h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" prot="public" static="no">
+        <name>op_t</name>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca2cbc6f8bd38469388a2c092018db1945" prot="public">
+          <name>PUT_OP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e" prot="public">
+          <name>UPDATE_OP</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+<para>inserimento di un oggetto nel repository </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a" prot="public">
+          <name>GET_OP</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+<para>aggiornamento di un oggetto gia&apos; presente </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849" prot="public">
+          <name>REMOVE_OP</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>recupero di un oggetto dal repository </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543" prot="public">
+          <name>LOCK_OP</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+<para>eliminazione di un oggetto dal repository </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039" prot="public">
+          <name>UNLOCK_OP</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+<para>acquisizione di una lock su tutto il repository </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c" prot="public">
+          <name>END_OP</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+<para>rilascio della lock su tutto il repository </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cacc156be86a1cb4bfc0e21d8c72e4971c" prot="public">
+          <name>OP_OK</name>
+          <initializer>= 11</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cadad4289276b97b650558ce66d141d648" prot="public">
+          <name>OP_FAIL</name>
+          <initializer>= 12</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44caa6854d18861e99bae48150981d7c3006" prot="public">
+          <name>OP_PUT_ALREADY</name>
+          <initializer>= 13</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cafdc0a1eddc2f5f76d3d4fc11f9cd03e8" prot="public">
+          <name>OP_PUT_TOOMANY</name>
+          <initializer>= 14</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae83c227bc906fa4210ee395ecc304f64" prot="public">
+          <name>OP_PUT_SIZE</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca6a40df2244f72f18eab5faa246368afc" prot="public">
+          <name>OP_PUT_REPOSIZE</name>
+          <initializer>= 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca251df847fddf5cf339baf4c30e335314" prot="public">
+          <name>OP_GET_NONE</name>
+          <initializer>= 17</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cab46339e3c4391e748999ec7651333eea" prot="public">
+          <name>OP_REMOVE_NONE</name>
+          <initializer>= 18</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cab9f870127a85a83e302efb5f5bf947b6" prot="public">
+          <name>OP_UPDATE_SIZE</name>
+          <initializer>= 19</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca121ee91addc0d03693490c4b59996495" prot="public">
+          <name>OP_UPDATE_NONE</name>
+          <initializer>= 20</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca58fa6c5a7a3f2d2df0c5c29f87d803eb" prot="public">
+          <name>OP_LOCKED</name>
+          <initializer>= 21</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="ops_8h_1ac6fa1b34da8872e34c2936391332f44cabdcd34b05c1f58b02bd7241312bd9b72" prot="public">
+          <name>OP_LOCK_NONE</name>
+          <initializer>= 22</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ops.h" line="10" column="1" bodyfile="ops.h" bodystart="10" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contiene i codici delle operazioni di richiesta e risposta. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#if<sp/>!defined(OPS_H_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>OPS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" refkind="member"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/><sp/><sp/>operazioni<sp/>da<sp/>implementare<sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>PUT_OP<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="16" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e" kindref="member">UPDATE_OP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>1,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a" kindref="member">GET_OP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>2,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849" kindref="member">REMOVE_OP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>3,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543" kindref="member">LOCK_OP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>4,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039" kindref="member">UNLOCK_OP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>5,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c" kindref="member">END_OP</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>6,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>numero<sp/>di<sp/>operazioni<sp/>definite<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>-----------------------------------<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/><sp/><sp/>messaggi<sp/>di<sp/>ritorno<sp/>dal<sp/>server<sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_OK<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>11,<sp/><sp/></highlight><highlight class="comment">//<sp/>operazione<sp/>eseguita<sp/>con<sp/>successo<sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_FAIL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>12,<sp/><sp/></highlight><highlight class="comment">//<sp/>generico<sp/>messaggio<sp/>di<sp/>fallimento</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_PUT_ALREADY<sp/><sp/>=<sp/>13,<sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>di<sp/>un<sp/>oggetto<sp/>gia&apos;<sp/>presente<sp/>nel<sp/>repository<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_PUT_TOOMANY<sp/><sp/>=<sp/>14,<sp/><sp/></highlight><highlight class="comment">//<sp/>raggiunto<sp/>il<sp/>massimo<sp/>numero<sp/>di<sp/>oggetti</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_PUT_SIZE<sp/><sp/><sp/><sp/><sp/>=<sp/>15,<sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>di<sp/>un<sp/>oggetto<sp/>troppo<sp/>grande</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_PUT_REPOSIZE<sp/>=<sp/>16,<sp/><sp/></highlight><highlight class="comment">//<sp/>superata<sp/>la<sp/>massima<sp/>size<sp/>del<sp/>repository</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_GET_NONE<sp/><sp/><sp/><sp/><sp/>=<sp/>17,<sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>di<sp/>un<sp/>oggetto<sp/>non<sp/>presente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_REMOVE_NONE<sp/><sp/>=<sp/>18,<sp/><sp/></highlight><highlight class="comment">//<sp/>rimozione<sp/>di<sp/>un<sp/>oggetto<sp/>non<sp/>presente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_UPDATE_SIZE<sp/><sp/>=<sp/>19,<sp/><sp/></highlight><highlight class="comment">//<sp/>size<sp/>dell&apos;oggetto<sp/>da<sp/>aggiornare<sp/>non<sp/>corrispondente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_UPDATE_NONE<sp/><sp/>=<sp/>20,<sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>di<sp/>un<sp/>oggetto<sp/>non<sp/>presente</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_LOCKED<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>21,<sp/><sp/></highlight><highlight class="comment">//<sp/>operazione<sp/>non<sp/>permessa<sp/>perche&apos;<sp/>il<sp/>sistema<sp/>e&apos;<sp/>in<sp/>stato<sp/>di<sp/>lock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>OP_LOCK_NONE<sp/><sp/><sp/><sp/>=<sp/>22<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>richiesta<sp/>di<sp/>unlock<sp/>ma<sp/>il<sp/>sistema<sp/>non<sp/>e&apos;<sp/>in<sp/>stato<sp/>di<sp/>lock</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*<sp/>aggiungere<sp/>qui<sp/>altri<sp/>messaggi<sp/>di<sp/>ritorno<sp/>che<sp/>possono<sp/>servire<sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}<sp/><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kindref="member">op_t</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>OPS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="ops.h"/>
+  </compounddef>
+</doxygen>

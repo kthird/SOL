@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structdata" kind="struct" language="C++" prot="public">
+    <compoundname>data</compoundname>
+    <includes refid="message_8h" local="no">message.h</includes>
+    <briefdescription>
+<para>body del messaggio </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="message.h" line="35" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

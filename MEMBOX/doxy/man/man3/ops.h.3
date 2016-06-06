@@ -1,0 +1,49 @@
+.TH "ops.h" 3 "Lun 6 Giu 2016" "Version 1" "SOL - MEMBOX" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ops.h \- Contiene i codici delle operazioni di richiesta e risposta\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Tipi enumerati (enum)"
+
+.in +1c
+.ti -1c
+.RI "enum \fBop_t\fP { \fBPUT_OP\fP = 0, \fBUPDATE_OP\fP = 1, \fBGET_OP\fP = 2, \fBREMOVE_OP\fP = 3, \fBLOCK_OP\fP = 4, \fBUNLOCK_OP\fP = 5, \fBEND_OP\fP = 6, \fBOP_OK\fP = 11, \fBOP_FAIL\fP = 12, \fBOP_PUT_ALREADY\fP = 13, \fBOP_PUT_TOOMANY\fP = 14, \fBOP_PUT_SIZE\fP = 15, \fBOP_PUT_REPOSIZE\fP = 16, \fBOP_GET_NONE\fP = 17, \fBOP_REMOVE_NONE\fP = 18, \fBOP_UPDATE_SIZE\fP = 19, \fBOP_UPDATE_NONE\fP = 20, \fBOP_LOCKED\fP = 21, \fBOP_LOCK_NONE\fP = 22 }"
+.br
+.in -1c
+.SH "Descrizione dettagliata"
+.PP 
+Contiene i codici delle operazioni di richiesta e risposta\&. 
+
+
+.SH "Documentazione dei tipi enumerati"
+.PP 
+.SS "enum \fBop_t\fP"
+
+.PP
+\fBValori del tipo enumerato\fP
+.in +1c
+.TP
+\fB\fIUPDATE_OP \fP\fP
+inserimento di un oggetto nel repository 
+.TP
+\fB\fIGET_OP \fP\fP
+aggiornamento di un oggetto gia' presente 
+.TP
+\fB\fIREMOVE_OP \fP\fP
+recupero di un oggetto dal repository 
+.TP
+\fB\fILOCK_OP \fP\fP
+eliminazione di un oggetto dal repository 
+.TP
+\fB\fIUNLOCK_OP \fP\fP
+acquisizione di una lock su tutto il repository 
+.TP
+\fB\fIEND_OP \fP\fP
+rilascio della lock su tutto il repository 
+.SH "Autore"
+.PP 
+Generato automaticamente da Doxygen per SOL - MEMBOX a partire dal codice sorgente\&.

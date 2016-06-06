@@ -1,0 +1,172 @@
+.TH "icl_hash.h" 3 "Lun 6 Giu 2016" "Version 1" "SOL - MEMBOX" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+icl_hash.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Composti"
+
+.in +1c
+.ti -1c
+.RI "struct \fBicl_entry_s\fP"
+.br
+.ti -1c
+.RI "struct \fBicl_hash_s\fP"
+.br
+.in -1c
+.SS "Definizioni"
+
+.in +1c
+.ti -1c
+.RI "#define \fBicl_hash_foreach\fP(ht,  tmpint,  tmpent,  kp,  dp)"
+.br
+.in -1c
+.SS "Ridefinizioni di tipo (typedef)"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBicl_entry_s\fP \fBicl_entry_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBicl_hash_s\fP \fBicl_hash_t\fP"
+.br
+.in -1c
+.SS "Funzioni"
+
+.in +1c
+.ti -1c
+.RI "\fBicl_hash_t\fP * \fBicl_hash_create\fP (int nbuckets, unsigned int(*hash_function)(void *), int(*hash_key_compare)(void *, void *))"
+.br
+.ti -1c
+.RI "void * \fBicl_hash_find\fP (\fBicl_hash_t\fP *, void *)"
+.br
+.ti -1c
+.RI "\fBicl_entry_t\fP * \fBicl_hash_insert\fP (\fBicl_hash_t\fP *, void *, void *)"
+.br
+.ti -1c
+.RI "\fBicl_entry_t\fP * \fBicl_hash_update_insert\fP (\fBicl_hash_t\fP *, void *, void *, void **)"
+.br
+.ti -1c
+.RI "int \fBicl_hash_destroy\fP (\fBicl_hash_t\fP *, void(*)(void *), void(*)(void *))"
+.br
+.ti -1c
+.RI "int \fBicl_hash_dump\fP (FILE *, \fBicl_hash_t\fP *)"
+.br
+.ti -1c
+.RI "int \fBicl_hash_delete\fP (\fBicl_hash_t\fP *ht, void *key, void(*free_key)(void *), void(*free_data)(void *))"
+.br
+.in -1c
+.SH "Descrizione dettagliata"
+.PP 
+Header file for icl_hash routines\&. 
+.SH "Documentazione delle definizioni"
+.PP 
+.SS "#define icl_hash_foreach(ht, tmpint, tmpent, kp, dp)"
+\fBValore:\fP
+.PP
+.nf
+for (tmpint=0;tmpint<ht->nbuckets; tmpint++)        \
+        for (tmpent=ht->buckets[tmpint];                                \
+             tmpent!=NULL&&((kp=tmpent->key)!=NULL)&&((dp=tmpent->data)!=NULL); \
+             tmpent=tmpent->next)
+.fi
+.SH "Documentazione delle funzioni"
+.PP 
+.SS "\fBicl_hash_t\fP* icl_hash_create (int nbuckets, unsigned int(*)(void *) hash_function, int(*)(void *, void *) hash_key_compare)"
+Create a new hash table\&.
+.PP
+\fBParametri:\fP
+.RS 4
+\fInbuckets\fP -- number of buckets to create 
+.br
+\fIhash_function\fP -- pointer to the hashing function to be used 
+.br
+\fIhash_key_compare\fP -- pointer to the hash key comparison function to be used
+.RE
+.PP
+\fBRestituisce:\fP
+.RS 4
+pointer to new hash table\&. 
+.RE
+.PP
+
+.SS "int icl_hash_delete (\fBicl_hash_t\fP * ht, void * key, void(*)(void *) free_key, void(*)(void *) free_data)"
+Free one hash table entry located by key (key and data are freed using functions)\&.
+.PP
+\fBParametri:\fP
+.RS 4
+\fIht\fP -- the hash table to be freed 
+.br
+\fIkey\fP -- the key of the new item 
+.br
+\fIfree_key\fP -- pointer to function that frees the key 
+.br
+\fIfree_data\fP -- pointer to function that frees the data
+.RE
+.PP
+\fBRestituisce:\fP
+.RS 4
+0 on success, -1 on failure\&. 
+.RE
+.PP
+
+.SS "int icl_hash_dump (FILE * stream, \fBicl_hash_t\fP * ht)"
+Dump the hash table's contents to the given file pointer\&.
+.PP
+\fBParametri:\fP
+.RS 4
+\fIstream\fP -- the file to which the hash table should be dumped 
+.br
+\fIht\fP -- the hash table to be dumped
+.RE
+.PP
+\fBRestituisce:\fP
+.RS 4
+0 on success, -1 on failure\&. 
+.RE
+.PP
+
+.SS "void* icl_hash_find (\fBicl_hash_t\fP * ht, void * key)"
+Search for an entry in a hash table\&.
+.PP
+\fBParametri:\fP
+.RS 4
+\fIht\fP -- the hash table to be searched 
+.br
+\fIkey\fP -- the key of the item to search for
+.RE
+.PP
+\fBRestituisce:\fP
+.RS 4
+pointer to the data corresponding to the key\&. If the key was not found, returns NULL\&. 
+.RE
+.PP
+
+.SS "\fBicl_entry_t\fP * icl_hash_update_insert (\fBicl_hash_t\fP * ht, void * key, void * data, void ** olddata)"
+Replace entry in hash table with the given entry\&.
+.PP
+\fBParametri:\fP
+.RS 4
+\fIht\fP -- the hash table 
+.br
+\fIkey\fP -- the key of the new item 
+.br
+\fIdata\fP -- pointer to the new item's data 
+.br
+\fIolddata\fP -- pointer to the old item's data (set upon return)
+.RE
+.PP
+\fBRestituisce:\fP
+.RS 4
+pointer to the new item\&. Returns NULL on error\&. 
+.RE
+.PP
+
+.SH "Autore"
+.PP 
+Generato automaticamente da Doxygen per SOL - MEMBOX a partire dal codice sorgente\&.

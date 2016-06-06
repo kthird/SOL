@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structmessage__hdr__t" kind="struct" language="C++" prot="public">
+    <compoundname>message_hdr_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmessage__hdr__t_1ab7f4eacc8e900cca79b63ddfb02d67fd" prot="public" static="no" mutable="no">
+        <type><ref refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kindref="member">op_t</ref></type>
+        <definition>op_t message_hdr_t::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="30" column="1" bodyfile="message.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmessage__hdr__t_1a683fe6c1599d9e0edcc5dbd10fda0545" prot="public" static="no" mutable="no">
+        <type>membox_key_t</type>
+        <definition>membox_key_t message_hdr_t::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="31" column="1" bodyfile="message.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="message.h" line="29" column="1" bodyfile="message.h" bodystart="29" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structmessage__hdr__t_1a683fe6c1599d9e0edcc5dbd10fda0545" prot="public" virt="non-virtual"><scope>message_hdr_t</scope><name>key</name></member>
+      <member refid="structmessage__hdr__t_1ab7f4eacc8e900cca79b63ddfb02d67fd" prot="public" virt="non-virtual"><scope>message_hdr_t</scope><name>op</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

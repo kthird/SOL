@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="stats_8h">
+    <title>stats.h File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;time.h&gt;</programlisting>
+<para>Include dependency diagram for stats.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="stats_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for stats.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="stats_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classi </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structstatistics">statistics</link></para>
+<para><emphasis>Struttura dati contenente le informazioni da monitorare.</emphasis></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="stats_8h_1a022239c8d1a8b6da394762b9c6c2edf2">printStats</link> (
+FILE * fout)<para><emphasis>Stampa le statistiche nel file passato come argomento.</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/stats.h</para>
+    </simplesect>
+</section>

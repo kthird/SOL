@@ -1,0 +1,53 @@
+\hypertarget{client_8c}{}\section{Riferimenti per il file client.\+c}
+\label{client_8c}\index{client.\+c@{client.\+c}}
+
+
+Semplice client di test.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$getopt.\+h$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$connections.\+h$>$}\\*
+{\ttfamily \#include $<$ops.\+h$>$}\\*
+Grafo delle dipendenze di inclusione per client.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{client_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Composti}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structoperation__t}{operation\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Definizioni}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries \+\_\+\+P\+O\+S\+I\+X\+\_\+\+C\+\_\+\+S\+O\+U\+R\+CE}~200809L\hypertarget{client_8c_a3024ccd4a9af5109d24e6c57565d74a1}{}\label{client_8c_a3024ccd4a9af5109d24e6c57565d74a1}
+
+\end{DoxyCompactItemize}
+\subsection*{Funzioni}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})\hypertarget{client_8c_a0ddf1224851353fc92bfbff6f499fa97}{}\label{client_8c_a0ddf1224851353fc92bfbff6f499fa97}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrizione dettagliata}
+Semplice client di test. 
+
+Esempio di utilizzo\+:
+\begin{DoxyItemize}
+\item progname -\/l socket\+\_\+path -\/c 100\+:0\+:8192 Invia una richiesta di P\+UT (0) per un oggetto di chiave 100 con size 8192 bytes.
+\item progname -\/l socket\+\_\+path -\/c 100\+:2\+:0 -\/c 100\+:3\+:0 Invia una richiesta di G\+ET (2) per un oggetto di chiave 100 seguita da una richiesta di R\+E\+M\+O\+VE (3) dello stesso oggetto. La seconda richiesta viene eseguita solo se la prima richiesta e\textquotesingle{} andata a buon fine.
+\item progname -\/s 500 -\/l socket\+\_\+path -\/c 100\+:0\+:8192 -\/c 100\+:2\+:0 Invia una richiesta di P\+UT (0) per un oggetto di chiave 100 con size 8192 bytes, se la richiesta va a buon fine invia una seconda richiesta per la chiave 100 di tipo G\+ET (2). Tra le due richieste trascorrono circa 500 millisecondi (opzione -\/s 500) 
+\end{DoxyItemize}

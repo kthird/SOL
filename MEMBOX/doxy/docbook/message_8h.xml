@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="message_8h">
+    <title>message.h File Reference</title>
+    <programlisting>#include &lt;assert.h&gt;</programlisting>
+    <programlisting>#include &lt;ops.h&gt;</programlisting>
+<para>Include dependency diagram for message.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="message_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for message.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="message_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classi </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmessage__hdr__t">message_hdr_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmessage__data__t">message_data_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structmessage__t">message_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Ridefinizioni di tipo (typedef)</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef unsigned long  <link linkend="message_8h_1a02d90ef6d091c6cca50db6fcc34a2d59">membox_key_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="message_8h_1a3874ff882664f04799f6dfea8ad834ea">setKey</link> (
+membox_key_t * key_out, membox_key_t * key_in)<para><emphasis>copia la chiave da in in out</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="message_8h_1ad170b7b27f066fb4f0863810a354a990">setHeader</link> (
+<link linkend="structmessage__t">message_t</link> * msg, <link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44c">op_t</link> op, membox_key_t * key)<para><emphasis>scrive l&apos;header del messaggio</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="message_8h_1ab3e9b706eeac83b761d5e51a265cb2b2">setData</link> (
+<link linkend="structmessage__t">message_t</link> * msg, const char * buf, unsigned int len)<para><emphasis>scrive la parte dati del messaggio</emphasis></para>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>Contiene il formato del messaggio. </para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/message.h</para>
+    </simplesect>
+</section>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="README_8txt">
+    <title>README.txt File Reference</title>
+<para>Include dependency diagram for README.txt</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="README_8txt__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for README.txt</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="README_8txt__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Variabili</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client <link linkend="README_8txt_1aa0ac8b1e62b114359027afaa79ba6fa8">c</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client <link linkend="README_8txt_1a8aa9ec37192bbbb3c431a5a9f5b57610">sendRequest</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>copiare kit_f2 tar nella directory e spostarsi nella directory appena creata Es mkdir Progetto_MemBox mv kit_f2 tar Progetto_MemBox cd Progetto_MemBox S tarare i file del kit con tar xvf kit_f2 tar questo comando crea nella directory corrente una directory membox con i seguenti file ls membox client <link linkend="README_8txt_1a4997c6687ac85940681eab6d2bbc65bf">readHeader</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/README.txt</para>
+    </simplesect>
+</section>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="icl__hash_8c">
+    <title>icl_hash.c File Reference</title>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;assert.h&gt;</programlisting>
+    <programlisting>#include &quot;icl_hash.h&quot;</programlisting>
+    <programlisting>#include &lt;limits.h&gt;</programlisting>
+<para>Include dependency diagram for icl_hash.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="icl__hash_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for icl_hash.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="icl__hash_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Definizioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="icl__hash_8c_1a2d10e257c22cc1e2f5b4ba85836ea6e5">BITS_IN_int</link> ( sizeof(int) * CHAR_BIT )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="icl__hash_8c_1a733032d4ad1dbc4241e6484ee43c5503">THREE_QUARTERS</link> ((int) ((BITS_IN_int * 3) / 4))</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="icl__hash_8c_1a884e9ecda77996d026dce1f76dbd1cd8">ONE_EIGHTH</link> ((int) (BITS_IN_int / 8))</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="icl__hash_8c_1a55bd7253449b589fcbbe9cdb09838150">HIGH_BITS</link> ( ~((unsigned int)(~0) &gt;&gt; ONE_EIGHTH ))</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static unsigned int <link linkend="icl__hash_8c_1a6a10ee6275ca507d09fd47a719767e3d">hash_pjw</link> (
+void * key)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="icl__hash_8c_1af73feac3dabb92903ba78109da604864">string_compare</link> (
+void * a, void * b)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structicl__hash__s">icl_hash_t</link> * <link linkend="icl__hash_8c_1a7dd8c07b7cf001deceaf83273c08cb10">icl_hash_create</link> (
+int nbuckets, unsigned int(*)(void *) hash_function, int(*)(void *, void *) hash_key_compare)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void * <link linkend="icl__hash_8c_1a13a0f184a9dc3dfa3a68445101370e32">icl_hash_find</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * ht, void * key)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structicl__entry__s">icl_entry_t</link> * <link linkend="icl__hash_8c_1a650b9755a4efce9df3093602ddb40414">icl_hash_insert</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * ht, void * key, void * data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structicl__entry__s">icl_entry_t</link> * <link linkend="icl__hash_8c_1a18e3ea6181d8c736206939def95da02a">icl_hash_update_insert</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * ht, void * key, void * data, void ** olddata)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="icl__hash_8c_1a9a61a09d5f70d66cc668565645aa3e88">icl_hash_delete</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * ht, void * key, void(*)(void *) free_key, void(*)(void *) free_data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="icl__hash_8c_1a4644f0e1c6aecfefd5ab9c378695d24a">icl_hash_destroy</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * ht, void(*)(void *) free_key, void(*)(void *) free_data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="icl__hash_8c_1a0f2c0d444320e2847ecaa8efbd9ff730">icl_hash_dump</link> (
+FILE * stream, <link linkend="structicl__hash__s">icl_hash_t</link> * ht)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>Dependency free hash table implementation.</para>
+
+<para>This simple hash table implementation should be easy to drop into any other peice of code, it does not depend on anything else :-)</para>
+
+<para><formalpara><title>Autore: </title>
+
+<para>Jakub Kurzak </para>
+</formalpara>
+</para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/icl_hash.c</para>
+    </simplesect>
+</section>

@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="icl__hash_8h">
+    <title>icl_hash.h File Reference</title>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+<para>Include dependency diagram for icl_hash.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="icl__hash_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for icl_hash.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="icl__hash_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classi </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structicl__entry__s">icl_entry_s</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structicl__hash__s">icl_hash_s</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Definizioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="icl__hash_8h_1ac445362364e0a96ab259479c104a7670">icl_hash_foreach</link> for (tmpint=0;tmpint&lt;ht-&gt;nbuckets; tmpint++)        \
+        for (tmpent=ht-&gt;buckets[tmpint];                                \
+             tmpent!=NULL&amp;&amp;((kp=tmpent-&gt;key)!=NULL)&amp;&amp;((dp=tmpent-&gt;<link linkend="structdata">data</link>)!=NULL); \
+             tmpent=tmpent-&gt;next)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Ridefinizioni di tipo (typedef)</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="structicl__entry__s">icl_entry_s</link>  <link linkend="icl__hash_8h_1acf4a693960a075af858870b4fdb63145">icl_entry_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>typedef struct <link linkend="structicl__hash__s">icl_hash_s</link>  <link linkend="icl__hash_8h_1a2a42248793d2b10c0c3306ed7c1619b6">icl_hash_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structicl__hash__s">icl_hash_t</link> * <link linkend="icl__hash_8h_1a7dd8c07b7cf001deceaf83273c08cb10">icl_hash_create</link> (
+int nbuckets, unsigned int(*)(void *) hash_function, int(*)(void *, void *) hash_key_compare)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>void * <link linkend="icl__hash_8h_1a43d20a7bd87e903ed90106ecfee92e50">icl_hash_find</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * , void * )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structicl__entry__s">icl_entry_t</link> * <link linkend="icl__hash_8h_1ade10c11884657c495a3b0b4db6e23d47">icl_hash_insert</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * , void * , void * )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para><link linkend="structicl__entry__s">icl_entry_t</link> * <link linkend="icl__hash_8h_1ab9fa2818d3299f96305126c1e80cdcf4">icl_hash_update_insert</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * , void * , void * , void ** )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="icl__hash_8h_1a3597dd0f42401d7283894644a8a7f0a0">icl_hash_destroy</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * , void(*)(void *) , void(*)(void *) )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="icl__hash_8h_1a9640883d7da1e9594ee76cca8634a2c6">icl_hash_dump</link> (
+FILE * , <link linkend="structicl__hash__s">icl_hash_t</link> * )</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="icl__hash_8h_1a9a61a09d5f70d66cc668565645aa3e88">icl_hash_delete</link> (
+<link linkend="structicl__hash__s">icl_hash_t</link> * ht, void * key, void(*)(void *) free_key, void(*)(void *) free_data)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>Header file for icl_hash routines. </para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/icl_hash.h</para>
+    </simplesect>
+</section>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="ops_8h">
+    <title>ops.h File Reference</title>
+<para>Include dependency diagram for ops.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="ops_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for ops.h</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="ops_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title>Tipi enumerati (enum)</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para><literallayout>enum <link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44c">op_t</link> {
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca2cbc6f8bd38469388a2c092018db1945">PUT_OP</link>= 0,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e">UPDATE_OP</link>= 1,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a">GET_OP</link>= 2,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849">REMOVE_OP</link>= 3,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543">LOCK_OP</link>= 4,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039">UNLOCK_OP</link>= 5,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c">END_OP</link>= 6,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cacc156be86a1cb4bfc0e21d8c72e4971c">OP_OK</link>= 11,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cadad4289276b97b650558ce66d141d648">OP_FAIL</link>= 12,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44caa6854d18861e99bae48150981d7c3006">OP_PUT_ALREADY</link>= 13,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cafdc0a1eddc2f5f76d3d4fc11f9cd03e8">OP_PUT_TOOMANY</link>= 14,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae83c227bc906fa4210ee395ecc304f64">OP_PUT_SIZE</link>= 15,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca6a40df2244f72f18eab5faa246368afc">OP_PUT_REPOSIZE</link>= 16,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca251df847fddf5cf339baf4c30e335314">OP_GET_NONE</link>= 17,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cab46339e3c4391e748999ec7651333eea">OP_REMOVE_NONE</link>= 18,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cab9f870127a85a83e302efb5f5bf947b6">OP_UPDATE_SIZE</link>= 19,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca121ee91addc0d03693490c4b59996495">OP_UPDATE_NONE</link>= 20,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca58fa6c5a7a3f2d2df0c5c29f87d803eb">OP_LOCKED</link>= 21,
+<link linkend="ops_8h_1ac6fa1b34da8872e34c2936391332f44cabdcd34b05c1f58b02bd7241312bd9b72">OP_LOCK_NONE</link>= 22
+}</literallayout>
+</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>Contiene i codici delle operazioni di richiesta e risposta. </para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/ops.h</para>
+    </simplesect>
+</section>

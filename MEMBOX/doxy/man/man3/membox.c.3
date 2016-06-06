@@ -1,0 +1,53 @@
+.TH "membox.c" 3 "Lun 6 Giu 2016" "Version 1" "SOL - MEMBOX" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+membox.c \- File principale del server membox\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <assert\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <pthread\&.h>\fP
+.br
+\fC#include <stats\&.h>\fP
+.br
+
+.SS "Definizioni"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_POSIX_C_SOURCE\fP   200809L"
+.br
+.in -1c
+.SS "Funzioni"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SS "Variabili"
+
+.in +1c
+.ti -1c
+.RI "struct \fBstatistics\fP \fBmboxStats\fP = { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 }"
+.br
+.in -1c
+.SH "Descrizione dettagliata"
+.PP 
+File principale del server membox\&. 
+
+
+.SH "Autore"
+.PP 
+Generato automaticamente da Doxygen per SOL - MEMBOX a partire dal codice sorgente\&.

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.11">
+  <compound refid="structdata" kind="struct"><name>data</name>
+  </compound>
+  <compound refid="structheader" kind="struct"><name>header</name>
+  </compound>
+  <compound refid="structicl__entry__s" kind="struct"><name>icl_entry_s</name>
+    <member refid="structicl__entry__s_1a175ddfefe49a8f6fa16155e58c39c88e" kind="variable"><name>key</name></member>
+    <member refid="structicl__entry__s_1ac01964f2d85fcdbaa2d16c78fb1a99d6" kind="variable"><name>data</name></member>
+    <member refid="structicl__entry__s_1af5bc67953f51e75cf74066d616f3420c" kind="variable"><name>next</name></member>
+  </compound>
+  <compound refid="structicl__hash__s" kind="struct"><name>icl_hash_s</name>
+    <member refid="structicl__hash__s_1a18d5f1bc101356322a4db7a6cfeb9f7e" kind="variable"><name>nbuckets</name></member>
+    <member refid="structicl__hash__s_1a7654114080ad222e0b8c2311ef3466fa" kind="variable"><name>nentries</name></member>
+    <member refid="structicl__hash__s_1a8d8b17cad1aca47e27486e4f49882df4" kind="variable"><name>buckets</name></member>
+    <member refid="structicl__hash__s_1a06d96a5a8f9015e2ee6d6bf2e0876971" kind="variable"><name>hash_function</name></member>
+    <member refid="structicl__hash__s_1a6e3fc8d3a066a9c8fd5f45161119874e" kind="variable"><name>hash_key_compare</name></member>
+  </compound>
+  <compound refid="structmessage__data__t" kind="struct"><name>message_data_t</name>
+    <member refid="structmessage__data__t_1a0f25429844cd856204c21329ff689566" kind="variable"><name>len</name></member>
+    <member refid="structmessage__data__t_1aba52694fd59a6cf8227b84b3cd1c30dd" kind="variable"><name>buf</name></member>
+  </compound>
+  <compound refid="structmessage__hdr__t" kind="struct"><name>message_hdr_t</name>
+    <member refid="structmessage__hdr__t_1ab7f4eacc8e900cca79b63ddfb02d67fd" kind="variable"><name>op</name></member>
+    <member refid="structmessage__hdr__t_1a683fe6c1599d9e0edcc5dbd10fda0545" kind="variable"><name>key</name></member>
+  </compound>
+  <compound refid="structmessage__t" kind="struct"><name>message_t</name>
+    <member refid="structmessage__t_1a6c9e3c76c26fd15afd27fca633875978" kind="variable"><name>hdr</name></member>
+    <member refid="structmessage__t_1a4246f40b480c7d84ff6319ef2ae7b305" kind="variable"><name>data</name></member>
+  </compound>
+  <compound refid="structmessaggio" kind="struct"><name>messaggio</name>
+  </compound>
+  <compound refid="structoperation__t" kind="struct"><name>operation_t</name>
+    <member refid="structoperation__t_1a58422637d6b9ed0081270dff03a42f42" kind="variable"><name>key</name></member>
+    <member refid="structoperation__t_1afa66e43cb50d2792e12f7a2b054bc396" kind="variable"><name>op</name></member>
+    <member refid="structoperation__t_1a453c2473442f61fbc268d30c8ebb4338" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="structstatistics" kind="struct"><name>statistics</name>
+    <member refid="structstatistics_1af6052d60054e79a5e9bd38f11f1cc9bb" kind="variable"><name>nput</name></member>
+    <member refid="structstatistics_1a526a898e02c6d4203017b39c8feae13c" kind="variable"><name>nput_failed</name></member>
+    <member refid="structstatistics_1a0dc1842056c05fa05f5e14263be33a59" kind="variable"><name>nupdate</name></member>
+    <member refid="structstatistics_1aa3bd8bc20aa8f030176e02c30af18472" kind="variable"><name>nupdate_failed</name></member>
+    <member refid="structstatistics_1a2c4b6cf66f83483b398a435c9e5c07b8" kind="variable"><name>nget</name></member>
+    <member refid="structstatistics_1a43380fe734194d3d48ec83e8348f5de8" kind="variable"><name>nget_failed</name></member>
+    <member refid="structstatistics_1a586a706595dcc11bcbdd144f7c475bd7" kind="variable"><name>nremove</name></member>
+    <member refid="structstatistics_1a6fcfd080f00c8293af00625a0719b44d" kind="variable"><name>nremove_failed</name></member>
+    <member refid="structstatistics_1ac5c44d82b16d00e7f6eb7d64162bde6b" kind="variable"><name>nlock</name></member>
+    <member refid="structstatistics_1a3a2be58e1c3eccdd23469df4070697dd" kind="variable"><name>nlock_failed</name></member>
+    <member refid="structstatistics_1a7bb318acbc8595f0be85cd45909c7d49" kind="variable"><name>concurrent_connections</name></member>
+    <member refid="structstatistics_1acc592409461ecabdf1076126edccce2c" kind="variable"><name>current_size</name></member>
+    <member refid="structstatistics_1ab8956bbbb0148facbac74299f8b6cd5e" kind="variable"><name>max_size</name></member>
+    <member refid="structstatistics_1a1a23a8b57e7ca1ecf4d49197a5a56ad2" kind="variable"><name>current_objects</name></member>
+    <member refid="structstatistics_1a21df893122b02d52a27f48df6032d0ef" kind="variable"><name>max_objects</name></member>
+  </compound>
+  <compound refid="client_8c" kind="file"><name>client.c</name>
+    <member refid="client_8c_1a3024ccd4a9af5109d24e6c57565d74a1" kind="define"><name>_POSIX_C_SOURCE</name></member>
+    <member refid="client_8c_1acbd1ae50231d20a553d0c97de0803830" kind="function"><name>use</name></member>
+    <member refid="client_8c_1ab82c5f8f9d07f2cdbe0bfa1da11c1174" kind="function"><name>init_data</name></member>
+    <member refid="client_8c_1a7db408259467e5c2f16fec6b0f5d6008" kind="function"><name>check_data</name></member>
+    <member refid="client_8c_1ad9a1e0fc16c6cce98fd544c2da2b8914" kind="function"><name>execute_op</name></member>
+    <member refid="client_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="connections_8h" kind="file"><name>connections.h</name>
+    <member refid="connections_8h_1aecf13b8dc783db2202ca5c34fe117fc3" kind="define"><name>MAX_RETRIES</name></member>
+    <member refid="connections_8h_1a763a071b50fb9cf7997861d0f5266387" kind="define"><name>MAX_SLEEPING</name></member>
+    <member refid="connections_8h_1a7baab2aa5bf8eb14b6128e0f16634837" kind="define"><name>UNIX_PATH_MAX</name></member>
+    <member refid="connections_8h_1a93ad31c416b2e2055827e5f684e89daf" kind="function"><name>openConnection</name></member>
+    <member refid="connections_8h_1a166a9f07b57f9684fc9e97863d97ff03" kind="function"><name>readHeader</name></member>
+    <member refid="connections_8h_1acf5cb8379636265d11a008d6aa94dc30" kind="function"><name>readData</name></member>
+    <member refid="connections_8h_1a3c23eb25de2ae8b5216eb6dd847521c0" kind="function"><name>sendRequest</name></member>
+    <member refid="connections_8h_1a9caa249e483ccf12bf8a2e6830a50a03" kind="function"><name>readReply</name></member>
+  </compound>
+  <compound refid="gruppo_8txt" kind="file"><name>gruppo.txt</name>
+    <member refid="gruppo_8txt_1afe12ec104ad9bf72be255a491560b4b5" kind="variable"><name>Francesco</name></member>
+    <member refid="gruppo_8txt_1a219f5429b659319043a61795f5d2ac78" kind="variable"><name>Lorito</name></member>
+  </compound>
+  <compound refid="icl__hash_8c" kind="file"><name>icl_hash.c</name>
+    <member refid="icl__hash_8c_1a2d10e257c22cc1e2f5b4ba85836ea6e5" kind="define"><name>BITS_IN_int</name></member>
+    <member refid="icl__hash_8c_1a733032d4ad1dbc4241e6484ee43c5503" kind="define"><name>THREE_QUARTERS</name></member>
+    <member refid="icl__hash_8c_1a884e9ecda77996d026dce1f76dbd1cd8" kind="define"><name>ONE_EIGHTH</name></member>
+    <member refid="icl__hash_8c_1a55bd7253449b589fcbbe9cdb09838150" kind="define"><name>HIGH_BITS</name></member>
+    <member refid="icl__hash_8c_1a6a10ee6275ca507d09fd47a719767e3d" kind="function"><name>hash_pjw</name></member>
+    <member refid="icl__hash_8c_1af73feac3dabb92903ba78109da604864" kind="function"><name>string_compare</name></member>
+    <member refid="icl__hash_8c_1a7dd8c07b7cf001deceaf83273c08cb10" kind="function"><name>icl_hash_create</name></member>
+    <member refid="icl__hash_8c_1a13a0f184a9dc3dfa3a68445101370e32" kind="function"><name>icl_hash_find</name></member>
+    <member refid="icl__hash_8c_1a650b9755a4efce9df3093602ddb40414" kind="function"><name>icl_hash_insert</name></member>
+    <member refid="icl__hash_8c_1a18e3ea6181d8c736206939def95da02a" kind="function"><name>icl_hash_update_insert</name></member>
+    <member refid="icl__hash_8c_1a9a61a09d5f70d66cc668565645aa3e88" kind="function"><name>icl_hash_delete</name></member>
+    <member refid="icl__hash_8c_1a4644f0e1c6aecfefd5ab9c378695d24a" kind="function"><name>icl_hash_destroy</name></member>
+    <member refid="icl__hash_8c_1a0f2c0d444320e2847ecaa8efbd9ff730" kind="function"><name>icl_hash_dump</name></member>
+  </compound>
+  <compound refid="icl__hash_8h" kind="file"><name>icl_hash.h</name>
+    <member refid="icl__hash_8h_1ac445362364e0a96ab259479c104a7670" kind="define"><name>icl_hash_foreach</name></member>
+    <member refid="icl__hash_8h_1acf4a693960a075af858870b4fdb63145" kind="typedef"><name>icl_entry_t</name></member>
+    <member refid="icl__hash_8h_1a2a42248793d2b10c0c3306ed7c1619b6" kind="typedef"><name>icl_hash_t</name></member>
+    <member refid="icl__hash_8h_1a7dd8c07b7cf001deceaf83273c08cb10" kind="function"><name>icl_hash_create</name></member>
+    <member refid="icl__hash_8h_1a43d20a7bd87e903ed90106ecfee92e50" kind="function"><name>icl_hash_find</name></member>
+    <member refid="icl__hash_8h_1ade10c11884657c495a3b0b4db6e23d47" kind="function"><name>icl_hash_insert</name></member>
+    <member refid="icl__hash_8h_1ab9fa2818d3299f96305126c1e80cdcf4" kind="function"><name>icl_hash_update_insert</name></member>
+    <member refid="icl__hash_8h_1a3597dd0f42401d7283894644a8a7f0a0" kind="function"><name>icl_hash_destroy</name></member>
+    <member refid="icl__hash_8h_1a9640883d7da1e9594ee76cca8634a2c6" kind="function"><name>icl_hash_dump</name></member>
+    <member refid="icl__hash_8h_1a9a61a09d5f70d66cc668565645aa3e88" kind="function"><name>icl_hash_delete</name></member>
+  </compound>
+  <compound refid="membox_8c" kind="file"><name>membox.c</name>
+    <member refid="membox_8c_1a3024ccd4a9af5109d24e6c57565d74a1" kind="define"><name>_POSIX_C_SOURCE</name></member>
+    <member refid="membox_8c_1a506d0c94191e22ab8f8ffae18236d46b" kind="variable"><name>mboxStats</name></member>
+    <member refid="membox_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="message_8h" kind="file"><name>message.h</name>
+    <member refid="message_8h_1a02d90ef6d091c6cca50db6fcc34a2d59" kind="typedef"><name>membox_key_t</name></member>
+    <member refid="message_8h_1a3874ff882664f04799f6dfea8ad834ea" kind="function"><name>setKey</name></member>
+    <member refid="message_8h_1ad170b7b27f066fb4f0863810a354a990" kind="function"><name>setHeader</name></member>
+    <member refid="message_8h_1ab3e9b706eeac83b761d5e51a265cb2b2" kind="function"><name>setData</name></member>
+  </compound>
+  <compound refid="ops_8h" kind="file"><name>ops.h</name>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44c" kind="enum"><name>op_t</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca2cbc6f8bd38469388a2c092018db1945" kind="enumvalue"><name>PUT_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e" kind="enumvalue"><name>UPDATE_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a" kind="enumvalue"><name>GET_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849" kind="enumvalue"><name>REMOVE_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543" kind="enumvalue"><name>LOCK_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039" kind="enumvalue"><name>UNLOCK_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c" kind="enumvalue"><name>END_OP</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cacc156be86a1cb4bfc0e21d8c72e4971c" kind="enumvalue"><name>OP_OK</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cadad4289276b97b650558ce66d141d648" kind="enumvalue"><name>OP_FAIL</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44caa6854d18861e99bae48150981d7c3006" kind="enumvalue"><name>OP_PUT_ALREADY</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cafdc0a1eddc2f5f76d3d4fc11f9cd03e8" kind="enumvalue"><name>OP_PUT_TOOMANY</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cae83c227bc906fa4210ee395ecc304f64" kind="enumvalue"><name>OP_PUT_SIZE</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca6a40df2244f72f18eab5faa246368afc" kind="enumvalue"><name>OP_PUT_REPOSIZE</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca251df847fddf5cf339baf4c30e335314" kind="enumvalue"><name>OP_GET_NONE</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cab46339e3c4391e748999ec7651333eea" kind="enumvalue"><name>OP_REMOVE_NONE</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cab9f870127a85a83e302efb5f5bf947b6" kind="enumvalue"><name>OP_UPDATE_SIZE</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca121ee91addc0d03693490c4b59996495" kind="enumvalue"><name>OP_UPDATE_NONE</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44ca58fa6c5a7a3f2d2df0c5c29f87d803eb" kind="enumvalue"><name>OP_LOCKED</name></member>
+    <member refid="ops_8h_1ac6fa1b34da8872e34c2936391332f44cabdcd34b05c1f58b02bd7241312bd9b72" kind="enumvalue"><name>OP_LOCK_NONE</name></member>
+  </compound>
+  <compound refid="README_8txt" kind="file"><name>README.txt</name>
+    <member refid="README_8txt_1aa0ac8b1e62b114359027afaa79ba6fa8" kind="variable"><name>c</name></member>
+    <member refid="README_8txt_1a8aa9ec37192bbbb3c431a5a9f5b57610" kind="variable"><name>sendRequest</name></member>
+    <member refid="README_8txt_1a4997c6687ac85940681eab6d2bbc65bf" kind="variable"><name>readHeader</name></member>
+  </compound>
+  <compound refid="stats_8h" kind="file"><name>stats.h</name>
+    <member refid="stats_8h_1a022239c8d1a8b6da394762b9c6c2edf2" kind="function"><name>printStats</name></member>
+  </compound>
+  <compound refid="test__hash_8c" kind="file"><name>test_hash.c</name>
+    <member refid="test__hash_8c_1aad3b13daa628e3f265cf69a185faa098" kind="function"><name>fnv_hash_function</name></member>
+    <member refid="test__hash_8c_1ab514c4d15f732b0ce3fd088d1fa0cb2d" kind="function"><name>ulong_hash_function</name></member>
+    <member refid="test__hash_8c_1af105ee3929a7d0a302795a91c564f7fb" kind="function"><name>ulong_key_compare</name></member>
+    <member refid="test__hash_8c_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+</doxygenindex>

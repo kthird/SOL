@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structmessage__t" kind="struct" language="C++" prot="public">
+    <compoundname>message_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmessage__t_1a6c9e3c76c26fd15afd27fca633875978" prot="public" static="no" mutable="no">
+        <type><ref refid="structmessage__hdr__t" kindref="compound">message_hdr_t</ref></type>
+        <definition>message_hdr_t message_t::hdr</definition>
+        <argsstring></argsstring>
+        <name>hdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="54" column="1" bodyfile="message.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmessage__t_1a4246f40b480c7d84ff6319ef2ae7b305" prot="public" static="no" mutable="no">
+        <type><ref refid="structmessage__data__t" kindref="compound">message_data_t</ref></type>
+        <definition>message_data_t message_t::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="message.h" line="55" column="1" bodyfile="message.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="39">
+        <label>message_hdr_t</label>
+        <link refid="structmessage__hdr__t"/>
+      </node>
+      <node id="38">
+        <label>message_data_t</label>
+        <link refid="structmessage__data__t"/>
+      </node>
+      <node id="37">
+        <label>message_t</label>
+        <link refid="structmessage__t"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>hdr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="message.h" line="53" column="1" bodyfile="message.h" bodystart="53" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structmessage__t_1a4246f40b480c7d84ff6319ef2ae7b305" prot="public" virt="non-virtual"><scope>message_t</scope><name>data</name></member>
+      <member refid="structmessage__t_1a6c9e3c76c26fd15afd27fca633875978" prot="public" virt="non-virtual"><scope>message_t</scope><name>hdr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

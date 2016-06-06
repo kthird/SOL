@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="client_8c">
+    <title>client.c File Reference</title>
+    <programlisting>#include &lt;time.h&gt;</programlisting>
+    <programlisting>#include &lt;errno.h&gt;</programlisting>
+    <programlisting>#include &lt;string.h&gt;</programlisting>
+    <programlisting>#include &lt;stdio.h&gt;</programlisting>
+    <programlisting>#include &lt;stdlib.h&gt;</programlisting>
+    <programlisting>#include &lt;getopt.h&gt;</programlisting>
+    <programlisting>#include &lt;unistd.h&gt;</programlisting>
+    <programlisting>#include &lt;signal.h&gt;</programlisting>
+    <programlisting>#include &lt;connections.h&gt;</programlisting>
+    <programlisting>#include &lt;ops.h&gt;</programlisting>
+<para>Include dependency diagram for client.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="client_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+<para>Included by dependency diagram for client.c</para>
+<para>
+    <figure>
+        <title>Dependency diagram</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="1" fileref="client_8c__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </figure>
+</para>
+        <section>
+            <title> Classi </title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>struct <link linkend="structoperation__t">operation_t</link></para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Definizioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                            <para>#define <link linkend="client_8c_1a3024ccd4a9af5109d24e6c57565d74a1">_POSIX_C_SOURCE</link> 200809L</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+        <section>
+            <title>Funzioni</title>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="client_8c_1acbd1ae50231d20a553d0c97de0803830">use</link> (
+const char * filename)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static void <link linkend="client_8c_1ab82c5f8f9d07f2cdbe0bfa1da11c1174">init_data</link> (
+membox_key_t * key, char * data, unsigned int len)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="client_8c_1a7db408259467e5c2f16fec6b0f5d6008">check_data</link> (
+membox_key_t * key, char * data, unsigned int len)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>static int <link linkend="client_8c_1ad9a1e0fc16c6cce98fd544c2da2b8914">execute_op</link> (
+int connfd, <link linkend="structoperation__t">operation_t</link> * o)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+            <para>
+                <itemizedlist>
+                    <listitem>
+                        <para>int <link linkend="client_8c_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (
+int argc, char * argv)</para>
+                    </listitem>
+                </itemizedlist>
+            </para>
+        </section>
+    <simplesect>
+        <title>Descrizione dettagliata</title>
+
+<para>Semplice client di test. </para>
+
+<para>Esempio di utilizzo:<itemizedlist>
+<listitem>
+<para>progname -l socket_path -c 100:0:8192 Invia una richiesta di PUT (0) per un oggetto di chiave 100 con size 8192 bytes.</para>
+</listitem><listitem>
+<para>progname -l socket_path -c 100:2:0 -c 100:3:0 Invia una richiesta di GET (2) per un oggetto di chiave 100 seguita da una richiesta di REMOVE (3) dello stesso oggetto. La seconda richiesta viene eseguita solo se la prima richiesta e&apos; andata a buon fine.</para>
+</listitem><listitem>
+<para>progname -s 500 -l socket_path -c 100:0:8192 -c 100:2:0 Invia una richiesta di PUT (0) per un oggetto di chiave 100 con size 8192 bytes, se la richiesta va a buon fine invia una seconda richiesta per la chiave 100 di tipo GET (2). Tra le due richieste trascorrono circa 500 millisecondi (opzione -s 500) </para>
+</listitem></itemizedlist>
+</para>
+    <para>Definition in file /home/kappa/Scrivania/SOL/MEMBOX/client.c</para>
+    </simplesect>
+</section>

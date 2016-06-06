@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>SOL - MEMBOX:  File sorgente ops.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">SOL - MEMBOX
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">ops.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="ops_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#if !defined(OPS_H_)</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define OPS_H_</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44c">   10</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> {</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">/* ----------------------------------- */</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">/*      operazioni da implementare     */</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">/* ------------------------------------*/</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    PUT_OP          = 0,   </div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e">   16</a></span>&#160;    <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e">UPDATE_OP</a>       = 1,   </div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a">   17</a></span>&#160;    <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a">GET_OP</a>          = 2,   </div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849">   18</a></span>&#160;    <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849">REMOVE_OP</a>       = 3,   </div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543">   19</a></span>&#160;    <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543">LOCK_OP</a>         = 4,   </div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039">   20</a></span>&#160;    <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039">UNLOCK_OP</a>       = 5,   </div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/* ----------------------------------- */</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">/* ----------------------------------- */</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c">   25</a></span>&#160;    <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c">END_OP</a>          = 6,   <span class="comment">// numero di operazioni definite    </span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">/* ----------------------------------- */</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">/*    messaggi di ritorno dal server   */</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/* ------------------------------------*/</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    OP_OK           = 11,  <span class="comment">// operazione eseguita con successo    </span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    OP_FAIL         = 12,  <span class="comment">// generico messaggio di fallimento</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    OP_PUT_ALREADY  = 13,  <span class="comment">// put di un oggetto gia&#39; presente nel repository </span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    OP_PUT_TOOMANY  = 14,  <span class="comment">// raggiunto il massimo numero di oggetti</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    OP_PUT_SIZE     = 15,  <span class="comment">// put di un oggetto troppo grande</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    OP_PUT_REPOSIZE = 16,  <span class="comment">// superata la massima size del repository</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    OP_GET_NONE     = 17,  <span class="comment">// get di un oggetto non presente</span></div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    OP_REMOVE_NONE  = 18,  <span class="comment">// rimozione di un oggetto non presente</span></div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    OP_UPDATE_SIZE  = 19,  <span class="comment">// size dell&#39;oggetto da aggiornare non corrispondente</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    OP_UPDATE_NONE  = 20,  <span class="comment">// update di un oggetto non presente</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    OP_LOCKED       = 21,  <span class="comment">// operazione non permessa perche&#39; il sistema e&#39; in stato di lock</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    OP_LOCK_NONE    = 22   <span class="comment">// richiesta di unlock ma il sistema non e&#39; in stato di lock</span></div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">/* </span></div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">     * aggiungere qui altri messaggi di ritorno che possono servire </span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;} <a class="code" href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44c">op_t</a>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OPS_H_ */</span><span class="preprocessor"></span></div><div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44c"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44c">op_t</a></div><div class="ttdeci">op_t</div><div class="ttdef"><b>Definition:</b> ops.h:10</div></div>
+<div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44cae84e92dac4bc1686a6b0645de1f8322c">END_OP</a></div><div class="ttdoc">rilascio della lock su tutto il repository </div><div class="ttdef"><b>Definition:</b> ops.h:25</div></div>
+<div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca7f6adda9745714c61b29ebd5c40d8039">UNLOCK_OP</a></div><div class="ttdoc">acquisizione di una lock su tutto il repository </div><div class="ttdef"><b>Definition:</b> ops.h:20</div></div>
+<div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca75a57b60cb749cdb0172550fa91a850a">GET_OP</a></div><div class="ttdoc">aggiornamento di un oggetto gia&amp;#39; presente </div><div class="ttdef"><b>Definition:</b> ops.h:17</div></div>
+<div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca07da0734b610b4d2d3f7b362159bc543">LOCK_OP</a></div><div class="ttdoc">eliminazione di un oggetto dal repository </div><div class="ttdef"><b>Definition:</b> ops.h:19</div></div>
+<div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44ca1074de885f81da3c6e970e8cc46a8849">REMOVE_OP</a></div><div class="ttdoc">recupero di un oggetto dal repository </div><div class="ttdef"><b>Definition:</b> ops.h:18</div></div>
+<div class="ttc" id="ops_8h_html_ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e"><div class="ttname"><a href="ops_8h.html#ac6fa1b34da8872e34c2936391332f44cad61253b558f9871d68d607b33d7bd18e">UPDATE_OP</a></div><div class="ttdoc">inserimento di un oggetto nel repository </div><div class="ttdef"><b>Definition:</b> ops.h:16</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generato da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
