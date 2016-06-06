@@ -3,7 +3,6 @@ Realizzazione di due frammenti
 
 #SPARSE 
 =========
-  
 Il progetto prevede la realizzazione di un insieme di funzioni C che
 lavorano su matrici sparse di double. Si intendono "sparse" la matrici che
 contengo una bassissima percentuale di elementi diversi da 0. Queste
@@ -55,7 +54,6 @@ forniti dai docenti.
 
 #MEMBOX
 =========
-
 Lo scopo del progetto è lo sviluppo di un server concorrente che implementa uno spazio
 di memorizzazione di oggetti (repository). Un oggetto è una sequenza continua di bytes
 di dimensione non nulla ed avente una size massima stabilita nel file di configurazione
