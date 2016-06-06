@@ -639,10 +639,15 @@ smatrix_t* load_smat (FILE* fd)
 	{	
 		fscanf(fd,"%d", &nrow);
 		fscanf(fd,"%d", &ncol);
+		if(nrow <= 0 || ncol <= 0)
+		{
+			errno=EINVAL;
+			return NULL;
+		}
 		p=new_smat(nrow,ncol);
 		if(p == NULL)
 		{
-			errno=ENOMEM;
+			errno=EINVAL;
 			fclose(fd);
 			return NULL;
 		}

@@ -1,14 +1,7 @@
-/**
-  \brief header file primo frammento
-  \author Francesco Lorito 464604
-*/
-
-#include "sparse.h"
-#include <errno.h>
-#include <stdlib.h>
 #include <stdio.h>
-#include <mcheck.h>
-
+#include <stdlib.h>
+#include <string.h>
+#include "sparse.h"
 
 #define FDATA1 "data1.txt"
 #define FDATA2 "data2.txt"
@@ -76,13 +69,52 @@ int main (void) {
     perror("is_equal_smat");
     return (EXIT_FAILURE);
   }
-	
-  printf("PROVO A LIBERARE LE MATRICI\n");
+  
   free_smat(&a);
   free_smat(&b);
-  if(a!=NULL || b!=NULL)
-  	printf("MATRICI NON LIBERATE");
-  else
-  	printf("MAATRICI LIBERATE");
-	return 0;
+  
+  
+  /* matrice mal formata  */
+  if ( (fd1 = fopen(FDATA2,"r") ) == NULL ) {
+    fprintf(stderr,"fopen:");
+    perror(FDATA2);
+    return (EXIT_FAILURE);
+  }
+
+ if ( ( a = load_smat(fd1) ) != NULL ) {
+   fprintf(stderr,"load smat: %s: errore\n", FDATA2);
+    return (EXIT_FAILURE);
+  }
+  
+   /* matrice mal formata  */
+  if ( (fd1 = fopen(FDATA3,"r") ) == NULL ) {
+    fprintf(stderr,"fopen:");
+    perror(FDATA3);
+    return (EXIT_FAILURE);
+  }
+
+ if ( ( a = load_smat(fd1) ) != NULL ) {
+   fprintf(stderr,"load smat: %s: errore\n", FDATA3);
+    return (EXIT_FAILURE);
+  }
+  
+
+  /* ultimo test  testuale corretto */
+  if ( (fd1 = fopen(FDATA4,"r") ) == NULL ) {
+    fprintf(stderr,"fopen:");
+    perror(FDATA4);
+    return (EXIT_FAILURE);
+  }
+
+  if ( ( a = load_smat(fd1) ) == NULL ) {
+    fprintf(stderr,"load smat:");
+    perror(FDATA4);
+    return (EXIT_FAILURE);
+  }
+  
+  fclose(fd1);
+
+  print_smat(stdout,a);
+  
+return 0;
 }
